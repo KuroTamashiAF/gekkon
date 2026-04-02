@@ -48,9 +48,12 @@ body {
     width: 100%;
     margin: 0 0 5px 0;
     gap: 15px;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
+
+}
+.HenkonEducation_label{
+    font-family: "Black ops";
+    font-size: 50px;
+
 }
 
 /* .container_pssw {
