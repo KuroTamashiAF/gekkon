@@ -17,8 +17,13 @@ body {
     height: 100%;
     min-width: 100%;
     min-height: 100%;
-    margin: 300px 0 0 0;
+    margin: 250px 0 0 0;
 
+}
+.logo_container{
+    /* display: flex;
+    justify-content: center; */
+    margin: 0 0 50px 0;
 }
 
 .flex {
@@ -27,9 +32,9 @@ body {
     align-items: center;
     justify-content: center;
 }
-.cointainer_flex_image{
+/* .cointainer_flex_image{
     
-}
+} */
 
 .enter_label {
     font-size: 50px;
