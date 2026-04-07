@@ -25,15 +25,21 @@
                         Вход
                     </h2>
                     <div class="container_form">
-                        <form action="#" method="POST">
-                            <div class="login_">
-                                <input type="text" placeholder="Логин" class="login_inp">
+                        <form action="{% url "main:index" %}" method="POST">
+                            {% csrf_token %}
+                            {% comment %} <label for="id_username"></label> {% endcomment %}
+                            <div class="inp_login">
+                                <input type="text" class="login_inp" name="username" id="id_username" 
+                                placeholder="Имя пользователя" required>
                             </div>
-                            <div class="psswd_">
-                                <input type="password" placeholder="Пароль" class="psswd_inp">
+
+                            {% comment %} <label for="id_password"></label> {% endcomment %}
+                            <div class="inp_psswd">
+                                <input type="password" class="psswd_inp" name="password" id="id_password" 
+                                placeholder="Пароль" required>
                             </div>
                             <div class="button_">
-                               <input type="button" value="Войти" class="button_inp">
+                                <button type="submit" class="button_inp">Войти</button>
                             </div>
                         </form>
                     </div>

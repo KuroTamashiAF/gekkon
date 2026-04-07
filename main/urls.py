@@ -22,5 +22,7 @@ from django.urls import path
 from main import views
 
 urlpatterns = [
-    path("", views.IndexView.as_view(), name="index"),
+    path("", views.StudentLoginView.as_view(), name="index"),
+    path("succes/", views.Succes.as_view(), name="suc"),
+    
 ]
