@@ -1,36 +1,34 @@
-from django.http import HttpResponse, HttpResponseRedirect
+from webbrowser import get
 
-# from django.shortcuts import render
+from django.conf.global_settings import LOGIN_URL
+from django.http import HttpResponseRedirect
+from django.shortcuts import redirect
+
+# from django.contrib.auth.mixins import LoginRequiredMixin
+
+
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView
 from django.contrib.auth.views import LoginView
-from main.forms import UserLoginForm
+from django.views.generic import CreateView
+from main.forms import StudentLoginForm
+from main.models import Student
+from django.shortcuts import get_object_or_404
+from django.contrib import auth
 
 # Create your views here.
 
 
-# class IndexView(TemplateView):
-#     template_name = "main/index.html"
-
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context["title"] = "Геккон тестирование"
-#         return context
-
-
 class StudentLoginView(LoginView):
-    template_name = "main/index.html"
-    form_class = UserLoginForm
-    success_url = reverse_lazy("main:suc")
-
-
+    template_name = "main/login.html"
+    form_class = StudentLoginForm
+    success_url = reverse_lazy("main:index")
 
     def form_valid(self, form):
         user = form.get_user()
         if user:
-            print("s,bhvdkhgksvkghsvkghsdghvghvkhgxszvghvshgvhgsvghvcghghcv")
+            auth.login(self.request, user)
             return HttpResponseRedirect(self.get_success_url())
-
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -38,10 +36,22 @@ class StudentLoginView(LoginView):
         return context
 
 
-class Succes(TemplateView):
-    template_name = "main/test.html"
+class IndexView(TemplateView):
+    template_name = "main/index.html"
+
 
     def get_context_data(self, **kwargs):
+        user = self.request.user
         context = super().get_context_data(**kwargs)
-        context["title"] = "УСПЕХХХХХХ"
+        context["title"] = "Геккон тестирование - Главная"
+        context["auth"] = user.enterprise
         return context
+
+
+# class RegistrationStudentView(CreateView):  # Доделать
+#     template_name = "main/vartests.html"
+
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context["title"] = "Геккон тестирование - Тесты"
+#         return context

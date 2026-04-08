@@ -3,53 +3,38 @@
 
 
 
-
-
+<
+    {% block title %}
+    
+        <title> {{ title }}</title>
+    
+    {% endblock title %}
     {% block css %}
-         <link rel="stylesheet" href="{% static "/main/index.css" %}">
+        <link rel="stylesheet" href="{% static "/main/index.css" %}">
     {% endblock css %}
-
-</head>
 
 <body>
     {% block content %}
         <div class="container_content">
-             
-        <div class="flex">   
-           
-                <div class="card">
-                    <div class="logo_container">
-                        <img src="{% static "img/Gekkon-Logo.png" %}" alt="логотип">
-                    </div>
-                    <h2 class="enter_label">
-                        Вход
-                    </h2>
-                    <div class="container_form">
-                        <form action="{% url "main:index" %}" method="POST">
-                            {% csrf_token %}
-                            {% comment %} <label for="id_username"></label> {% endcomment %}
-                            <div class="inp_login">
-                                <input type="text" class="login_inp" name="username" id="id_username" 
-                                placeholder="Имя пользователя" required>
-                            </div>
+            <div class="container_banner">
+        
+               {{ auth }}
 
-                            {% comment %} <label for="id_password"></label> {% endcomment %}
-                            <div class="inp_psswd">
-                                <input type="password" class="psswd_inp" name="password" id="id_password" 
-                                placeholder="Пароль" required>
-                            </div>
-                            <div class="button_">
-                                <button type="submit" class="button_inp">Войти</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </div>
+
+
+
+
+
+
         </div>
-    </div>
+    
     
     
     {% endblock content %}
-    
+
+
+
+   
 </body>
 </html>
