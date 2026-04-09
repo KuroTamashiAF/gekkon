@@ -7,19 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="{% static "img/Gekkon_Icon.png" %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static "img/Gekkon_Icon.png" %}">
+    <link rel="stylesheet" href="{% static "/main/base.css" %}">
+   
     {% block title %}
     
          <title>Заголовок не опрделен </title>
     
     {% endblock title %}
-   
+
+        
+
     {% block css%}
         <p> стили не подключены </p>
     {% endblock %}
 </head>
 <body>
+    <!--верстка банера с кнопками -->
+        <div class="container_content">
+            <div class="container_banner_color">
+                <div class="container_banner">
+                    <div class="link_to_for_staff">
+                        {% if is_staff %}
+                            <a class="registration_label" href="{% url "main:registration" %}">Регистрация студента</a>
+                        {% endif %}
+                    </div>
+                        <div class="container_for_label_and_button">
+                            <div class="username_container">
+                                <p class="username_label">
+                                    Пользователь: {{ username }}
+                                </p>
+                            </div>
+
+                            <div class="button_logout_container">
+
+                                <a class="registration_label" href="{% url "main:logout" %}">Выйти</a>
+
+                            </div>
+                        </div>
+                    </div>
+                 </div>   
+            </div>
+        </div>
+        <!--Конец верстки банера с кнопками -->
     {% block content %}
-    
+        Блок контент не определен     
     {% endblock content %}
 
 </body>

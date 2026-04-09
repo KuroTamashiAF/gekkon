@@ -1,20 +1,18 @@
-from webbrowser import get
-
-from django.conf.global_settings import LOGIN_URL
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
 
-# from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 
 
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView
 from django.contrib.auth.views import LoginView
 from django.views.generic import CreateView
-from main.forms import StudentLoginForm
+from main.forms import StudentLoginForm, StudentRegistrationForm
 from main.models import Student
 from django.shortcuts import get_object_or_404
-from django.contrib import auth
+from django.contrib import auth, messages
 
 # Create your views here.
 
@@ -22,7 +20,9 @@ from django.contrib import auth
 class StudentLoginView(LoginView):
     template_name = "main/login.html"
     form_class = StudentLoginForm
+    login_url = "main:login"
     success_url = reverse_lazy("main:index")
+
 
     def form_valid(self, form):
         user = form.get_user()
@@ -36,22 +36,69 @@ class StudentLoginView(LoginView):
         return context
 
 
-class IndexView(TemplateView):
+class IndexView(LoginRequiredMixin, TemplateView):
     template_name = "main/index.html"
-
 
     def get_context_data(self, **kwargs):
         user = self.request.user
         context = super().get_context_data(**kwargs)
         context["title"] = "Геккон тестирование - Главная"
-        context["auth"] = user.enterprise
+        if user.is_authenticated:
+            context["username"] = user.username
+            context["is_staff"] = user.is_staff
         return context
 
 
-# class RegistrationStudentView(CreateView):  # Доделать
-#     template_name = "main/vartests.html"
+class RegistrationStudentView(LoginRequiredMixin, CreateView):  # Доделать
+    template_name = "main/registration.html"
+    form_class = StudentRegistrationForm
+    success_url = reverse_lazy("main:index")
 
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context["title"] = "Геккон тестирование - Тесты"
-#         return context
+    def get_context_data(self, **kwargs):
+        user = self.request.user
+        context = super().get_context_data(**kwargs)
+        context["title"] = "Геккон тестирование - Регистрация студента"
+        if user.is_authenticated:
+            context["username"] = user.username
+        return context
+       
+    def form_valid(self, form):
+        user = form.instance
+        if user:
+            form.save()
+            print("Данные записаны")
+            messages.success(
+                self.request,
+                f"{user.username}, данные записаны",
+            )
+        return HttpResponseRedirect(self.success_url)
+
+
+
+
+    def form_invalid(self, form):
+        print(form.errors)
+        # print("данные не записаны")
+        # password = self.request.POST["password"]
+        # first_name = self.request.POST["first_name"]
+        # last_name = self.request.POST["last_name"]
+        # email = self.request.POST["email"]
+        # enterprise =self.request.POST["enterprise"]
+        # plot = self.request.POST["plot"]
+        # function = self.request.POST["function"]
+        # print(password)
+        # print(first_name)
+        # print(last_name)
+        # print(email)
+        # print(enterprise)
+        # print(plot)
+        # print(function)
+        messages.error(self.request, "данные не записаны")
+        return HttpResponseRedirect(self.success_url)
+
+
+
+@login_required
+def logout(request):
+    auth.logout(request)
+    return redirect("main:login")

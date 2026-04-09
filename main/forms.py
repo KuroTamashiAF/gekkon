@@ -20,13 +20,13 @@ class StudentRegistrationForm(UserCreationForm):
         model = Student
         fields = [
             "password",
-            "first_name",
-            "last_name",
-            "email",
-            "enterprise",
-            "plot",
-            "function",
-            "surname",
+            "first_name",#
+            "last_name",#
+            "email",#
+            "enterprise", #
+            "plot",#
+            "function",#
+            "surname",#
             ]
     password = forms.PasswordInput()
     first_name = forms.CharField()

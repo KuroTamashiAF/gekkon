@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title>{{ title }} </title>
+{% endblock title %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "/main/registration.css" %}">
+{% endblock css %}
+
+{% block content %}
+    <div class="registration_content_container">
+        <h2> Страница регистрации студента </h2>
+        <div class="registration_container_forms">
+            <form action="{% url "main:registration" %}" method="POST">
+
+                {% csrf_token %}
+
+                <div class="registration_container_grid">
+                    <div class="grid_field">
+                        <input type="text" class="inp_field" placeholder="Предприятие" 
+                        name="enterprise">
+                         {{ form.enterprise.errors }}
+                        {% if form.enterprise.errors %}
+                            <div class="form_errors">
+                                {{ form.enterprise.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    
+
+                    <div class="grid_field">
+                        <input type="text" class="inp_field" placeholder="Участок" 
+                        name="plot">
+                        {% if form.plot.errors %}
+                            <div class="form_errors">
+                                {{ form.plot.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="grid_field">
+                        <input type="text" class="inp_field" placeholder="Должность" 
+                        name="function">
+                        {% if form.function.errors %}
+                            <div class="form_errors">
+                                {{ form.function.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="grid_field">
+                        <input type="text" class="inp_field" placeholder="Отчество" 
+                        name="surname">
+                        {% if form.surname.errors %}
+                            <div class="form_errors">
+                                {{ form.surname.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="grid_field">
+                        <input type="text" class="inp_field" placeholder="Имя" 
+                        name="first_name">
+                        {% if form.first_name.errors %}
+                            <div class="form_errors">
+                                {{ form.first_name.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="grid_field">
+                        <input type="text" class="inp_field" placeholder="Фамилия" 
+                        name="last_name">
+                        {% if form.last_name.errors %}
+                            <div class="form_errors">
+                                {{ form.last_name.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="grid_field">
+                        <input type="text" class="inp_field" placeholder="Email" 
+                        name="email">
+                        {% if form.email.errors %}
+                            <div class="form_errors">
+                                {{ form.email.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="grid_field">
+                        <input type="password"
+                         class="inp_field" placeholder="Пароль1" 
+                        name="password1">
+                        {% if form.password.errors %}
+                            <div class="form_errors">
+                                {{ form.password.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    </div>
+                    <div class="grid_field">
+                        <input type="password"
+                         class="inp_field" placeholder="Пароль2" 
+                        name="password2">
+                        {% if form.password.errors %}
+                            <div class="form_errors">
+                                {{ form.password.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="grid_field">
+                        <input type="password"
+                         class="inp_field" placeholder="Пароль" 
+                        name="password">
+                        {% if form.password.errors %}
+                            <div class="form_errors">
+                                {{ form.password.errors }}
+                            </div>
+                        {% endif %}
+                    <button type="submit" >Войти</button>
+                </div>
+             </form>
+        </div>
+    </div>
+
+    
+    
+
+{% endblock content %}

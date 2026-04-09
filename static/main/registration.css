@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.registration_content_container{
+    padding: 0vh 20vh 0vh 20vh;
+}
+.registration_container_grid{
+    display: grid;
+    grid-template-columns: 50vh 50vh;
+    grid-template-rows: ;
+}
