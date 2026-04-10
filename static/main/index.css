@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.index_content_container{
+    padding: 0vh 20vh 0vh 20vh;
+    margin: 2vh 0vh 15vh 5vh;
+    font-family: "Shopen";
+
+}

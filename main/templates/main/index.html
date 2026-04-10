@@ -10,13 +10,25 @@
     
     {% endblock title %}
     {% block css %}
-        
+        <link rel="stylesheet" href="{% static "/main/index.css" %}">
     {% endblock css %}
 
 <body>
     {% block content %}
-        <h2>Доступные тесты </h2>
-    
+        <div class="index_content_container">
+            <h2>Доступные тесты </h2>
+            {% for category in categories %}
+            <div class="caterory_cont">
+                <ul>
+                    <li>{{ category }}</li>
+                </ul>
+            </div>
+                
+            {% endfor %}
+
+
+        </div>
+
     {% endblock content %}
 
 </body>

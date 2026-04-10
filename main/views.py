@@ -1,4 +1,4 @@
-from time import sleep
+
 
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
@@ -15,6 +15,7 @@ from main.forms import StudentLoginForm, StudentRegistrationForm
 from main.models import Student
 from django.shortcuts import get_object_or_404
 from django.contrib import auth, messages
+from gtests.models import TestCategories
 
 # Create your views here.
 
@@ -48,6 +49,8 @@ class IndexView(LoginRequiredMixin, TemplateView):
         if user.is_authenticated:
             context["username"] = user.username
             context["is_staff"] = user.is_staff
+            context["categories"] = TestCategories.objects.all()
+            print()
         return context
 
 
