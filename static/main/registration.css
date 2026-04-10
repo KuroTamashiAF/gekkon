@@ -4,9 +4,40 @@
 }
 .registration_content_container{
     padding: 0vh 20vh 0vh 20vh;
+    margin: 2vh 0vh 15vh 5vh;
+    font-family: "Shopen";
 }
 .registration_container_grid{
     display: grid;
     grid-template-columns: 50vh 50vh;
-    grid-template-rows: ;
+    gap: 30px;
+    margin: 2vh 0vh 15vh 5vh;
+    
+}
+.grid_field{
+    display: flex;
+    justify-content: center;
+}
+
+.inp_field{
+    width: 35vh;
+    height: 50px;
+    border-color: black;
+    border-radius: 5PX;
+    font-family: "Shopen";
+    font-size: 26px;
+}
+.button_inp{
+     font-size: 26px;
+    font-family: "Black ops";
+    height: 5vh;
+    width: 25vh;
+    border-color: 5px black;
+    border-radius: 5px;
+}
+
+
+@font-face {
+    font-family: "Shopen";
+    src: url(../fonts/Shonen.ttf);
 }

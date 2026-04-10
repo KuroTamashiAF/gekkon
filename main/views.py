@@ -1,3 +1,5 @@
+from time import sleep
+
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
 
@@ -67,33 +69,17 @@ class RegistrationStudentView(LoginRequiredMixin, CreateView):  # Доделат
         if user:
             form.save()
             print("Данные записаны")
-            messages.success(
-                self.request,
-                f"{user.username}, данные записаны",
-            )
+            messages.success(self.request, "Данные сохранены")
+
         return HttpResponseRedirect(self.success_url)
 
 
 
 
-    def form_invalid(self, form):
-        print(form.errors)
-        # print("данные не записаны")
-        # password = self.request.POST["password"]
-        # first_name = self.request.POST["first_name"]
-        # last_name = self.request.POST["last_name"]
-        # email = self.request.POST["email"]
-        # enterprise =self.request.POST["enterprise"]
-        # plot = self.request.POST["plot"]
-        # function = self.request.POST["function"]
-        # print(password)
-        # print(first_name)
-        # print(last_name)
-        # print(email)
-        # print(enterprise)
-        # print(plot)
-        # print(function)
-        messages.error(self.request, "данные не записаны")
+    def form_invalid(self, form): 
+    
+        messages.error(self.request, "Данные не сохранены")
+   
         return HttpResponseRedirect(self.success_url)
 
 

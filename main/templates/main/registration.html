@@ -18,110 +18,67 @@
                 {% csrf_token %}
 
                 <div class="registration_container_grid">
+
+                    <div class="grid_field">
+                        <input type="text" class="inp_field" placeholder="Имя пользователя" 
+                        name="username">
+                    </div>
                     <div class="grid_field">
                         <input type="text" class="inp_field" placeholder="Предприятие" 
                         name="enterprise">
-                         {{ form.enterprise.errors }}
-                        {% if form.enterprise.errors %}
-                            <div class="form_errors">
-                                {{ form.enterprise.errors }}
-                            </div>
-                        {% endif %}
-                    </div>
-
-                    
-
-                    <div class="grid_field">
-                        <input type="text" class="inp_field" placeholder="Участок" 
-                        name="plot">
-                        {% if form.plot.errors %}
-                            <div class="form_errors">
-                                {{ form.plot.errors }}
-                            </div>
-                        {% endif %}
-                    </div>
-
-                    <div class="grid_field">
-                        <input type="text" class="inp_field" placeholder="Должность" 
-                        name="function">
-                        {% if form.function.errors %}
-                            <div class="form_errors">
-                                {{ form.function.errors }}
-                            </div>
-                        {% endif %}
-                    </div>
-
-                    <div class="grid_field">
-                        <input type="text" class="inp_field" placeholder="Отчество" 
-                        name="surname">
-                        {% if form.surname.errors %}
-                            <div class="form_errors">
-                                {{ form.surname.errors }}
-                            </div>
-                        {% endif %}
                     </div>
 
                     <div class="grid_field">
                         <input type="text" class="inp_field" placeholder="Имя" 
                         name="first_name">
-                        {% if form.first_name.errors %}
-                            <div class="form_errors">
-                                {{ form.first_name.errors }}
-                            </div>
-                        {% endif %}
+                    </div>
+                
+                    <div class="grid_field">
+                        <input type="text" class="inp_field" placeholder="Участок" 
+                        name="plot">
                     </div>
 
                     <div class="grid_field">
                         <input type="text" class="inp_field" placeholder="Фамилия" 
                         name="last_name">
-                        {% if form.last_name.errors %}
-                            <div class="form_errors">
-                                {{ form.last_name.errors }}
-                            </div>
-                        {% endif %}
+                    </div>
+
+                    <div class="grid_field">
+                        <input type="text" class="inp_field" placeholder="Должность" 
+                        name="function">
+                    </div>
+
+                    <div class="grid_field">
+                        <input type="text" class="inp_field" placeholder="Отчество" 
+                        name="surname">
                     </div>
 
                     <div class="grid_field">
                         <input type="text" class="inp_field" placeholder="Email" 
                         name="email">
-                        {% if form.email.errors %}
-                            <div class="form_errors">
-                                {{ form.email.errors }}
-                            </div>
-                        {% endif %}
                     </div>
+                    {% comment %} <label for="password1">Пароль</label> {% endcomment %}
                     <div class="grid_field">
                         <input type="password"
                          class="inp_field" placeholder="Пароль1" 
-                        name="password1">
-                        {% if form.password.errors %}
-                            <div class="form_errors">
-                                {{ form.password.errors }}
-                            </div>
-                        {% endif %}
+                        name="password1" id="password1">
                     </div>
 
-                    </div>
                     <div class="grid_field">
+                        <label for="password2"> </label>
                         <input type="password"
                          class="inp_field" placeholder="Пароль2" 
-                        name="password2">
-                        {% if form.password.errors %}
-                            <div class="form_errors">
-                                {{ form.password.errors }}
-                            </div>
-                        {% endif %}
+                        name="password2" id="password2">
                     </div>
                     <div class="grid_field">
-                        <input type="password"
-                         class="inp_field" placeholder="Пароль" 
-                        name="password">
-                        {% if form.password.errors %}
-                            <div class="form_errors">
-                                {{ form.password.errors }}
-                            </div>
-                        {% endif %}
-                    <button type="submit" >Войти</button>
+                        {% comment %} <input type=""
+                         class="inp_field" placeholder="" 
+                        name="" id=""> {% endcomment %}
+                    
+                    </div>
+                     <div class="grid_field">
+                       <button class="button_inp"type="submit" >Сохранить</button>
+                    </div>
                 </div>
              </form>
         </div>

@@ -49,6 +49,16 @@
             </div>
         </div>
         <!--Конец верстки банера с кнопками -->
+        <!-- success.html или шаблон success_url -->
+        <div class="cont_messages">
+            {% if messages %}
+                <div class="alert alert_success" role="alert">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
     {% block content %}
         Блок контент не определен     
     {% endblock content %}

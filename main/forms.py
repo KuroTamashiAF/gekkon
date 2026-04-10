@@ -19,16 +19,17 @@ class StudentRegistrationForm(UserCreationForm):
     class Meta():
         model = Student
         fields = [
-            "password",
+            # "password",
             "first_name",#
             "last_name",#
             "email",#
             "enterprise", #
             "plot",#
             "function",#
-            "surname",#
+            "surname",
+            "username",#
             ]
-    password = forms.PasswordInput()
+    # password = forms.PasswordInput()
     first_name = forms.CharField()
     last_name = forms.CharField()
     email = forms.EmailField()
@@ -36,5 +37,6 @@ class StudentRegistrationForm(UserCreationForm):
     plot = forms.CharField()
     function = forms.CharField()
     surname = forms.CharField()
+    username = forms.CharField()
 
    
