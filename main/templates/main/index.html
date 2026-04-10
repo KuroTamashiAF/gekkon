@@ -17,16 +17,16 @@
     {% block content %}
         <div class="index_content_container">
             <h2>Доступные тесты </h2>
-            {% for category in categories %}
+            {% for test in tests %}
             <div class="caterory_cont">
                 <ul>
-                    <li>{{ category }}</li>
+                    <li> <a href="{% url "gtests:test_detail" test.id %}">{{ test.title}}</a> </li>
                 </ul>
             </div>
                 
             {% endfor %}
 
-
+           
         </div>
 
     {% endblock content %}

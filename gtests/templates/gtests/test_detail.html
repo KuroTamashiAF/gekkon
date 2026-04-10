@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+    <h1>{{ test.title }}</h1>
+<p>{{ test.description }}</p>
+{% if test.time_limit %}
+    <p>Время на тест: {{ test.time_limit }} минут</p>
+{% endif %}
+<a href="{% url 'gtests:take_test' test.id %}" class="btn btn-primary">Начать тест</a>
+<a href="{% url "gtests:test_results" test.id %}">d,jhbdkhvdk</a>
+
+
+{% endblock content %}

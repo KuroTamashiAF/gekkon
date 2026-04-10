@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+    <h1>{{ test.title }}</h1>
+    <h1>{{ test.id }}</h1>
+
+<form method="post">
+    {% csrf_token %}
+
+    {% for field in form %}
+        <div class="question">
+            <h4>{{ field.label }}</h4>
+            {% for choice in field %}
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ field.name }}" id="{{ choice.id_for_label }}" value="{{ choice.choice_value }}">
+                    <label class="form-check-label" for="{{ choice.id_for_label }}">
+                        {{ choice.choice_label }}
+                    </label>
+                </div>
+            {% endfor %}
+        </div>
+        <hr>
+    {% endfor %}
+
+    <button type="submit" class="btn btn-success">Завершить тест</button>
+</form>
+{% comment %} <a href="{% url "gtests:test_results test.id" %}"></a> {% endcomment %}
+
+{% endblock content %}

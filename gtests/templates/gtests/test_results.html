@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+{% block content %}
+    <h1>Результаты теста</h1>
+    <p>Тест: {{ result.test.title }}</p>
+    <p>Правильных ответов: {{ result.correctanswers }} из {{ result.total_questions }}</p>
+    <p>Результат: {{ result.score }}%</p>
+    <p>Завершено: {{ result.completed_at }}</p>
+
+{% comment %} <a href="{% url 'test_detail' result.test.id %}" class="btn btn-primary">Пройти {% endcomment %}
+
+
+
+{% endblock content %}

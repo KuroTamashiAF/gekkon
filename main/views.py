@@ -15,7 +15,8 @@ from main.forms import StudentLoginForm, StudentRegistrationForm
 from main.models import Student
 from django.shortcuts import get_object_or_404
 from django.contrib import auth, messages
-from gtests.models import TestCategories
+from gtests.models import TestCategories, Test
+
 
 # Create your views here.
 
@@ -49,8 +50,8 @@ class IndexView(LoginRequiredMixin, TemplateView):
         if user.is_authenticated:
             context["username"] = user.username
             context["is_staff"] = user.is_staff
-            context["categories"] = TestCategories.objects.all()
-            print()
+            context["tests"] = Test.objects.all()
+
         return context
 
 
@@ -65,6 +66,7 @@ class RegistrationStudentView(LoginRequiredMixin, CreateView):  # Доделат
         context["title"] = "Геккон тестирование - Регистрация студента"
         if user.is_authenticated:
             context["username"] = user.username
+
         return context
        
     def form_valid(self, form):
