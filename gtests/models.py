@@ -57,6 +57,11 @@ class AnswerOption(models.Model):
         verbose_name_plural = "Опции ответов"
 
 
+    def __str__(self):
+        return f"{self.text}"
+    
+
+
 class UserTestResult(models.Model):
     user = models.ForeignKey(Student, on_delete=models.CASCADE)
     test = models.ForeignKey(Test, on_delete=models.CASCADE)

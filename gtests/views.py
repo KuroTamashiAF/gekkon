@@ -5,7 +5,7 @@ from django.shortcuts import redirect, render
 # Create your views here.
 from django.template.base import kwarg_re
 from django.views.generic import DetailView, FormView
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.shortcuts import get_object_or_404
 from django.contrib import messages
 from gtests.models import Test, Question, UserAnswer, UserTestResult, AnswerOption
@@ -51,12 +51,11 @@ class TakeTestView(FormView):
     def form_valid(self, form):
         # Сохраняем ответы пользователя
         self.save_user_answers(form.cleaned_data)
-        print(reverse_lazy("gtests:test_results", kwargs = {"test_id":self.test.id}))
-        print("++++++++++++++++++++++")
-        
+    
         # Рассчитываем и сохраняем результат
         score_data = self.calculate_score()
-        UserTestResult.objects.create(
+        print("CREATING RESULT")
+        result = UserTestResult.objects.create(
             user=self.request.user,
             test=self.test,
             score=score_data["percentage"],
@@ -69,45 +68,40 @@ class TakeTestView(FormView):
             self.request,
             f'Тест завершён! Ваш результат: {score_data["percentage"]:.1f}%',
         )
-        return super().form_valid(form)
+        
+        return redirect("gtests:test_results", pk=result.id)
     
 
 
-
     def form_invalid(self, form):
-        print("----------------------")
         print(form.errors)
-        return redirect("gtests:test_results", test_id=self.test.id)
+        return super().form_invalid(form)
 
-    def look_array(self):
-        for arr in self.array:
-            print(arr.text)
 
     def save_user_answers(self, cleaned_data):
-        # UserAnswer.objects.filter(
-        #     user=self.request.user, question__test=self.test
-        # ).delete()  # Удаляем старые ответы для этого теста
-        self.array=[]
+        UserAnswer.objects.filter(
+            user=self.request.user,
+            question__test=self.test
+        ).delete()
 
         answers_to_create = []
-        for question in self.questions:
-            self.look_array()
-            option_id = cleaned_data.get(f"question_{question.id}")
-            print(f"{option_id}----------------------------")
-            if option_id:
-                selected_option = AnswerOption.objects.get(id=option_id)
-                is_correct = selected_option.is_correct
 
-                answers_to_create.append(
-                    UserAnswer(
-                        user=self.request.user,
-                        question=question,
-                        selected_option=selected_option,
-                        is_correct=is_correct,
-                    )
+        for question in self.questions:
+            # ❗ FIX: теперь это УЖЕ объект AnswerOption
+            selected_option = cleaned_data.get(f"question_{question.id}")
+
+            if not selected_option:
+                continue
+
+            answers_to_create.append(
+                UserAnswer(
+                    user=self.request.user,
+                    question=question,
+                    selected_option=selected_option,
+                    is_correct=selected_option.is_correct,
                 )
-        print(answers_to_create)
-        UserAnswer.objects.bulk_create(answers_to_create)
+            )
+            UserAnswer.objects.bulk_create(answers_to_create)
         
     def calculate_score(self):
         total_questions = self.questions.count()
@@ -127,31 +121,5 @@ class TakeTestView(FormView):
 
 class TestResultsView(DetailView):
     model = UserTestResult
-    # model = UserAnswer
     template_name = "gtests/test_results.html"
     context_object_name = "result"
-
-    def get_object(self, queryset=None):
-        # Получаем test_id из URL
-        test_id = self.kwargs['test_id']
-        # Получаем pk из URL (для поиска UserTestResult)
-        # pk = self.kwargs['pk']
-
-        # Находим тест (для проверки доступа)
-        test = get_object_or_404(Test, id=test_id)
-
-        # Ищем результат, принадлежащий текущему пользователю и указанному тесту
-        queryset = self.get_queryset().filter(
-            user=self.request.user,
-            test=test
-        )
-
-        # Используем стандартный механизм DetailView для поиска по pk
-        return get_object_or_404(queryset, pk=test_id)
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        # Добавляем test_id в контекст для использования в шаблоне
-        context['test_id'] = self.kwargs['test_id']
-        return context
-
