@@ -5,13 +5,72 @@
 
 
 {% block content %}
-    <h1>Результаты теста</h1>
+    {% comment %} НА ВСЯКИЙ СЛУЧАЙ СТАРЫЙ КОД {% endcomment %}
+    {% comment %} <h1>Результаты теста</h1>
     <p>Тест: {{ result.test.title }}</p>
     <p>Правильных ответов: {{ result.correctanswers }} из {{ result.total_questions }}</p>
     <p>Результат: {{ result.score }}%</p>
     <p>Завершено: {{ result.completed_at }}</p>
 
-{% comment %} <a href="{% url 'test_detail' result.test.id %}" class="btn btn-primary">Пройти {% endcomment %}
+ {% endcomment %}
+
+    <div class="container mt-4">
+
+        <h2>Результат теста: {{ result.test.title }}</h2>
+
+        <div class="alert alert-info mt-3">
+            <strong>Баллы:</strong> {{ result.score|floatformat:1 }}% <br>
+            <strong>Правильных ответов:</strong> {{ result.correct_answers }} / {{ result.total_questions }}
+        </div>
+
+        <hr>
+
+        {% for answer in user_answers %}
+
+            <div class="card mb-3">
+
+                <div class="card-body">
+
+                    <!-- ВОПРОС -->
+                    <h5 class="card-title">
+                        {{ answer.question.text }}
+                    </h5>
+
+                    <!-- ОТВЕТ ПОЛЬЗОВАТЕЛЯ -->
+                    <p class="mb-1">
+                        <strong>Ваш ответ:</strong>
+                        {{ answer.selected_option.text }}
+                    </p>
+
+                    <!-- ПРАВИЛЬНЫЙ ОТВЕТ -->
+                    <p class="mb-1">
+                        <strong>Правильный ответ:</strong>
+                        {% for option in answer.question.options.all %}
+                            {% if option.is_correct %}
+                                {{ option.text }}
+                            {% endif %}
+                        {% endfor %}
+                    </p>
+
+                    <!-- ИНДИКАТОР -->
+                    {% if answer.is_correct %}
+                        <span class="badge bg-success">Верно</span>
+                    {% else %}
+                        <span class="badge bg-danger">Неверно</span>
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+        {% comment %} <a href="{% url 'gtests:test_list' %}" class="btn btn-primary mt-3">
+            Вернуться к тестам
+        </a> {% endcomment %}
+
+    </div>
+
 
 
 

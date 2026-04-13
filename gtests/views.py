@@ -19,7 +19,7 @@ class TestDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # context['questions'] = Question.objects.all()
+        context["username"] = self.request.user.username 
         return context
 
 
@@ -46,6 +46,7 @@ class TakeTestView(FormView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["test"] = self.test
+        context["username"] = self.request.user.username
         return context
 
     def form_valid(self, form):
@@ -123,3 +124,19 @@ class TestResultsView(DetailView):
     model = UserTestResult
     template_name = "gtests/test_results.html"
     context_object_name = "result"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        result = self.object
+
+        user_answers = UserAnswer.objects.filter(
+            user=result.user,
+            question__test=result.test
+        ).select_related("question", "selected_option")
+        context["username"] = self.request.user.username
+        context["user_answers"] = user_answers
+
+
+
+        return context
+
