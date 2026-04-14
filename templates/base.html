@@ -28,8 +28,17 @@
                 <div class="container_banner">
                     <div class="link_to_for_staff">
                         {% if is_staff %}
-                            <a class="registration_label" href="{% url "main:registration" %}">Регистрация студента</a>
+                            <div class="registration_cont">
+                                <a class="registration_label" href="{% url "main:registration" %}">Регистрация студента     </a>
+                            </div>
                         {% endif %}
+                        {% if is_superuser %}
+                            <div class="admin_cont">
+                                <a class="registration_label" href="{% url 'admin:index' %}">Админка</a>
+                            </div>
+                        {% endif %}
+
+                        
                     </div>
                         <div class="container_for_label_and_button">
                             <div class="username_container">

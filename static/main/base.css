@@ -25,6 +25,10 @@
 .link_to_for_staff{
     margin: 8vh 30vh 0px 0px;
     font-family: "Shopen" ;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
     
 }
 .label_user_name{

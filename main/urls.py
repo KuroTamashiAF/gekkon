@@ -1,3 +1,6 @@
+from django.conf import settings
+from django.conf.urls.static import static
+
 """
 URL configuration for HenkonKnowledgeTest project.
 
@@ -26,4 +29,4 @@ urlpatterns = [
     path("index/", views.IndexView.as_view(), name="index"),
     path("registration/", views.RegistrationStudentView.as_view(), name="registration"),
     path("logout/", views.logout, name="logout"),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,32 +1,126 @@
 {% extends "base.html" %}
 {% load static %}
+{% comment %} {% extends "base.html" %}
+{% load static %}
+
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "gtests/take_test.css" %}">
+{% endblock css %}
+
+{% block title %}
+    <title> {{ title }}</title>
+{% endblock title %}
 
 
 {% block content %}
-    <h1>{{ test.title }}</h1>
-    <h1>{{ test.id }}</h1>
+    <div class="take_test_container">
+        <h1>{{ test.title }}</h1>
+        <h1>{{ test.id }}</h1>
 
-<form method="post">
-    {% csrf_token %}
+        <form method="post">
+            {% csrf_token %}
 
-    {% for field in form %}
-    <div class="question">
-        <h4>{{ field.label }}</h4>
+            {% for field in form %}
+                <div class="question">
+                    <h4>{{ field.label }}</h4>   <!-- ВОПРОС -->
 
-        {% for choice in field %}
-            <div class="form-check">
-                {{ choice.tag }}
-                <label class="form-check-label" for="{{ choice.id_for_label }}">
-                    {{ choice.choice_label }}
-                </label>
-            </div>
-        {% endfor %}
+                    {% for choice in field %}
+                        <div class="form-check">
+                            {{ choice.tag }}
+                            <label class="form-check-label" for="{{ choice.id_for_label }}">
+                                {{ choice.choice_label }}
+                            </label>
+                        </div>
+                    {% endfor %}
+                </div>
+                <hr>
+            {% endfor %}
+
+            <button type="submit" class="btn btn-success">Завершить тест</button>
+        </form>
     </div>
-    <hr>
-{% endfor %}
-
-    <button type="submit" class="btn btn-success">Завершить тест</button>
-</form>
 {% comment %} <a href="{% url "gtests:test_results test.id" %}"></a> {% endcomment %}
+
+{% comment %} {% endblock content %} {% endcomment %}
+
+
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static "gtests/take_test.css" %}">
+{% endblock css %}
+
+{% block title %}
+<title>{{ title }}</title>
+{% endblock title %}
+
+{% block content %}
+
+    {% for field, question  in form_questions %}
+
+        <div class="take_tests_content_container">
+            <div class="title_cont">
+                <h1>{{test.title}}</h1>
+            </div>
+
+                <div class="flex_container">
+
+                    {% if question.image %}
+                        <div class="image_container">
+                            <img class="img_question_container" src="{{ question.image.url }}" alt="картинка">
+                        </div>
+                        
+                    {% endif %}
+                    
+                    <div class="form_container"></div>
+                    <form method="post" class="test-body">
+                    {% csrf_token %}
+
+                        
+                        <div class="question-block">
+
+                            <!-- ЛЕВАЯ ЧАСТЬ -->
+                            <div class="question-left">
+                                <div class="timer">
+                                    {% comment %} ВРЕМЯ НА ТЕСТ: 20 МИНУТ {% endcomment %}
+                                </div>
+                            </div>
+
+                            <!-- ПРАВАЯ ЧАСТЬ -->
+                            <div class="question-right">
+
+                                <!-- ВОПРОС -->
+                                <div class="question-title">
+                                    {{ field.label }}
+                                    {{field.image.url}}
+                                </div>
+
+                                <!-- ВАРИАНТЫ -->
+                                <div class="answers">
+                                    {% for choice in field %}
+                                    <label class="answer">
+                                        {{ choice.tag }}
+                                        <span>{{ choice.choice_label }}</span>
+                                    </label>
+                                {% endfor %}
+                            </div>
+
+                        </div>
+
+                    </div>
+            
+
+                        <div class="submit-block">
+                            <button type="submit">Завершить тест</button>
+                        </div>
+
+                    </form>
+    {% endfor %}
+        
+
+      
+        
+    </div>
 
 {% endblock content %}

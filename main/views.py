@@ -1,21 +1,14 @@
-
-
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
-
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
-
-
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView
 from django.contrib.auth.views import LoginView
 from django.views.generic import CreateView
 from main.forms import StudentLoginForm, StudentRegistrationForm
-from main.models import Student
-from django.shortcuts import get_object_or_404
 from django.contrib import auth, messages
-from gtests.models import TestCategories, Test
+from main.servises import get_available_tests_for_user
 
 
 # Create your views here.
@@ -38,7 +31,7 @@ class StudentLoginView(LoginView):
         context = super().get_context_data(**kwargs)
         context["title"] = "Геккон тестирование - Авторизация"
         return context
-
+    
 
 class IndexView(LoginRequiredMixin, TemplateView):
     template_name = "main/index.html"
@@ -48,10 +41,10 @@ class IndexView(LoginRequiredMixin, TemplateView):
         context = super().get_context_data(**kwargs)
         context["title"] = "Геккон тестирование - Главная"
         if user.is_authenticated:
+            context["is_superuser"] = user.is_superuser
             context["username"] = user.username
             context["is_staff"] = user.is_staff
-            context["tests"] = Test.objects.all()
-
+            context["tests"] = get_available_tests_for_user(user)
         return context
 
 

@@ -1,15 +1,12 @@
-from re import S
-
-from django.shortcuts import redirect, render
-
-# Create your views here.
-from django.template.base import kwarg_re
+from django.shortcuts import redirect
 from django.views.generic import DetailView, FormView
-from django.urls import reverse_lazy, reverse
+from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404
 from django.contrib import messages
-from gtests.models import Test, Question, UserAnswer, UserTestResult, AnswerOption
+from gtests.models import Test, UserAnswer, UserTestResult
 from gtests.forms import TestForm
+from main.servises import get_available_tests_for_user
+from django.core.exceptions import PermissionDenied
 
 
 class TestDetailView(DetailView):
@@ -17,9 +14,15 @@ class TestDetailView(DetailView):
     template_name = "gtests/test_detail.html"
     context_object_name = "test"
 
+    def get_queryset(self):
+        return get_available_tests_for_user(self.request.user)
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["username"] = self.request.user.username 
+        context["title"] = "Геккон тестирование - Начало Теста "
+        context["is_staff"] = self.request.user.is_staff
+        context["is_superuser"] = self.request.user.is_superuser
+        context["username"] = self.request.user.username
         return context
 
 
@@ -29,12 +32,16 @@ class TakeTestView(FormView):
     # success_url = reverse_lazy("gtests:test_results", kwargs = {"test_id":test.id})
 
     def get_success_url(self):
-        return reverse_lazy("gtests:test_results", kwargs = {"test_id":self.test.id})
-
+        return reverse_lazy("gtests:test_results", kwargs={"test_id": self.test.id})
 
     def dispatch(self, request, *args, **kwargs):
-        self.test = get_object_or_404(Test, id=self.kwargs["test_id"])
-        # print(self.test)
+        test = get_object_or_404(Test, id=self.kwargs["test_id"])
+        allowed_tests = get_available_tests_for_user(request.user)
+
+        if test not in allowed_tests:
+            raise PermissionDenied("Нет доступа к этому тесту")
+
+        self.test = test
         self.questions = self.test.questions.all()
         return super().dispatch(request, *args, **kwargs)
 
@@ -46,16 +53,19 @@ class TakeTestView(FormView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["test"] = self.test
+        context["title"] = "Геккон тестирование - Тест"
+        context["is_staff"] = self.request.user.is_staff
+        context["is_superuser"] = self.request.user.is_superuser
         context["username"] = self.request.user.username
+        context["form_questions"] = zip(self.get_form(), self.questions)
         return context
 
     def form_valid(self, form):
         # Сохраняем ответы пользователя
         self.save_user_answers(form.cleaned_data)
-    
+
         # Рассчитываем и сохраняем результат
         score_data = self.calculate_score()
-        print("CREATING RESULT")
         result = UserTestResult.objects.create(
             user=self.request.user,
             test=self.test,
@@ -63,26 +73,21 @@ class TakeTestView(FormView):
             total_questions=score_data["total"],
             correct_answers=score_data["correct"],
         )
-        # form.save()
 
         messages.success(
             self.request,
             f'Тест завершён! Ваш результат: {score_data["percentage"]:.1f}%',
         )
-        
-        return redirect("gtests:test_results", pk=result.id)
-    
 
+        return redirect("gtests:test_results", pk=result.id)
 
     def form_invalid(self, form):
         print(form.errors)
         return super().form_invalid(form)
 
-
     def save_user_answers(self, cleaned_data):
         UserAnswer.objects.filter(
-            user=self.request.user,
-            question__test=self.test
+            user=self.request.user, question__test=self.test
         ).delete()
 
         answers_to_create = []
@@ -102,8 +107,8 @@ class TakeTestView(FormView):
                     is_correct=selected_option.is_correct,
                 )
             )
-            UserAnswer.objects.bulk_create(answers_to_create)
-        
+        UserAnswer.objects.bulk_create(answers_to_create)
+
     def calculate_score(self):
         total_questions = self.questions.count()
         correct_answers = UserAnswer.objects.filter(
@@ -130,13 +135,9 @@ class TestResultsView(DetailView):
         result = self.object
 
         user_answers = UserAnswer.objects.filter(
-            user=result.user,
-            question__test=result.test
+            user=result.user, question__test=result.test
         ).select_related("question", "selected_option")
         context["username"] = self.request.user.username
         context["user_answers"] = user_answers
 
-
-
         return context
-

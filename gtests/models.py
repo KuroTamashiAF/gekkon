@@ -22,6 +22,7 @@ class Test(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
     time_limit = models.IntegerField(help_text="Время в минутах", null=True, blank=True)
+    image  = models.ImageField(upload_to="tests_images/", blank=True, null=True, verbose_name="Изображение")
 
     class Meta:
         db_table = "test"
@@ -36,7 +37,7 @@ class Question(models.Model):
     test = models.ForeignKey(Test, on_delete=models.CASCADE, related_name="questions")
     text = models.TextField()
     image = image = models.ImageField(
-        upload_to="goods_images", blank=True, null=True, verbose_name="Изображение")
+        upload_to="question_images/", blank=True, null=True, verbose_name="Изображение", default="question_images/plug.jpg")
 
     class Meta:
         db_table = "Question"

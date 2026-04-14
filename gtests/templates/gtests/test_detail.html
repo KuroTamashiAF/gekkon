@@ -1,15 +1,37 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block css %}
+    <link rel="stylesheet" href="{% static "/gtests/test_detail.css" %}">
+{% endblock css %}
+
+{% block title %}
+    <title>  {{title}} </title>
+
+{% endblock title %}
 
 {% block content %}
-    <h1>{{ test.title }}</h1>
-<p>{{ test.description }}</p>
-{% if test.time_limit %}
-    <p>Время на тест: {{ test.time_limit }} минут</p>
-{% endif %}
-<a href="{% url 'gtests:take_test' test.id %}" class="btn btn-primary">Начать тест</a>
+    <div class="test_detail_container">       
+            <div class="title_container">
+                <h1>{{ test.title }}</h1>
+            </div>
+        <div class="flex_container">
+            {% if test.image %}
+                <div class="image_test_container">
+                    <img src="{{ test.image.url }}" alt="Картинка теста" class="test_image_teg">
+                </div>
+            {% endif %}
+            <div class="discription_container">
+                <p>{{ test.description }}</p>
+            </div>
+            
+        </div>
+        {% if test.time_limit %}
+            <div class="time_to_test_container">
+                <p>Время на тест: {{ test.time_limit }} минут</p>
+            </div>
+        {% endif %}
 
-
-
+        <a class="start_btn" href="{% url 'gtests:take_test' test.id %}" class="btn btn-primary" >Начать тест</a>
+    </div>
 {% endblock content %}
