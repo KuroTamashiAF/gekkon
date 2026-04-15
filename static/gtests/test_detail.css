@@ -12,7 +12,7 @@
 .flex_container{
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: start;
     gap: 5vh;
 
     margin: 3vh 0vh 3vh 0vh;

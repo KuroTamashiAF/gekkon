@@ -29,8 +29,12 @@
                     <div class="link_to_for_staff">
                         {% if is_staff %}
                             <div class="registration_cont">
-                                <a class="registration_label" href="{% url "main:registration" %}">Регистрация студента     </a>
+                                <a class="registration_label" href="{% url "main:registration" %}">Регистрация студента</a>
                             </div>
+                             {% comment %} <div class="registration_cont">
+                                <a class="registration_label" href="{% url "main:registration" %}">Регистрация студента</a>
+                            </div> {% endcomment %}
+
                         {% endif %}
                         {% if is_superuser %}
                             <div class="admin_cont">

@@ -42,30 +42,46 @@ class TakeTestView(FormView):
             raise PermissionDenied("Нет доступа к этому тесту")
 
         self.test = test
-        self.questions = self.test.questions.all()
+        self.questions = list(self.test.questions.all())
+        self.q_index = int(request.GET.get("q", 0)) # пагинация номер вопроса
+
+        if self.q_index <0 or self.q_index >= len(self.questions): # пагинация проверка выхода за границы 
+            self.q_index = 0
+        
+        self.current_question = self.questions[self.q_index]
+
         return super().dispatch(request, *args, **kwargs)
 
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()
-        kwargs["questions"] = self.questions
+        # kwargs["questions"] = self.questions
+        kwargs["questions"] = [self.current_question]   # пагинация передаю 1 вопрос 
         return kwargs
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["test"] = self.test
+        context["question"] = self.current_question
+        context["q_index"] = self.q_index
+        context["total"] = len(self.questions)
         context["title"] = "Геккон тестирование - Тест"
         context["is_staff"] = self.request.user.is_staff
         context["is_superuser"] = self.request.user.is_superuser
         context["username"] = self.request.user.username
-        context["form_questions"] = zip(self.get_form(), self.questions)
+        # context["form_questions"] = zip(self.get_form(), self.questions)
         return context
 
     def form_valid(self, form):
         # Сохраняем ответы пользователя
         self.save_user_answers(form.cleaned_data)
+        next_q = self.q_index + 1    
+
+        if next_q < len(self.questions):   # Пагинация если есть следующий вопрос 
+            return redirect(f"{self.request.path}?q={next_q}")
 
         # Рассчитываем и сохраняем результат
         score_data = self.calculate_score()
+        
         result = UserTestResult.objects.create(
             user=self.request.user,
             test=self.test,
@@ -86,31 +102,24 @@ class TakeTestView(FormView):
         return super().form_invalid(form)
 
     def save_user_answers(self, cleaned_data):
-        UserAnswer.objects.filter(
-            user=self.request.user, question__test=self.test
-        ).delete()
+        question = self.current_question
 
-        answers_to_create = []
+        selected_option = cleaned_data.get(f"question_{question.id}")
 
-        for question in self.questions:
-            # ❗ FIX: теперь это УЖЕ объект AnswerOption
-            selected_option = cleaned_data.get(f"question_{question.id}")
+        if not selected_option:
+            return
 
-            if not selected_option:
-                continue
-
-            answers_to_create.append(
-                UserAnswer(
-                    user=self.request.user,
-                    question=question,
-                    selected_option=selected_option,
-                    is_correct=selected_option.is_correct,
-                )
-            )
-        UserAnswer.objects.bulk_create(answers_to_create)
+        UserAnswer.objects.update_or_create(
+            user=self.request.user,
+            question=question,
+            defaults={
+                "selected_option": selected_option,
+                "is_correct": selected_option.is_correct,
+            },
+        )
 
     def calculate_score(self):
-        total_questions = self.questions.count()
+        total_questions = len(self.questions)
         correct_answers = UserAnswer.objects.filter(
             user=self.request.user, question__test=self.test, is_correct=True
         ).count()
@@ -139,5 +148,7 @@ class TestResultsView(DetailView):
         ).select_related("question", "selected_option")
         context["username"] = self.request.user.username
         context["user_answers"] = user_answers
+        context["is_staff"] = self.request.user.is_staff
+        context["is_superuser"] = self.request.user.is_superuser
 
         return context

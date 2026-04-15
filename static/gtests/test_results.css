@@ -1,0 +1,18 @@
+.take_tests_container{
+    padding: 0vh 20vh 0vh 20vh;
+    margin: 2vh 0vh 15vh 5vh;
+    font-family: "Shopen";
+}
+.card-title{
+    margin: 3vh 0vh 3vh 0vh ;
+}
+.result_flex_cont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.img_status{
+    height: 10vh;
+    width: 10vh;
+}

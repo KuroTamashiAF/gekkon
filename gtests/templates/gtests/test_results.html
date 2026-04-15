@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 
-
+{% block css %}
+    <link rel="stylesheet" href="{% static "/gtests/test_results.css" %}">
+{% endblock css %}
 
 
 {% block content %}
@@ -14,7 +16,7 @@
 
  {% endcomment %}
 
-    <div class="container mt-4">
+    <div class="take_tests_container">
 
         <h2>Результат теста: {{ result.test.title }}</h2>
 
@@ -24,46 +26,60 @@
         </div>
 
         <hr>
+        {% if is_staff %}
+            {% for answer in user_answers %}
 
-        {% for answer in user_answers %}
+                <div class="card mb-3">
 
-            <div class="card mb-3">
+                    <div class="card-body">
 
-                <div class="card-body">
+                        <!-- ВОПРОС -->
+                        <h2 class="card-title">
+                            {{ answer.question.text }}
+                        </h2>
 
-                    <!-- ВОПРОС -->
-                    <h5 class="card-title">
-                        {{ answer.question.text }}
-                    </h5>
+                        <!-- ОТВЕТ ПОЛЬЗОВАТЕЛЯ -->
+                        <p class="mb-1">
+                            <strong>Ваш ответ:</strong>
+                            {{ answer.selected_option.text }}
+                        </p>
 
-                    <!-- ОТВЕТ ПОЛЬЗОВАТЕЛЯ -->
-                    <p class="mb-1">
-                        <strong>Ваш ответ:</strong>
-                        {{ answer.selected_option.text }}
-                    </p>
+                        <!-- ПРАВИЛЬНЫЙ ОТВЕТ -->
+                        <p class="mb-1">
+                            <strong>Правильный ответ:</strong>
+                            {% for option in answer.question.options.all %}
+                                {% if option.is_correct %}
+                                    {{ option.text }}
+                                {% endif %}
+                            {% endfor %}
+                        </p>
 
-                    <!-- ПРАВИЛЬНЫЙ ОТВЕТ -->
-                    <p class="mb-1">
-                        <strong>Правильный ответ:</strong>
-                        {% for option in answer.question.options.all %}
-                            {% if option.is_correct %}
-                                {{ option.text }}
-                            {% endif %}
-                        {% endfor %}
-                    </p>
+                        <!-- ИНДИКАТОР -->
+                        {% if answer.is_correct %}
+                        <div class="result_flex_cont">
+                            <div class="label_flex_cont">
+                                <span class="status_question">Верно</span>
+                            </div>
+                            <div class="img_flex_cont">
+                                <img class="img_status" src="{% static "img/OK.png" %}" alt="ОК">
+                            </div>
+                        </div>
+                        {% else %}
+                            <div class="result_flex_cont">
+                                <div class="label_flex_cont">
+                                    <span class="status_question">Неверно</span>
+                                </div>
+                                <div class="img_flex_cont">
+                                    <img class="img_status" src="{% static "img/NotOK.png" %}" alt="НЕОК">
+                                </div>
+                        {% endif %}
 
-                    <!-- ИНДИКАТОР -->
-                    {% if answer.is_correct %}
-                        <span class="badge bg-success">Верно</span>
-                    {% else %}
-                        <span class="badge bg-danger">Неверно</span>
-                    {% endif %}
+                    </div>
 
                 </div>
 
-            </div>
-
-        {% endfor %}
+            {% endfor %}
+        {% endif %}
 
         {% comment %} <a href="{% url 'gtests:test_list' %}" class="btn btn-primary mt-3">
             Вернуться к тестам

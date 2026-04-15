@@ -44,6 +44,9 @@ class Question(models.Model):
         verbose_name = "Вопрос"
         verbose_name_plural = "Вопросы"
 
+    def __str__(self):
+        return f"{self.text}"
+
 
 class AnswerOption(models.Model):
     question = models.ForeignKey(
