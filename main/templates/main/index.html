@@ -18,11 +18,19 @@
         <div class="index_content_container">
             <h2>Доступные тесты </h2>
             {% for test in tests %}
-            <div class="caterory_cont">
-                <ul>
-                    <li> <a href="{% url "gtests:test_detail" test.id %}">{{ test.title}}</a> </li>
-                </ul>
-            </div>
+            <div class="flex_container_to_tests">
+                <div class="caterory_cont">
+                    <ul>
+                        <li> <a href="{% url "gtests:test_detail" test.id %}">{{ test.title}} </a> </li>
+                    </ul>
+                </div>
+                 <div class="used_attempts_container">
+                    <h3> 0 / {{ attemts_count }}</h3>
+                </div>
+               
+
+
+            </div> 
                 
             {% endfor %}
 

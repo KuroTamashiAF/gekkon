@@ -18,36 +18,29 @@ class Test(models.Model):
     def __str__(self):
         return str(self.title)
 
+
 class UserTestAttempt(models.Model):
     user = models.ForeignKey(Student, on_delete=models.CASCADE)
     test = models.ForeignKey(Test, on_delete=models.CASCADE)
     started_at = models.DateTimeField(auto_now_add=True)
     completed = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
 
     class Meta:
-        unique_together = ("user", "test")  # ❗ 1 попытка на тест
-
-
-# Create your models here.
-class TestCategories(models.Model):
-    name = models.CharField(
-        max_length=150, unique=True, verbose_name="Название категории"
-    )
-
-    class Meta:
-        db_table = "category"
-        verbose_name = "Категорию"
-        verbose_name_plural = "Категории"
-        ordering = ("id",)
+        # db_table = "UserTestAttempt"
+        verbose_name = "Попытка"
+        verbose_name_plural = "Попытки"
 
     def __str__(self):
-        return str(self.name)
+        return f"{self.user} | {self.test} | {self.completed}"
+    
+
 
 
 class Question(models.Model):
     test = models.ForeignKey(Test, on_delete=models.CASCADE, related_name="questions")
     text = models.TextField()
-    image = image = models.ImageField(
+    image = models.ImageField(
         upload_to="question_images/",
         blank=True,
         null=True,
@@ -73,8 +66,8 @@ class AnswerOption(models.Model):
 
     class Meta:
         db_table = "AnswerOption"
-        verbose_name = "Опции ответа"
-        verbose_name_plural = "Опции ответов"
+        verbose_name = "Вариант ответа"
+        verbose_name_plural = "Варианты ответов"
 
     def __str__(self):
         return f"{self.text}"
@@ -82,8 +75,8 @@ class AnswerOption(models.Model):
 
 class UserTestResult(models.Model):
     user = models.ForeignKey(Student, on_delete=models.CASCADE)
-    # test = models.ForeignKey(Test, on_delete=models.CASCADE)
-    attempt = models.OneToOneField("gtests.UserTestAttempt", on_delete=models.CASCADE, related_name="result", null=True
+    attempt = models.OneToOneField(
+        "gtests.UserTestAttempt", on_delete=models.CASCADE, related_name="result"
     )
     score = models.FloatField()
     total_questions = models.IntegerField()
@@ -93,13 +86,17 @@ class UserTestResult(models.Model):
     class Meta:
         db_table = "UserTestResult"
         verbose_name = "Результаты теста"
-        verbose_name_plural = "Результаты тестов"
+        verbose_name_plural = "Результаты тестов | процентовка"
+
+    def __str__(self):
+        return f"{self.user} | {self.score}"
 
 
 class UserAnswer(models.Model):
     user = models.ForeignKey(Student, on_delete=models.CASCADE)
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    attempt = models.ForeignKey("gtests.UserTestAttempt", on_delete=models.CASCADE, related_name="answers", null=True
+    attempt = models.ForeignKey(
+        "gtests.UserTestAttempt", on_delete=models.CASCADE, related_name="answers"
     )
     selected_option = models.ForeignKey(AnswerOption, on_delete=models.CASCADE)
     is_correct = models.BooleanField()
@@ -109,3 +106,5 @@ class UserAnswer(models.Model):
         verbose_name = "Ответ пользователя"
         verbose_name_plural = "Ответ пользователя"
 
+    def __str__(self):
+        return f"{self.user} -> {self.question}-> {self.selected_option}"

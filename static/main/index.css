@@ -9,3 +9,9 @@
     font-family: "Shopen";
 
 }
+.flex_container_to_tests{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: start; */
+    gap:30px;
+}

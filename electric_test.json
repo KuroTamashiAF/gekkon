@@ -1,0 +1,111 @@
+{
+  "questions": [
+    {
+      "question": "Что измеряет амперметр?",
+      "options": [
+        {
+          "text": "Напряжение",
+          "is_correct": false
+        },
+        {
+          "text": "Сопротивление",
+          "is_correct": false
+        },
+        {
+          "text": "Силу тока",
+          "is_correct": true
+        },
+        {
+          "text": "Мощность",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Какое устройство преобразует электрическую энергию в механическую?",
+      "options": [
+        {
+          "text": "Генератор",
+          "is_correct": false
+        },
+        {
+          "text": "Трансформатор",
+          "is_correct": false
+        },
+        {
+          "text": "Электродвигатель",
+          "is_correct": true
+        },
+        {
+          "text": "Резистор",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Как изменяется общее сопротивление при последовательном соединении?",
+      "image": "series.png",
+      "options": [
+        {
+          "text": "Уменьшается",
+          "is_correct": false
+        },
+        {
+          "text": "Складывается",
+          "is_correct": true
+        },
+        {
+          "text": "Не изменяется",
+          "is_correct": false
+        },
+        {
+          "text": "Становится нулевым",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Как изменяется ток в параллельной цепи?",
+      "image": "parallel.png",
+      "options": [
+        {
+          "text": "Одинаков во всех ветвях",
+          "is_correct": false
+        },
+        {
+          "text": "Делится по ветвям",
+          "is_correct": true
+        },
+        {
+          "text": "Всегда равен нулю",
+          "is_correct": false
+        },
+        {
+          "text": "Увеличивается в 2 раза",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "question": "Единица измерения сопротивления:",
+      "options": [
+        {
+          "text": "Вольт",
+          "is_correct": false
+        },
+        {
+          "text": "Ампер",
+          "is_correct": false
+        },
+        {
+          "text": "Ом",
+          "is_correct": true
+        },
+        {
+          "text": "Ватт",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}

@@ -45,6 +45,7 @@ class IndexView(LoginRequiredMixin, TemplateView):
             context["username"] = user.username
             context["is_staff"] = user.is_staff
             context["tests"] = get_available_tests_for_user(user)
+            context["attemts_count"] = user.student_type.max_attempts
         return context
 
 

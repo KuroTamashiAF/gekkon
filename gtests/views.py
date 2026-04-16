@@ -40,15 +40,47 @@ class TakeTestView(FormView):
         if self.test not in allowed_tests:
             raise PermissionDenied()
 
-        # ✅ Получаем или создаём попытку
-        self.attempt, _ = UserTestAttempt.objects.get_or_create(
+        attempts_count = UserTestAttempt.objects.filter(
             user=request.user,
             test=self.test,
+            completed=True,
+            is_active=True,
+        ).count()
+
+        max_attempts = getattr(request.user.student_type, "max_attempts", 1)
+
+        if attempts_count >= max_attempts:
+            messages.error(request, "Вы исчерпали количество попыток для этого теста")
+            return redirect("main:index")
+
+        # ✅ Получаем или создаём попытку
+
+        attempt_id = request.session.get("attempt_id")
+
+        if attempt_id:
+            try:
+                self.attempt = UserTestAttempt.objects.get(
+                id=attempt_id,
+                user=request.user,
+                test=self.test,
+                is_active=True 
+            )
+            except UserTestAttempt.DoesNotExist:
+                self.attempt = None
+        else:
+            self.attempt = None
+
+        if not self.attempt:
+            self.attempt = UserTestAttempt.objects.create(
+            user=request.user,
+            test=self.test,
+            is_active=True
         )
+        request.session["attempt_id"] = self.attempt.id
 
         # 🚫 Если тест уже завершён
         if self.attempt.completed:
-            return redirect("main:home")
+            return redirect("main:index")
 
         self.questions = list(self.test.questions.all())
 
@@ -80,8 +112,6 @@ class TakeTestView(FormView):
         kwargs["questions"] = [self.current_question]
         return kwargs
 
-
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["test"] = self.test
@@ -96,9 +126,7 @@ class TakeTestView(FormView):
         return context
 
     def form_valid(self, form):
-        selected_option = form.cleaned_data.get(
-            f"question_{self.current_question.id}"
-        )
+        selected_option = form.cleaned_data.get(f"question_{self.current_question.id}")
 
         if selected_option:
             UserAnswer.objects.create(
@@ -110,8 +138,6 @@ class TakeTestView(FormView):
             )
 
         return redirect(f"{self.request.path}?q={self.q_index + 1}")
-
-
 
     def form_invalid(self, form):
         print(form.errors)
@@ -134,7 +160,6 @@ class TakeTestView(FormView):
             },
         )
 
-
     def finish_test(self):
         total = self.attempt.answers.count()
         correct = self.attempt.answers.filter(is_correct=True).count()
@@ -142,6 +167,8 @@ class TakeTestView(FormView):
         percentage = (correct / total * 100) if total > 0 else 0
 
         result = UserTestResult.objects.create(
+            user=self.request.user,
+            # test = self.test,
             attempt=self.attempt,
             score=percentage,
             total_questions=total,
@@ -151,13 +178,9 @@ class TakeTestView(FormView):
         self.attempt.completed = True
         self.attempt.save()
 
-        messages.success(
-            self.request,
-            f"Тест завершён! Результат: {percentage:.1f}%"
-        )
-
+        messages.success(self.request, f"Тест завершён! Результат: {percentage:.1f}%")
+        self.request.session.pop("attempt_id", None)
         return redirect("gtests:test_results", pk=result.id)
-
 
     # def calculate_score(self):
     #     total_questions = len(self.questions)
@@ -174,6 +197,7 @@ class TakeTestView(FormView):
     #         "percentage": percentage,
     #     }
 
+
 @method_decorator(never_cache, name="dispatch")
 class TestResultsView(DetailView):
     model = UserTestResult
@@ -184,9 +208,9 @@ class TestResultsView(DetailView):
         context = super().get_context_data(**kwargs)
         result = self.object
 
-        user_answers  = result.attempt.answers.select_related(
-    "question", "selected_option"
-)
+        user_answers = result.attempt.answers.select_related(
+            "question", "selected_option"
+        )
 
         context["username"] = self.request.user.username
         context["user_answers"] = user_answers

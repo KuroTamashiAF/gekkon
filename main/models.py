@@ -30,7 +30,7 @@ class Student(AbstractUser):
 
     @property
     def get_available_tests(self):
-        Test = apps.get_model('gtests', 'Test')
+        Test = apps.get_model("gtests", "Test")
 
         if self.student_type:
             return self.student_type.tests.all()
@@ -44,12 +44,14 @@ class StudentType(models.Model):
         blank=True,
         related_name="allowed_for_student_types",
     )
-    # student = models.ForeignKey("main.Student", on_delete=models.CASCADE)
+    max_attempts = models.PositiveIntegerField(
+        default=1, verbose_name="Максимум попыток на тест"
+    )
 
     class Meta:
         db_table = "Available tests"
-        verbose_name = "Доступные тесты"
-        verbose_name_plural = "Доступные тесты"
+        verbose_name = "Категория студента"
+        verbose_name_plural = "Категории студентов"
 
     def __str__(self):
         return f"{self.name}"
