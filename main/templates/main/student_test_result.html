@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+
+
+{% endblock title %}
+
+
+{% block css %}
+
+    <link rel="stylesheet" href="{% static "main/student_test_result.css" %}">
+
+{% endblock css %}
+
+
+{% block content %}
+    <div class="student_test_result_container">
+    
+        <a class="back-btn" href="{% url 'main:student_profile' attempt.user.id %}">
+            ← Назад к студенту
+        </a>
+
+        <div class="header-card">
+            <div class="student-name">
+                {{ attempt.user.username }}
+            </div>
+
+            <div class="test-title">
+                Тест: {{ attempt.test.title }}
+            </div>
+
+            {% if attempt.result %}
+                <div class="score-box">
+                    Результат: {{ attempt.result.score }}%
+                    ({{ attempt.result.correct_answers }}/{{ attempt.result.total_questions }})
+                </div>
+            {% endif %}
+        </div>
+
+        {% for answer in attempt.answers.all %}
+            <div class="question-card">
+
+                <div class="question-number">
+                    Вопрос {{ forloop.counter }}
+                </div>
+
+                <div class="question-text">
+                    {{ answer.question.text }}
+                </div>
+
+                {% if answer.question.image %}
+                    <img class="question-image"
+                        src="{{ answer.question.image.url }}">
+                {% endif %}
+
+                <div class="answer-block">
+                    <strong>Ответ студента:</strong>
+                    {{ answer.selected_option.text }}
+                </div>
+
+                <div class="answer-block">
+                    <strong>Статус:</strong>
+
+                    {% if answer.is_correct %}
+                        <span class="correct">✅ Правильно</span>
+                    {% else %}
+                        <span class="wrong">❌ Неправильно</span>
+                    {% endif %}
+                </div>
+
+                <div class="correct-answer-box">
+                    <strong>Правильный ответ:</strong>
+
+                    <ul>
+                        {% for option in answer.question.options.all %}
+                            {% if option.is_correct %}
+                                <li>{{ option.text }}</li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            </div>
+        {% endfor %}
+
+    </div>
+
+
+
+
+{% endblock content %}

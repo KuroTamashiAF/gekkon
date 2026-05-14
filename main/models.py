@@ -26,7 +26,7 @@ class Student(AbstractUser):
         verbose_name_plural = "Студенты"
 
     def __str__(self) -> str:
-        return str(self.username)
+        return f"{self.username} ====>>> {self.first_name} {self.last_name} {self.surname}"
 
     @property
     def get_available_tests(self):

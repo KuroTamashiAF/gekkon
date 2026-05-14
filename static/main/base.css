@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.container_content {}
+
 .cont_messages{
     display: flex;
     justify-content: center;
@@ -35,8 +35,12 @@
     margin: 3vh;
 }
 .registration_label{
+    /* background-color: azure; */
     color: black;
     text-decoration: none;
+    /* border: 3px solid black;
+    border-radius: 10px;
+    padding: 3px; */
 }
 .container_for_label_and_button{
     margin: 5vh;

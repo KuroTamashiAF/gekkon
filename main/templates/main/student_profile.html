@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+
+    <title> {{ title }}</title>
+
+
+{% endblock title %}
+
+
+
+{% block css %}
+
+
+    <link rel="stylesheet" href="{% static "/main/student_profile.css" %}">
+
+
+{% endblock css %}
+
+
+{% block content %}
+    {% comment %} <div class="student_profile_continer">
+      <h2>Студент: {{ student.username }}</h2>
+
+<h3>Пройденные тесты</h3>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Тест</th>
+        <th>Дата прохождения</th>
+        <th>Подробнее</th>
+    </tr>
+
+    {% for attempt in attempts %}
+    <tr>
+        <td>{{ attempt.test.title }}</td>
+        <td>{{ attempt.started_at }}</td>
+        <td>
+            <a href="{% url 'main:student_result' attempt.id %}">
+                Открыть
+            </a>
+        </td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="3">Тесты не пройдены</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+    </div> {% endcomment %}
+    <div class="look_student_container">
+
+        <a class="back-btn" href="{% url 'main:result_student' %}">
+            ← Назад к списку студентов
+        </a>
+
+        <div class="profile-card">
+            <div class="student-name">
+                {{ student.last_name }} {{ student.first_name }} {{ student.surname }}
+            </div>
+
+            <div class="student-type">
+                Тип: {{ student.student_type }}
+            </div>
+            <div class="center_for_grid_container">
+                <div class="profile-subcart_grid_container">
+                    <div class="profile-subcard">
+                  <strong> Имя пользователя: {{ student.username }} </strong>
+                    </div>
+                    <div class="profile-subcard">
+                        <strong> Email: {{ student.email }} </strong>
+                    </div>
+                    <div class="profile-subcard">
+                        <strong> Предприятие: {{ student.enterprise }} </strong>
+                    </div>
+                    <div class="profile-subcard">
+                        <strong> Участок: {{ student.plot }} </strong>
+                    </div>
+                    <div class="profile-subcard">
+                        <strong> Должность: {{ student.function }} </strong>
+                    </div>
+                    <div class="profile-subcard">
+                        <strong> Дата регистрации: {{ student.date_joined }} </strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Пройденные тесты</h2>
+
+        {% if attempts %}
+            <div class="tests-grid">
+                {% for attempt in attempts %}
+                    <div class="test-card">
+
+                        <div class="test-title">
+                            {{ attempt.test.title }}
+                        </div>
+
+                        <div class="test-date">
+                            Дата: {{ attempt.started_at|date:"d.m.Y H:i" }}
+                        </div>
+
+                        <a class="open-btn"
+                        href="{% url 'main:student_result' attempt.id %}">
+                            Посмотреть ответы
+                        </a>
+
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="empty-block">
+                У студента пока нет пройденных тестов.
+            </div>
+        {% endif %}
+
+    </div>
+
+
+
+
+{% endblock content %}
+
+

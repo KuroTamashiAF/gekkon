@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 30px;
+    background: #f5f7fb;
+    font-family: Arial, sans-serif;
+}
+
+.student_test_result_container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #2d7ff9;
+    font-weight: bold;
+}
+
+.header-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.student-name {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.test-title {
+    font-size: 20px;
+    color: #555;
+}
+
+.question-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.question-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.question-image {
+    max-width: 350px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.answer-block {
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+.correct {
+    color: green;
+    font-weight: bold;
+}
+
+.wrong {
+    color: red;
+    font-weight: bold;
+}
+
+.correct-answer-box {
+    margin-top: 15px;
+    padding: 15px;
+    background: #eef9ee;
+    border-left: 5px solid green;
+    border-radius: 8px;
+}
+
+.question-number {
+    color: #888;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.score-box {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #222;
+}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+
+    <title> {{ title }}</title>
+
+{% endblock title %}
+
+
+{% block css %}
+
+    <link rel="stylesheet" href="{% static "/main/look_student.css" %}">
+
+{% endblock css %}
+
+
+{% block content  %}
+    <div class="look_student_container">
+
+        {% for student in students %}   
+            <a href=" {% url "main:student_profile" student.id %}"> {{ student.username }}</a>
+        {% endfor %}
+    </div>
+
+
+{% endblock content  %}
+

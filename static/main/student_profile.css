@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 30px;
+    background: #f5f7fb;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.center_for_grid_container{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.profile-subcart_grid_container{
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 15px
+}
+
+.profile-subcard {
+    background: rgb(159, 160, 238);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-size: 22px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.student-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.student-type {
+    color: #666;
+    font-size: 18px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.tests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.test-card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+.test-card:hover {
+    transform: translateY(-4px);
+}
+
+.test-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.test-date {
+    color: #666;
+    margin-bottom: 16px;
+}
+
+.open-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #2d7ff9;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+.open-btn:hover {
+    background: #1f65cc;
+}
+
+.empty-block {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    color: #777;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #2d7ff9;
+    font-weight: bold;
+}

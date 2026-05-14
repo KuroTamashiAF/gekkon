@@ -11,6 +11,7 @@
 
 {% block content %}
     <div class="registration_content_container">
+        <a class="back-btn" href="{% url "main:index" %}" > ← Назад к списку доступных тестов</a>
         <h2> Страница регистрации студента </h2>
         <div class="registration_container_forms">
             <form action="{% url "main:registration" %}" method="POST">

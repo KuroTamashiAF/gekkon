@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+
+    <title> {{ title }}</title>
+
+{% endblock title %}
+
+
+{% block css %}
+
+    <link rel="stylesheet" href="{% static "/main/look_student.css" %}">
+
+{% endblock css %}
+
+
+{% block content  %}
+    <a class="back-btn" href="{% url "main:index" %}" > ← Назад к списку доступных тестов</a>
+   <div class="container">
+    <h1>Выбор студента</h1>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Поиск студента...">
+    </div>
+
+    <div class="students-grid" id="studentsGrid">
+        {% for student in students %}
+            <div class="student-card">
+                <div class="student-name">{{ student.first_name }} {{ student.last_name }} {{ student.surname }}  </div>
+
+                <div class="student-type">
+                    {{ student.student_type }}
+                </div>
+
+                <a class="open-btn"
+                   href="{% url 'main:student_profile' student.id %}">
+                    Открыть профиль
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.student-card');
+
+    searchInput.addEventListener('keyup', function() {
+        const value = this.value.toLowerCase();
+
+        cards.forEach(card => {
+            const name = card.querySelector('.student-name').textContent.toLowerCase();
+
+            if (name.includes(value)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+</script>
+
+
+{% endblock content  %}
+

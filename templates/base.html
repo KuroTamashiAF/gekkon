@@ -34,8 +34,14 @@
                              {% comment %} <div class="registration_cont">
                                 <a class="registration_label" href="{% url "main:registration" %}">Регистрация студента</a>
                             </div> {% endcomment %}
-
                         {% endif %}
+
+                        {% if is_staff %}
+                            <div class="registration_cont">
+                                <a class="registration_label" href="{% url "main:result_student" %}">Результаты тестов</a>
+                            </div>
+                        {% endif %}
+
                         {% if is_superuser %}
                             <div class="admin_cont">
                                 <a class="registration_label" href="{% url 'admin:index' %}">Админка</a>
