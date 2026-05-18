@@ -29,7 +29,9 @@
                     <div class="link_to_for_staff">
                         {% if is_staff %}
                             <div class="registration_cont">
-                                <a class="registration_label" href="{% url "main:registration" %}">Регистрация студента</a>
+                                <a class="nav-btn {% if request.resolver_match.url_name == 'registration'%}active{% endif%}"
+                                
+                                href="{% url "main:registration" %}">Регистрация студента</a>
                             </div>
                              {% comment %} <div class="registration_cont">
                                 <a class="registration_label" href="{% url "main:registration" %}">Регистрация студента</a>
@@ -38,13 +40,14 @@
 
                         {% if is_staff %}
                             <div class="registration_cont">
-                                <a class="registration_label" href="{% url "main:result_student" %}">Результаты тестов</a>
+                                <a class="nav-btn {% if request.resolver_match.url_name == 'result_student'%}active{% endif%}"
+                                 href="{% url "main:result_student" %}">Результаты тестов</a>
                             </div>
                         {% endif %}
 
                         {% if is_superuser %}
                             <div class="admin_cont">
-                                <a class="registration_label" href="{% url 'admin:index' %}">Админка</a>
+                                <a class="nav-btn" href="{% url 'admin:index' %}">Админка</a>
                             </div>
                         {% endif %}
 

@@ -69,6 +69,9 @@ class RegistrationStudentView(LoginRequiredMixin, CreateView):  # Доделат
         context["title"] = "Геккон тестирование - Регистрация студента"
         if user.is_authenticated:
             context["username"] = user.username
+            context["is_superuser"] = user.is_superuser
+            context["username"] = user.username
+            context["is_staff"] = user.is_staff
 
         return context
 
