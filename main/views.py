@@ -48,6 +48,13 @@ class IndexView(LoginRequiredMixin, TemplateView):
             context["is_staff"] = user.is_staff
             context["tests"] = get_available_tests_for_user(user)
             context["attemts_count"] = user.student_type.max_attempts
+        #     context["attemts_used"] = UserTestAttempt.objects.filter(
+        #     user=self.request.user,
+        #     test=self.test,
+        #     completed=True,
+        #     is_active=True,
+        # ).count()
+
         return context
 
 

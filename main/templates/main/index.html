@@ -17,25 +17,41 @@
     {% block content %}
         <div class="index_content_container">
             <h2>Доступные тесты </h2>
-            {% for test in tests %}
-            <div class="flex_container_to_tests">
-                <div class="caterory_cont">
-                    <ul>
-                        <li> <a href="{% url "gtests:test_detail" test.id %}">{{ test.title}} </a> </li>
-                    </ul>
-                </div>
-                 <div class="used_attempts_container">
-                    <h3> 0 / {{ attemts_count }}</h3>
-                </div>
-               
-
-
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Поиск теста...">
+            </div>
+            <div class="grid_container">
+                {% for test in tests %}
+                    <div class="grid_item">
+                        <strong><h3 class="test_title"> {{test.title}} </h3></strong>
+                        <a class="link_to_test_btn" href="{% url "gtests:test_detail" test.id %}"> Открыть </a>
+                    </div>
+                {% endfor %}
             </div> 
-                
-            {% endfor %}
-
-           
         </div>
+        <script>
+            const searchInput = document.getElementById('searchInput');
+            const cards = document.querySelectorAll('.grid_item');
+
+                searchInput.addEventListener('keyup', function() {
+                    const value = this.value.toLowerCase();
+
+                    cards.forEach(card => {
+                        const name = card.querySelector('.test_title').textContent.toLowerCase();
+
+                        if (name.includes(value)) {
+                            card.style.display = "block";
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+                });
+</script>
+
+
+
+
+
 
     {% endblock content %}
 

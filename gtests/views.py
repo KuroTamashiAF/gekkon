@@ -159,7 +159,7 @@ class TakeTestView(FormView):
                 "is_correct": selected_option.is_correct,
             },
         )
-
+        
     def finish_test(self):
         total = self.attempt.answers.count()
         correct = self.attempt.answers.filter(is_correct=True).count()

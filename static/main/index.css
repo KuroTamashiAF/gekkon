@@ -9,9 +9,49 @@
     font-family: "Shopen";
 
 }
-.flex_container_to_tests{
+/* .flex_container_to_tests{
     display: flex;
     flex-direction: row;
-    /* justify-content: start; */
     gap:30px;
+} */
+ .grid_container{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    gap:30px;
+ }
+ .grid_item{
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.2s;
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+.test_title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+.link_to_test_btn{
+    display: inline-block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #f7f7f7;
+    font-weight: bold;
+    background-color: rgb(11, 52, 234);
+    border: 3px solid blue;
+    border-radius: 10px     ;
+    padding: 5px 5px;
+}
+.search-box {
+    margin-bottom: 30px;
+}
+.search-box input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
