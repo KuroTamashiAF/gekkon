@@ -98,7 +98,7 @@ class UserAnswer(models.Model):
     attempt = models.ForeignKey(
         "gtests.UserTestAttempt", on_delete=models.CASCADE, related_name="answers"
     )
-    selected_option = models.ForeignKey(AnswerOption, on_delete=models.CASCADE)
+    selected_option = models.ForeignKey(AnswerOption, on_delete=models.CASCADE, null=True, blank=True)
     is_correct = models.BooleanField()
 
     class Meta:

@@ -49,5 +49,11 @@
     border-radius: 8px;
     text-decoration: none;
 }
-
+.timer-box{
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #d62828;
+    margin-bottom: 20px;
+}
 

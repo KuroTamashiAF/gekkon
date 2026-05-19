@@ -34,15 +34,16 @@
 
         <!-- ФОРМА -->
         <div class="form_container">
-            <form method="post" class="test-body">
+            <form method="post" class="test-body" id="test-form">
                 {% csrf_token %}
 
                 <div class="question-block">
 
                     <!-- ЛЕВАЯ ЧАСТЬ (таймер можно потом вставить) -->
                     <div class="question-left">
-                        <div class="timer">
+                        <div class="timer-box">
                             <!-- Таймер -->
+                            Осталось времени <span id="timer"></span>
                         </div>
                     </div>
 
@@ -91,5 +92,30 @@
 </div>
 
 <script src="{% static 'js/script.js' %}"></script>
+<script>
+    let totalSeconds = {{ time_limit }} * 60;
+
+    function updateTimer() {
+        let minutes = Math.floor(totalSeconds / 60);
+        let seconds = totalSeconds % 60;
+
+        document.getElementById("timer").textContent =
+            `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+        if (totalSeconds <= 0) {
+            clearInterval(timerInterval);
+
+            alert("Время вышло. Тест завершён.");
+
+            document.getElementById("test-form").submit();
+        }
+
+        totalSeconds--;
+    }
+
+    updateTimer();
+
+    let timerInterval = setInterval(updateTimer, 1000);
+</script>
 
 {% endblock content %}

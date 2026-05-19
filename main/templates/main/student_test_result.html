@@ -3,7 +3,7 @@
 
 
 {% block title %}
-
+    <title> {{title}} </title>
 
 {% endblock title %}
 
@@ -24,7 +24,7 @@
 
         <div class="header-card">
             <div class="student-name">
-                {{ attempt.user.username }}
+                {{ attempt.user.first_name }} {{ attempt.user.last_name }} {{ attempt.user.surname }}
             </div>
 
             <div class="test-title">
@@ -57,7 +57,13 @@
 
                 <div class="answer-block">
                     <strong>Ответ студента:</strong>
-                    {{ answer.selected_option.text }}
+                    {% if  answer.selected_option %}
+                        <span class="answered">{{ answer.selected_option.text }}</span>
+                    {% else %}
+                        <span class="not_answered"> Не ответил</span>
+                    {% endif %}
+
+                    
                 </div>
 
                 <div class="answer-block">

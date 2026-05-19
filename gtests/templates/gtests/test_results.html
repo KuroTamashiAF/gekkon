@@ -5,16 +5,13 @@
     <link rel="stylesheet" href="{% static "/gtests/test_results.css" %}">
 {% endblock css %}
 
+{% block title %}
+
+    <title> {{title}} </title>
+
+{% endblock title %}
 
 {% block content %}
-    {% comment %} НА ВСЯКИЙ СЛУЧАЙ СТАРЫЙ КОД {% endcomment %}
-    {% comment %} <h1>Результаты теста</h1>
-    <p>Тест: {{ result.test.title }}</p>
-    <p>Правильных ответов: {{ result.correctanswers }} из {{ result.total_questions }}</p>
-    <p>Результат: {{ result.score }}%</p>
-    <p>Завершено: {{ result.completed_at }}</p>
-
- {% endcomment %}
 
     <div class="take_tests_container">
 
@@ -41,16 +38,25 @@
                         <!-- ОТВЕТ ПОЛЬЗОВАТЕЛЯ -->
                         <p class="mb-1">
                             <strong>Ваш ответ:</strong>
-                            {{ answer.selected_option.text }}
+                            {% if  answer.selected_option %}
+                                {{ answer.selected_option.text }}
+
+                            {% else %}
+                                <span style="color:red"> НЕ ОТВЕТИЛ </span>
+        
+                            {% endif %}
+
                         </p>
 
                         <!-- ПРАВИЛЬНЫЙ ОТВЕТ -->
                         <p class="mb-1">
                             <strong>Правильный ответ:</strong>
                             {% for option in answer.question.options.all %}
+
                                 {% if option.is_correct %}
                                     {{ option.text }}
                                 {% endif %}
+            
                             {% endfor %}
                         </p>
 

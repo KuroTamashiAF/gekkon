@@ -9,6 +9,9 @@ from main.servises import get_available_tests_for_user
 from django.core.exceptions import PermissionDenied
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import never_cache
+from django.utils import timezone
+from datetime import timedelta
+from gtests.services import word_ending
 
 
 class TestDetailView(DetailView):
@@ -25,6 +28,9 @@ class TestDetailView(DetailView):
         context["is_staff"] = self.request.user.is_staff
         context["is_superuser"] = self.request.user.is_superuser
         context["username"] = self.request.user.username
+        context["min_ending"] = word_ending(int(self.get_object().time_limit))
+    
+        
         return context
 
 
@@ -60,11 +66,8 @@ class TakeTestView(FormView):
         if attempt_id:
             try:
                 self.attempt = UserTestAttempt.objects.get(
-                id=attempt_id,
-                user=request.user,
-                test=self.test,
-                is_active=True 
-            )
+                    id=attempt_id, user=request.user, test=self.test, is_active=True
+                )
             except UserTestAttempt.DoesNotExist:
                 self.attempt = None
         else:
@@ -72,11 +75,15 @@ class TakeTestView(FormView):
 
         if not self.attempt:
             self.attempt = UserTestAttempt.objects.create(
-            user=request.user,
-            test=self.test,
-            is_active=True
-        )
+                user=request.user, test=self.test, is_active=True
+            )
         request.session["attempt_id"] = self.attempt.id
+
+        if self.test.time_limit:
+            end_time = self.attempt.started_at + timedelta(minutes=self.test.time_limit)
+
+            if timezone.now() > end_time:
+                return self.finish_test()
 
         # 🚫 Если тест уже завершён
         if self.attempt.completed:
@@ -122,7 +129,7 @@ class TakeTestView(FormView):
         context["is_staff"] = self.request.user.is_staff
         context["is_superuser"] = self.request.user.is_superuser
         context["username"] = self.request.user.username
-        # context["form_questions"] = zip(self.get_form(), self.questions)
+        context["time_limit"] = self.test.time_limit
         return context
 
     def form_valid(self, form):
@@ -159,16 +166,28 @@ class TakeTestView(FormView):
                 "is_correct": selected_option.is_correct,
             },
         )
-        
-    def finish_test(self):
-        total = self.attempt.answers.count()
-        correct = self.attempt.answers.filter(is_correct=True).count()
 
+    def finish_test(self):
+        all_questions = list(self.test.questions.all())
+        answered_question_ids = set(
+            self.attempt.answers.values_list("question_id", flat=True)
+        )
+         # создаём пропущенные как "не ответил"
+        for question in all_questions:
+            if question.id not in answered_question_ids:
+                UserAnswer.objects.create(
+                    user=self.request.user,
+                    attempt=self.attempt,
+                    question=question,
+                    selected_option=None,
+                    is_correct=False,
+                )
+        total = len(all_questions)
+        correct =  self.attempt.answers.filter(is_correct=True).count()
         percentage = (correct / total * 100) if total > 0 else 0
 
         result = UserTestResult.objects.create(
             user=self.request.user,
-            # test = self.test,
             attempt=self.attempt,
             score=percentage,
             total_questions=total,
@@ -178,24 +197,38 @@ class TakeTestView(FormView):
         self.attempt.completed = True
         self.attempt.save()
 
-        messages.success(self.request, f"Тест завершён! Результат: {percentage:.1f}%")
+        messages.success(
+            self.request,
+            f"Тест завершён! Результат: {percentage:.1f}%"
+        )
+
         self.request.session.pop("attempt_id", None)
+
         return redirect("gtests:test_results", pk=result.id)
 
-    # def calculate_score(self):
-    #     total_questions = len(self.questions)
-    #     correct_answers = UserAnswer.objects.filter(
-    #         user=self.request.user, question__test=self.test, is_correct=True
-    #     ).count()
 
-    #     percentage = (
-    #         (correct_answers / total_questions) * 100 if total_questions > 0 else 0
-    #     )
-    #     return {
-    #         "correct": correct_answers,
-    #         "total": total_questions,
-    #         "percentage": percentage,
-    #     }
+        
+
+        # total = self.attempt.answers.count()
+        # correct = self.attempt.answers.filter(is_correct=True).count()
+
+        # percentage = (correct / total * 100) if total > 0 else 0
+
+        # result = UserTestResult.objects.create(
+        #     user=self.request.user,
+        #     # test = self.test,
+        #     attempt=self.attempt,
+        #     score=percentage,
+        #     total_questions=total,
+        #     correct_answers=correct,
+        # )
+
+        # self.attempt.completed = True
+        # self.attempt.save()
+
+        # messages.success(self.request, f"Тест завершён! Результат: {percentage:.1f}%")
+        # self.request.session.pop("attempt_id", None)
+        # return redirect("gtests:test_results", pk=result.id)
 
 
 @method_decorator(never_cache, name="dispatch")
@@ -216,9 +249,6 @@ class TestResultsView(DetailView):
         context["user_answers"] = user_answers
         context["is_staff"] = self.request.user.is_staff
         context["is_superuser"] = self.request.user.is_superuser
+        context["title"] = "Геккон тестирование - Результаты"
 
         return context
-    
-
-
-    

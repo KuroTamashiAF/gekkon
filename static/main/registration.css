@@ -26,6 +26,7 @@
     border-radius: 5PX;
     font-family: "Shopen";
     font-size: 26px;
+    box-shadow: 5px 4px 12px rgba(0,0,0,0.08);
 }
 .button_inp{
      font-size: 26px;
