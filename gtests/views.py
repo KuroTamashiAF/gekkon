@@ -129,7 +129,16 @@ class TakeTestView(FormView):
         context["is_staff"] = self.request.user.is_staff
         context["is_superuser"] = self.request.user.is_superuser
         context["username"] = self.request.user.username
-        context["time_limit"] = self.test.time_limit
+        if self.test.time_limit:
+            end_time = self.attempt.started_at + timedelta(minutes=self.test.time_limit)
+            remaining_seconds = max(
+                0,
+                int((end_time - timezone.now()).total_seconds())
+            )
+        else:
+            remaining_seconds = None
+
+        context["remaining_seconds"] = remaining_seconds
         return context
 
     def form_valid(self, form):

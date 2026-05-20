@@ -9,3 +9,5 @@ def word_ending(number:int ):
     elif number % 10 >= 5:
         result = "т"
     return result
+
+
