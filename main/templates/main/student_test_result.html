@@ -21,6 +21,9 @@
         <a class="back-btn" href="{% url 'main:student_profile' attempt.user.id %}">
             ← Назад к студенту
         </a>
+        <a class="back-btn" href="{% url 'gtests:export_excel' test.id %}">
+            ← Экспорт Excel
+        </a>
 
         <div class="header-card">
             <div class="student-name">

@@ -144,12 +144,14 @@ class StudentTestResultView(LoginRequiredMixin, DetailView):
         )
     
     def get_context_data(self, **kwargs):
+        test = self.get_object().test
         context = super().get_context_data(**kwargs)
         user = self.request.user
         context["title"] = "Геккон тестирование - Результаты тестов студентов"
         context["username"] = user.username
         context["is_staff"] = user.is_staff
         context["is_superuser"] = user.is_superuser
+        context["test"] = test
         return context
 
 

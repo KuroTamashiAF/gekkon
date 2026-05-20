@@ -3,8 +3,7 @@ from django.views.generic import DetailView, FormView
 from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404
 from django.contrib import messages
-from gtests.models import Test, UserAnswer, UserTestResult, UserTestAttempt
-from gtests.forms import TestForm
+from django.http import HttpResponse
 from main.servises import get_available_tests_for_user
 from django.core.exceptions import PermissionDenied
 from django.utils.decorators import method_decorator
@@ -12,6 +11,13 @@ from django.views.decorators.cache import never_cache
 from django.utils import timezone
 from datetime import timedelta
 from gtests.services import word_ending
+from gtests.models import Test, UserAnswer, UserTestResult, UserTestAttempt
+from gtests.forms import TestForm
+from io import BytesIO
+from openpyxl import Workbook
+from openpyxl.drawing.image import Image as ExcelImage
+from openpyxl.styles import Alignment
+from PIL import Image as PILImage 
 
 
 class TestDetailView(DetailView):
@@ -261,3 +267,111 @@ class TestResultsView(DetailView):
         context["title"] = "Геккон тестирование - Результаты"
 
         return context
+
+
+def export_test_detailed_excel(request, tests_id):
+    test = get_object_or_404(Test, id=tests_id)
+    user_name = ""
+    user_last_name=""
+    user_surname=""
+
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Detailed Results"
+
+    headers = [
+        "Пользователь",
+        "Тест",
+        "Процент",
+        "Вопрос",
+        "Выбранный ответ",
+        "Правильный ответ",
+        "Результат",
+        "Изображение",
+        "Дата",
+    ]
+    ws.append(headers)
+
+    results = UserTestResult.objects.filter(
+        attempt__test=test
+    ).select_related("user", "attempt")
+    
+
+    row_num = 2
+    
+
+    for result in results:
+        answers = UserAnswer.objects.filter(
+            attempt=result.attempt
+        ).select_related(
+            "question",
+            "selected_option"
+        )
+        user_name = result.user.last_name
+        user_last_name = result.user.last_name
+        user_surname = result.user.surname
+        print(f"{user_name}_{user_last_name}_{user_surname}")
+
+        for answer in answers:
+            correct_option = answer.question.options.filter(is_correct=True).first()
+
+            ws.append([
+                str(result.user),
+                str(test.title),
+                result.score,
+                answer.question.text,
+                answer.selected_option.text if answer.selected_option else "Не ответил",
+                correct_option.text if correct_option else "",
+                "Верно" if answer.is_correct else "Неверно",
+                "",  # сюда вставим картинку
+                result.completed_at.strftime("%Y-%m-%d %H:%M"),
+            ])
+
+            # Вставка картинки
+            if answer.question.image:
+                try:
+                    img_path = answer.question.image.path
+
+                    pil_img = PILImage.open(img_path)
+                    pil_img.thumbnail((120, 120))
+
+                    img_bytes = BytesIO()
+                    pil_img.save(img_bytes, format="PNG")
+                    img_bytes.seek(0)
+
+                    excel_img = ExcelImage(img_bytes)
+                    ws.add_image(excel_img, f"H{row_num}")
+
+                    ws.row_dimensions[row_num].height = 100
+
+                except Exception as e:
+                    print("Ошибка изображения:", e)
+
+            row_num += 1
+
+    # ширина колонок
+    ws.column_dimensions["A"].width = 20
+    ws.column_dimensions["B"].width = 20
+    ws.column_dimensions["C"].width = 10
+    ws.column_dimensions["D"].width = 50
+    ws.column_dimensions["E"].width = 30
+    ws.column_dimensions["F"].width = 30
+    ws.column_dimensions["G"].width = 15
+    ws.column_dimensions["H"].width = 20
+    ws.column_dimensions["I"].width = 20
+
+    for row in ws.iter_rows():
+        for cell in row:
+            cell.alignment = Alignment(wrap_text=True, vertical="top")
+
+    response = HttpResponse(
+        content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+
+    # filename = f"{test.title}-{results.user.last_name}-{results.user.first_name}-{results.user.surname}.xlsx"
+    filename = f"{test.title}_{user_name}_{user_last_name}_{user_surname}.xlsx"
+
+    response["Content-Disposition"] = f'attachment; filename="{filename}"'
+
+    wb.save(response)
+    return response
