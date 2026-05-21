@@ -269,109 +269,110 @@ class TestResultsView(DetailView):
         return context
 
 
-def export_test_detailed_excel(request, tests_id):
-    test = get_object_or_404(Test, id=tests_id)
-    user_name = ""
-    user_last_name=""
-    user_surname=""
+#старый экспорт в excel
+# def export_test_detailed_excel(request, tests_id):
+#     test = get_object_or_404(Test, id=tests_id)
+#     user_name = ""
+#     user_last_name=""
+#     user_surname=""
 
-    wb = Workbook()
-    ws = wb.active
-    ws.title = "Detailed Results"
+#     wb = Workbook()
+#     ws = wb.active
+#     ws.title = "Detailed Results"
 
-    headers = [
-        "Пользователь",
-        "Тест",
-        "Процент",
-        "Вопрос",
-        "Выбранный ответ",
-        "Правильный ответ",
-        "Результат",
-        "Изображение",
-        "Дата",
-    ]
-    ws.append(headers)
+#     headers = [
+#         "Пользователь",
+#         "Тест",
+#         "Процент",
+#         "Вопрос",
+#         "Выбранный ответ",
+#         "Правильный ответ",
+#         "Результат",
+#         "Изображение",
+#         "Дата",
+#     ]
+#     ws.append(headers)
 
-    results = UserTestResult.objects.filter(
-        attempt__test=test
-    ).select_related("user", "attempt")
+#     results = UserTestResult.objects.filter(
+#         attempt__test=test
+#     ).select_related("user", "attempt")
     
 
-    row_num = 2
+#     row_num = 2
     
 
-    for result in results:
-        answers = UserAnswer.objects.filter(
-            attempt=result.attempt
-        ).select_related(
-            "question",
-            "selected_option"
-        )
-        user_name = result.user.last_name
-        user_last_name = result.user.last_name
-        user_surname = result.user.surname
-        print(f"{user_name}_{user_last_name}_{user_surname}")
+#     for result in results:
+#         answers = UserAnswer.objects.filter(
+#             attempt=result.attempt
+#         ).select_related(
+#             "question",
+#             "selected_option"
+#         )
+#         user_name = result.user.last_name
+#         user_last_name = result.user.last_name
+#         user_surname = result.user.surname
+#         print(f"{user_name}_{user_last_name}_{user_surname}")
 
-        for answer in answers:
-            correct_option = answer.question.options.filter(is_correct=True).first()
+#         for answer in answers:
+#             correct_option = answer.question.options.filter(is_correct=True).first()
 
-            ws.append([
-                str(result.user),
-                str(test.title),
-                result.score,
-                answer.question.text,
-                answer.selected_option.text if answer.selected_option else "Не ответил",
-                correct_option.text if correct_option else "",
-                "Верно" if answer.is_correct else "Неверно",
-                "",  # сюда вставим картинку
-                result.completed_at.strftime("%Y-%m-%d %H:%M"),
-            ])
+#             ws.append([
+#                 str(result.user),
+#                 str(test.title),
+#                 result.score,
+#                 answer.question.text,
+#                 answer.selected_option.text if answer.selected_option else "Не ответил",
+#                 correct_option.text if correct_option else "",
+#                 "Верно" if answer.is_correct else "Неверно",
+#                 "",  # сюда вставим картинку
+#                 result.completed_at.strftime("%Y-%m-%d %H:%M"),
+#             ])
 
-            # Вставка картинки
-            if answer.question.image:
-                try:
-                    img_path = answer.question.image.path
+#             # Вставка картинки
+#             if answer.question.image:
+#                 try:
+#                     img_path = answer.question.image.path
 
-                    pil_img = PILImage.open(img_path)
-                    pil_img.thumbnail((120, 120))
+#                     pil_img = PILImage.open(img_path)
+#                     pil_img.thumbnail((120, 120))
 
-                    img_bytes = BytesIO()
-                    pil_img.save(img_bytes, format="PNG")
-                    img_bytes.seek(0)
+#                     img_bytes = BytesIO()
+#                     pil_img.save(img_bytes, format="PNG")
+#                     img_bytes.seek(0)
 
-                    excel_img = ExcelImage(img_bytes)
-                    ws.add_image(excel_img, f"H{row_num}")
+#                     excel_img = ExcelImage(img_bytes)
+#                     ws.add_image(excel_img, f"H{row_num}")
 
-                    ws.row_dimensions[row_num].height = 100
+#                     ws.row_dimensions[row_num].height = 100
 
-                except Exception as e:
-                    print("Ошибка изображения:", e)
+#                 except Exception as e:
+#                     print("Ошибка изображения:", e)
 
-            row_num += 1
+#             row_num += 1
 
-    # ширина колонок
-    ws.column_dimensions["A"].width = 20
-    ws.column_dimensions["B"].width = 20
-    ws.column_dimensions["C"].width = 10
-    ws.column_dimensions["D"].width = 50
-    ws.column_dimensions["E"].width = 30
-    ws.column_dimensions["F"].width = 30
-    ws.column_dimensions["G"].width = 15
-    ws.column_dimensions["H"].width = 20
-    ws.column_dimensions["I"].width = 20
+#     # ширина колонок
+#     ws.column_dimensions["A"].width = 20
+#     ws.column_dimensions["B"].width = 20
+#     ws.column_dimensions["C"].width = 10
+#     ws.column_dimensions["D"].width = 50
+#     ws.column_dimensions["E"].width = 30
+#     ws.column_dimensions["F"].width = 30
+#     ws.column_dimensions["G"].width = 15
+#     ws.column_dimensions["H"].width = 20
+#     ws.column_dimensions["I"].width = 20
 
-    for row in ws.iter_rows():
-        for cell in row:
-            cell.alignment = Alignment(wrap_text=True, vertical="top")
+#     for row in ws.iter_rows():
+#         for cell in row:
+#             cell.alignment = Alignment(wrap_text=True, vertical="top")
 
-    response = HttpResponse(
-        content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-    )
+#     response = HttpResponse(
+#         content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+#     )
 
-    # filename = f"{test.title}-{results.user.last_name}-{results.user.first_name}-{results.user.surname}.xlsx"
-    filename = f"{test.title}_{user_name}_{user_last_name}_{user_surname}.xlsx"
+#     # filename = f"{test.title}-{results.user.last_name}-{results.user.first_name}-{results.user.surname}.xlsx"
+#     filename = f"{test.title}_{user_name}_{user_last_name}_{user_surname}.xlsx"
 
-    response["Content-Disposition"] = f'attachment; filename="{filename}"'
+#     response["Content-Disposition"] = f'attachment; filename="{filename}"'
 
-    wb.save(response)
-    return response
+#     wb.save(response)
+#     return response

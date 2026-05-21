@@ -1,5 +1,3 @@
-from xml.parsers.expat import model
-
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -13,6 +11,19 @@ from django.contrib import auth, messages
 from main.servises import get_available_tests_for_user
 from gtests.models import Student, UserTestAttempt
 from main import servises
+from io import BytesIO
+from openpyxl import Workbook
+from openpyxl.drawing.image import Image as ExcelImage
+from openpyxl.styles import Alignment
+from django.http import HttpResponse
+from django.shortcuts import get_object_or_404
+from PIL import Image as PILImage
+
+from gtests.views import UserTestAttempt
+from urllib.parse import quote
+import re 
+
+
 
 # Create your views here.
 
@@ -160,3 +171,94 @@ class StudentTestResultView(LoginRequiredMixin, DetailView):
 def logout(request):
     auth.logout(request)
     return redirect("main:login")
+
+
+def export_attempt_excel(request, pk):
+    attempt = get_object_or_404(
+        UserTestAttempt.objects.select_related("user", "test").prefetch_related(
+            "answers__question",
+            "answers__selected_option",
+            "answers__question__options",
+        ),
+        pk=pk,
+    )
+
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Result"
+
+    ws.append([
+        "Студент",
+        "Тест",
+        "Процент",
+        "Вопрос",
+        "Выбранный ответ",
+        "Правильный ответ",
+        "Результат",
+        "Изображение",
+    ])
+
+    score = attempt.result.score if hasattr(attempt, "result") else 0
+
+    row_num = 2
+
+    for answer in attempt.answers.all():
+        correct_option = answer.question.options.filter(is_correct=True).first()
+
+        ws.append([
+            str(attempt.user),
+            str(attempt.test),
+            score,
+            answer.question.text,
+            answer.selected_option.text if answer.selected_option else "Не ответил",
+            correct_option.text if correct_option else "",
+            "Верно" if answer.is_correct else "Неверно",
+            "",
+        ])
+
+        if answer.question.image:
+            try:
+                img_path = answer.question.image.path
+
+                pil_img = PILImage.open(img_path)
+                pil_img.thumbnail((120, 120))
+
+                img_bytes = BytesIO()
+                pil_img.save(img_bytes, format="PNG")
+                img_bytes.seek(0)
+
+                excel_img = ExcelImage(img_bytes)
+                ws.add_image(excel_img, f"H{row_num}")
+
+                ws.row_dimensions[row_num].height = 100
+
+            except Exception as e:
+                print(e)
+
+        row_num += 1
+
+    ws.column_dimensions["A"].width = 20
+    ws.column_dimensions["B"].width = 20
+    ws.column_dimensions["C"].width = 10
+    ws.column_dimensions["D"].width = 50
+    ws.column_dimensions["E"].width = 30
+    ws.column_dimensions["F"].width = 30
+    ws.column_dimensions["G"].width = 15
+    ws.column_dimensions["H"].width = 20
+
+    for row in ws.iter_rows():
+        for cell in row:
+            cell.alignment = Alignment(wrap_text=True, vertical="top")
+
+    response = HttpResponse(
+        content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+   
+    filename = f"{attempt.user.first_name}_{attempt.user.last_name}_{attempt.user.surname}_{attempt.test.title}"
+    filename = re.sub(r'[\\/*?:"<>|]', "", filename)
+    filename = filename.replace(" ", "_")
+
+    response["Content-Disposition"] = f"attachment; filename*=UTF-8''{quote(filename)}.xlsx"
+
+    wb.save(response)
+    return response
