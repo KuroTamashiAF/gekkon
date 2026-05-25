@@ -1,0 +1,7 @@
+2026-05-25 09:42:10,192 | INFO | main | views | form_valid | line 44 | LOGIN root-2026-05-25 09:42:10.191757
+2026-05-25 10:09:36,924 | INFO | main | views | form_valid | line 44 | LOGIN root-2026-05-25 10:09:36.924132
+2026-05-25 10:09:44,637 | INFO | main | views | export_attempt_excel | line 262 | EXCEL EXPORT | root-2026-05-25 10:09:44.637604
+2026-05-25 10:33:22,167 | INFO | main | views | export_attempt_excel | line 267 | EXCEL EXPORT | root-2026-05-25 10:33:22.167468
+2026-05-25 10:36:23,337 | INFO | main | views | get_context_data | line 164 | RESULT VIEW | root-2026-05-25 10:36:23.337011
+2026-05-25 10:40:36,210 | INFO | main | views | get_context_data | line 164 | RESULT VIEW | root-2026-05-25 10:40:36.210148
+2026-05-25 10:40:41,001 | INFO | main | views | export_attempt_excel | line 268 | EXCEL EXPORT | root-2026-05-25 10:40:41.001783

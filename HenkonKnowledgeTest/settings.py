@@ -12,8 +12,9 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 import os
+import logging
 
-from django.conf.global_settings import LOGIN_REDIRECT_URL, LOGIN_URL, MEDIA_ROOT, MEDIA_URL
+# from django.conf.global_settings import LOGIN_REDIRECT_URL, LOGIN_URL, MEDIA_ROOT, MEDIA_URL
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -137,3 +138,100 @@ LOGIN_URL = "main:login"
 
 MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "/media/"
+
+LOG_DIR = BASE_DIR / "logs"
+LOG_DIR.mkdir(exist_ok=True)  #Если папка уже существует → ошибки не будет.
+
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+
+    "formatters": {            #КАК будет выглядеть лог.Например:2026-05-20 | ERROR | views | line 52 | database error
+        "verbose": {
+            "format": (
+                "{asctime} | "    # Время ошибки.
+                "{levelname} | "  #Уровень ошибки:
+                "{name} | "       #Имя logger.
+                "{module} | "       #Имя файла Python.
+                "{funcName} | "     #Имя функции.
+                "line {lineno} | "      #Номер строки.ОЧЕНЬ полезно на сервере.
+                "{message}"     #Текст твоего лога.
+            ),
+            "style": "{",
+        },
+
+        "simple": {                                                         #Красивый вывод в консоль.Например:INFO | TEST STARTED
+            "format": "{levelname} | {message}",
+            "style": "{",
+        },
+    },
+
+    "handlers": {            # andler = куда писать лог.Например:файл консоль email telegram linux journal
+
+        "django_file": {        # отлов ошибок Django 
+            "level": "ERROR",
+            "class": "logging.handlers.RotatingFileHandler",        #Автоматически:ограничивает размеh / создаёт новые файлы
+            "filename": LOG_DIR / "django_errors.log",          #Куда писать.
+            "maxBytes": 1024 * 1024 * 5,                        #Максимальный размер:
+            "backupCount": 5,                                   # Хранить 5 старых логов 
+            "formatter": "verbose",                             #Использовать подробный формат.
+        },
+
+        "gtests_file": {
+            "level": "INFO",
+            "class": "logging.handlers.RotatingFileHandler",
+            "filename": LOG_DIR / "gtests.log",
+            "maxBytes": 1024 * 1024 * 5,
+            "backupCount": 5,
+            "formatter": "verbose",
+        },
+
+        "warning_file": {
+            "level": "WARNING",
+            "class": "logging.handlers.RotatingFileHandler",
+            "filename": LOG_DIR / "warnings.log",
+            "maxBytes": 1024 * 1024 * 5,
+            "backupCount": 5,
+            "formatter": "verbose",
+        },
+
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "simple",
+        },
+
+        "main_file": {
+            "level": "INFO", # INFO и выше
+            "class": "logging.handlers.RotatingFileHandler",  # Ротация логов
+            "filename": LOG_DIR / "main.log",   # Файл:
+                                                # logs/main.log
+            "maxBytes": 1024 * 1024 * 5,     # Максимальный размер:
+                                            # 5 MB
+            "backupCount": 5,   # 5 резервных файлов
+            "formatter": "verbose", # Подробный formatter
+        },
+    },
+
+    "loggers": {
+
+        "django": {
+            "handlers": ["django_file", "console"],
+            "level": "ERROR",
+            "propagate": True,
+        },
+
+        "gtests": {
+            "handlers": ["gtests_file", "warning_file", "console"],
+            "level": "INFO",
+            "propagate": False,
+        },
+
+        "main": {
+            "handlers": ["main_file","warning_file", "console"],
+            "level": "INFO",        # INFO и выше
+            "propagate": False,    # Не дублировать логи
+        },
+
+    },
+}
