@@ -14,6 +14,7 @@ from gtests.models import Test, UserAnswer, UserTestResult, UserTestAttempt
 from gtests.forms import TestForm
 import logging
 import datetime as dt 
+import random
 
 logger = logging.getLogger("gtests")
 
@@ -100,8 +101,26 @@ class TakeTestView(FormView):
         # 🚫 Если тест уже завершён
         if self.attempt.completed:
             return redirect("main:index")
+        
+        question_order = request.session.get("question_order")
 
-        self.questions = list(self.test.questions.all())   # вопросы 
+        if not question_order:
+            self.questions = list(self.test.questions.all()) # Получаем вопросы
+
+            random.shuffle(self.questions)  # Перемешиваем 1 раз
+
+            question_order = [q.id for q in self.questions]  # Сохраняем ID вопросов в session
+            request.session["question_order"] = question_order
+        
+        else:  # Если порядок уже есть
+            questions_dict = {
+                q.id: q for q in self.test.questions.all()}  # Загружаем вопросы в сохранённом порядке
+            
+            self.questions = [
+                questions_dict[q_id]
+                for q_id in question_order
+                if q_id in questions_dict
+            ]
 
         # ✅ текущий вопрос
         answered_count = self.attempt.answers.count()
@@ -239,6 +258,7 @@ class TakeTestView(FormView):
         )
 
         self.request.session.pop("attempt_id", None)
+        self.request.session.pop("question_order", None)
 
         return redirect("gtests:test_results", pk=result.id)
 

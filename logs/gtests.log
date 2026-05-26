@@ -127,3 +127,274 @@
 2026-05-26 09:10:04,284 | INFO | gtests | views | dispatch | line 84 | START TEST | user=root--test=Тест по электрике--attempt_id=61--2026-05-26 09:10:04.284601
 2026-05-26 09:10:04,300 | INFO | gtests | views | finish_test | line 227 | FINISH TEST | user=root--test=Тест по электрике--score=66.66666666666666%--correct=4/6--2026-05-26 09:10:04.300267
 2026-05-26 09:10:41,152 | INFO | gtests | views | dispatch | line 84 | START TEST | user=root--test=Тест по электрике--attempt_id=None--2026-05-26 09:10:41.152568
+2026-05-26 09:27:41,973 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=None--2026-05-26 09:27:41.973139
+2026-05-26 09:27:49,633 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:27:49.633393
+2026-05-26 09:27:54,795 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:27:54.795242
+2026-05-26 09:28:07,793 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:28:07.793783
+2026-05-26 09:28:12,012 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:28:12.012661
+2026-05-26 09:28:27,146 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:28:27.146967
+2026-05-26 09:28:43,720 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:28:43.720281
+2026-05-26 09:28:49,573 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:28:49.573238
+2026-05-26 09:28:53,863 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:28:53.863741
+2026-05-26 09:28:55,636 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:28:55.636820
+2026-05-26 09:28:55,641 | INFO | gtests | views | form_valid | line 168 | ANSWEAR | user=root--test=Тест по электрике----question_id=1--selected_option=2--2026-05-26 09:28:55.641943
+2026-05-26 09:28:55,736 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:28:55.736715
+2026-05-26 09:28:57,468 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:28:57.468945
+2026-05-26 09:28:58,744 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:28:58.744372
+2026-05-26 09:28:58,751 | INFO | gtests | views | form_valid | line 168 | ANSWEAR | user=root--test=Тест по электрике----question_id=5--selected_option=18--2026-05-26 09:28:58.751445
+2026-05-26 09:28:58,847 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:28:58.847981
+2026-05-26 09:29:00,378 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:29:00.378635
+2026-05-26 09:29:00,384 | INFO | gtests | views | form_valid | line 168 | ANSWEAR | user=root--test=Тест по электрике----question_id=4--selected_option=13--2026-05-26 09:29:00.383622
+2026-05-26 09:29:00,485 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:29:00.485453
+2026-05-26 09:29:01,786 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:29:01.786047
+2026-05-26 09:29:01,790 | INFO | gtests | views | form_valid | line 168 | ANSWEAR | user=root--test=Тест по электрике----question_id=4--selected_option=13--2026-05-26 09:29:01.790376
+2026-05-26 09:29:01,887 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:29:01.887568
+2026-05-26 09:29:03,283 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:29:03.283460
+2026-05-26 09:29:04,608 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:29:04.608925
+2026-05-26 09:29:06,200 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:29:06.200675
+2026-05-26 09:29:08,538 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:29:08.538265
+2026-05-26 09:29:08,542 | INFO | gtests | views | form_valid | line 168 | ANSWEAR | user=root--test=Тест по электрике----question_id=1--selected_option=2--2026-05-26 09:29:08.542266
+2026-05-26 09:29:08,637 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:29:08.637971
+2026-05-26 09:29:09,910 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:29:09.910702
+2026-05-26 09:29:11,040 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:29:11.040584
+2026-05-26 09:29:11,045 | INFO | gtests | views | form_valid | line 168 | ANSWEAR | user=root--test=Тест по электрике----question_id=2--selected_option=5--2026-05-26 09:29:11.045511
+2026-05-26 09:29:11,138 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=63--2026-05-26 09:29:11.138536
+2026-05-26 09:29:11,159 | INFO | gtests | views | finish_test | line 235 | FINISH TEST | user=root--test=Тест по электрике--score=0.0%--correct=0/6--2026-05-26 09:29:11.159507
+2026-05-26 09:39:25,501 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=None--2026-05-26 09:39:25.501240
+2026-05-26 09:39:29,952 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=64--2026-05-26 09:39:29.952101
+2026-05-26 09:39:31,688 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=64--2026-05-26 09:39:31.688166
+2026-05-26 09:39:33,566 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=64--2026-05-26 09:39:33.566800
+2026-05-26 09:39:34,739 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=64--2026-05-26 09:39:34.739611
+2026-05-26 09:39:36,011 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=64--2026-05-26 09:39:36.011079
+2026-05-26 09:39:37,797 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=64--2026-05-26 09:39:37.797038
+2026-05-26 09:39:38,735 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=64--2026-05-26 09:39:38.735061
+2026-05-26 09:39:40,113 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=64--2026-05-26 09:39:40.113743
+2026-05-26 09:39:41,432 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=64--2026-05-26 09:39:41.431977
+2026-05-26 09:39:41,442 | INFO | gtests | views | form_valid | line 165 | ANSWEAR | user=root--test=Тест по электрике----question_id=2--selected_option=5--2026-05-26 09:39:41.442969
+2026-05-26 09:39:41,617 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=64--2026-05-26 09:39:41.617517
+2026-05-26 09:39:43,197 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=64--2026-05-26 09:39:43.197158
+2026-05-26 09:39:44,802 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=64--2026-05-26 09:39:44.802809
+2026-05-26 09:39:46,362 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=64--2026-05-26 09:39:46.362017
+2026-05-26 09:39:47,902 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=64--2026-05-26 09:39:47.902154
+2026-05-26 09:39:49,231 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=64--2026-05-26 09:39:49.231599
+2026-05-26 09:39:51,028 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=64--2026-05-26 09:39:51.028699
+2026-05-26 10:45:51,020 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=None--2026-05-26 10:45:51.019489
+2026-05-26 10:45:53,693 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=65--2026-05-26 10:45:53.692774
+2026-05-26 10:45:53,698 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=3--selected_option=11--2026-05-26 10:45:53.698797
+2026-05-26 10:45:53,789 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=65--2026-05-26 10:45:53.789072
+2026-05-26 10:45:55,071 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=65--2026-05-26 10:45:55.071312
+2026-05-26 10:45:55,077 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=1--selected_option=1--2026-05-26 10:45:55.077379
+2026-05-26 10:45:55,159 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=65--2026-05-26 10:45:55.159894
+2026-05-26 10:45:56,337 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=65--2026-05-26 10:45:56.337778
+2026-05-26 10:45:56,342 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=5--selected_option=17--2026-05-26 10:45:56.342796
+2026-05-26 10:45:56,430 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=65--2026-05-26 10:45:56.430005
+2026-05-26 10:45:57,699 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=65--2026-05-26 10:45:57.699893
+2026-05-26 10:45:57,704 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=2--selected_option=5--2026-05-26 10:45:57.704952
+2026-05-26 10:45:57,791 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=65--2026-05-26 10:45:57.791092
+2026-05-26 10:46:00,380 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=65--2026-05-26 10:46:00.380030
+2026-05-26 10:46:00,385 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=6--selected_option=22--2026-05-26 10:46:00.385997
+2026-05-26 10:46:00,473 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=65--2026-05-26 10:46:00.473552
+2026-05-26 10:46:02,489 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=65--2026-05-26 10:46:02.489662
+2026-05-26 10:46:02,495 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=4--selected_option=13--2026-05-26 10:46:02.495584
+2026-05-26 10:46:02,579 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=65--2026-05-26 10:46:02.579553
+2026-05-26 10:46:02,595 | INFO | gtests | views | finish_test | line 246 | FINISH TEST | user=root--test=Тест по электрике--score=16.666666666666664%--correct=1/6--2026-05-26 10:46:02.595646
+2026-05-26 10:48:09,877 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=None--2026-05-26 10:48:09.876502
+2026-05-26 10:48:12,173 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=66--2026-05-26 10:48:12.173062
+2026-05-26 10:48:12,178 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=3--selected_option=11--2026-05-26 10:48:12.178965
+2026-05-26 10:48:12,260 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=66--2026-05-26 10:48:12.260230
+2026-05-26 10:48:13,785 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=66--2026-05-26 10:48:13.785690
+2026-05-26 10:48:13,788 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=1--selected_option=3--2026-05-26 10:48:13.788691
+2026-05-26 10:48:13,868 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=66--2026-05-26 10:48:13.867503
+2026-05-26 10:48:15,171 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=66--2026-05-26 10:48:15.171380
+2026-05-26 10:48:15,176 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=5--selected_option=19--2026-05-26 10:48:15.176392
+2026-05-26 10:48:15,261 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=66--2026-05-26 10:48:15.260137
+2026-05-26 10:48:16,836 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=66--2026-05-26 10:48:16.836324
+2026-05-26 10:48:16,840 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=2--selected_option=6--2026-05-26 10:48:16.840327
+2026-05-26 10:48:16,922 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=66--2026-05-26 10:48:16.922324
+2026-05-26 10:48:18,380 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=66--2026-05-26 10:48:18.380048
+2026-05-26 10:48:18,384 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=6--selected_option=23--2026-05-26 10:48:18.384072
+2026-05-26 10:48:18,464 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=66--2026-05-26 10:48:18.464550
+2026-05-26 10:48:19,913 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=66--2026-05-26 10:48:19.913255
+2026-05-26 10:48:19,918 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=4--selected_option=15--2026-05-26 10:48:19.918254
+2026-05-26 10:48:19,999 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=66--2026-05-26 10:48:19.999459
+2026-05-26 10:48:20,016 | INFO | gtests | views | finish_test | line 246 | FINISH TEST | user=root--test=Тест по электрике--score=33.33333333333333%--correct=2/6--2026-05-26 10:48:20.016487
+2026-05-26 10:48:34,081 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=None--2026-05-26 10:48:34.081854
+2026-05-26 10:48:35,710 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=67--2026-05-26 10:48:35.710674
+2026-05-26 10:48:35,714 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=3--selected_option=11--2026-05-26 10:48:35.714631
+2026-05-26 10:48:35,799 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=67--2026-05-26 10:48:35.799607
+2026-05-26 10:48:36,715 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=67--2026-05-26 10:48:36.715252
+2026-05-26 10:48:36,720 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=2--selected_option=7--2026-05-26 10:48:36.720380
+2026-05-26 10:48:36,802 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=67--2026-05-26 10:48:36.802337
+2026-05-26 10:48:37,593 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=67--2026-05-26 10:48:37.593992
+2026-05-26 10:48:37,598 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=4--selected_option=15--2026-05-26 10:48:37.598946
+2026-05-26 10:48:37,671 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=67--2026-05-26 10:48:37.671261
+2026-05-26 10:48:38,691 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=67--2026-05-26 10:48:38.691851
+2026-05-26 10:48:38,697 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=5--selected_option=19--2026-05-26 10:48:38.697856
+2026-05-26 10:48:38,781 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=67--2026-05-26 10:48:38.780981
+2026-05-26 10:48:41,446 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=67--2026-05-26 10:48:41.446947
+2026-05-26 10:48:41,450 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=6--selected_option=23--2026-05-26 10:48:41.450926
+2026-05-26 10:48:41,533 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=67--2026-05-26 10:48:41.533729
+2026-05-26 10:48:43,043 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=67--2026-05-26 10:48:43.043038
+2026-05-26 10:48:43,047 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=1--selected_option=3--2026-05-26 10:48:43.047995
+2026-05-26 10:48:43,134 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=67--2026-05-26 10:48:43.134402
+2026-05-26 10:48:43,151 | INFO | gtests | views | finish_test | line 246 | FINISH TEST | user=root--test=Тест по электрике--score=50.0%--correct=3/6--2026-05-26 10:48:43.151555
+2026-05-26 10:49:22,551 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=None--2026-05-26 10:49:22.551348
+2026-05-26 10:49:26,740 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=68--2026-05-26 10:49:26.739928
+2026-05-26 10:49:26,745 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=AlexUser--test=Тест по электрике----question_id=2--selected_option=7--2026-05-26 10:49:26.745012
+2026-05-26 10:49:26,821 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=68--2026-05-26 10:49:26.821988
+2026-05-26 10:49:31,970 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=68--2026-05-26 10:49:31.970451
+2026-05-26 10:49:31,975 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=AlexUser--test=Тест по электрике----question_id=6--selected_option=22--2026-05-26 10:49:31.975354
+2026-05-26 10:49:32,061 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=68--2026-05-26 10:49:32.061388
+2026-05-26 10:49:33,468 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=68--2026-05-26 10:49:33.468740
+2026-05-26 10:49:33,473 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=AlexUser--test=Тест по электрике----question_id=4--selected_option=13--2026-05-26 10:49:33.473738
+2026-05-26 10:49:33,556 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=68--2026-05-26 10:49:33.556633
+2026-05-26 10:49:34,872 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=68--2026-05-26 10:49:34.872905
+2026-05-26 10:49:34,877 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=AlexUser--test=Тест по электрике----question_id=5--selected_option=20--2026-05-26 10:49:34.877670
+2026-05-26 10:49:34,956 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=68--2026-05-26 10:49:34.956937
+2026-05-26 10:49:35,922 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=68--2026-05-26 10:49:35.922961
+2026-05-26 10:49:35,927 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=AlexUser--test=Тест по электрике----question_id=3--selected_option=11--2026-05-26 10:49:35.927834
+2026-05-26 10:49:36,005 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=68--2026-05-26 10:49:36.005935
+2026-05-26 10:49:37,278 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=68--2026-05-26 10:49:37.278892
+2026-05-26 10:49:37,282 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=AlexUser--test=Тест по электрике----question_id=1--selected_option=1--2026-05-26 10:49:37.282891
+2026-05-26 10:49:37,365 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=68--2026-05-26 10:49:37.365051
+2026-05-26 10:49:37,382 | INFO | gtests | views | finish_test | line 246 | FINISH TEST | user=AlexUser--test=Тест по электрике--score=33.33333333333333%--correct=2/6--2026-05-26 10:49:37.382061
+2026-05-26 10:56:42,507 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=None--2026-05-26 10:56:42.507957
+2026-05-26 10:56:44,433 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=69--2026-05-26 10:56:44.432895
+2026-05-26 10:56:44,438 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=4--selected_option=15--2026-05-26 10:56:44.438882
+2026-05-26 10:56:44,520 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=69--2026-05-26 10:56:44.520671
+2026-05-26 10:56:45,793 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=69--2026-05-26 10:56:45.793745
+2026-05-26 10:56:45,798 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=3--selected_option=11--2026-05-26 10:56:45.798158
+2026-05-26 10:56:45,876 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=69--2026-05-26 10:56:45.876274
+2026-05-26 10:56:47,551 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=69--2026-05-26 10:56:47.551754
+2026-05-26 10:56:47,556 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=5--selected_option=19--2026-05-26 10:56:47.556732
+2026-05-26 10:56:47,636 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=69--2026-05-26 10:56:47.635955
+2026-05-26 10:56:49,947 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=69--2026-05-26 10:56:49.947798
+2026-05-26 10:56:49,952 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=1--selected_option=3--2026-05-26 10:56:49.952809
+2026-05-26 10:56:50,036 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=69--2026-05-26 10:56:50.036442
+2026-05-26 10:56:51,202 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=69--2026-05-26 10:56:51.202618
+2026-05-26 10:56:51,208 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=2--selected_option=7--2026-05-26 10:56:51.208584
+2026-05-26 10:56:51,292 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=69--2026-05-26 10:56:51.292030
+2026-05-26 10:56:53,035 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=69--2026-05-26 10:56:53.035205
+2026-05-26 10:56:53,040 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=6--selected_option=22--2026-05-26 10:56:53.040203
+2026-05-26 10:56:53,121 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=69--2026-05-26 10:56:53.121747
+2026-05-26 10:56:53,138 | INFO | gtests | views | finish_test | line 246 | FINISH TEST | user=root--test=Тест по электрике--score=66.66666666666666%--correct=4/6--2026-05-26 10:56:53.138748
+2026-05-26 11:00:02,096 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=None--2026-05-26 11:00:02.096820
+2026-05-26 11:00:06,490 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=70--2026-05-26 11:00:06.490340
+2026-05-26 11:00:06,496 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=1--selected_option=1--2026-05-26 11:00:06.495313
+2026-05-26 11:00:06,577 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=70--2026-05-26 11:00:06.577193
+2026-05-26 11:00:08,073 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=70--2026-05-26 11:00:08.073143
+2026-05-26 11:00:08,078 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=3--selected_option=9--2026-05-26 11:00:08.078229
+2026-05-26 11:00:08,162 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=70--2026-05-26 11:00:08.162621
+2026-05-26 11:00:09,413 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=70--2026-05-26 11:00:09.413000
+2026-05-26 11:00:09,417 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=5--selected_option=17--2026-05-26 11:00:09.417897
+2026-05-26 11:00:09,502 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=70--2026-05-26 11:00:09.502869
+2026-05-26 11:00:10,972 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=70--2026-05-26 11:00:10.972032
+2026-05-26 11:00:10,976 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=2--selected_option=5--2026-05-26 11:00:10.975045
+2026-05-26 11:00:11,062 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=70--2026-05-26 11:00:11.062392
+2026-05-26 11:00:12,204 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=70--2026-05-26 11:00:12.204561
+2026-05-26 11:00:12,209 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=4--selected_option=13--2026-05-26 11:00:12.209167
+2026-05-26 11:00:12,292 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=70--2026-05-26 11:00:12.292492
+2026-05-26 11:00:14,989 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=70--2026-05-26 11:00:14.989935
+2026-05-26 11:00:14,993 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=6--selected_option=21--2026-05-26 11:00:14.993894
+2026-05-26 11:00:15,073 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=70--2026-05-26 11:00:15.073383
+2026-05-26 11:00:15,089 | INFO | gtests | views | finish_test | line 246 | FINISH TEST | user=root--test=Тест по электрике--score=0.0%--correct=0/6--2026-05-26 11:00:15.089365
+2026-05-26 11:00:22,194 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=None--2026-05-26 11:00:22.194423
+2026-05-26 11:00:23,808 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=71--2026-05-26 11:00:23.808429
+2026-05-26 11:00:23,813 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=1--selected_option=1--2026-05-26 11:00:23.813444
+2026-05-26 11:00:23,894 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=71--2026-05-26 11:00:23.894470
+2026-05-26 11:00:25,053 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=71--2026-05-26 11:00:25.053226
+2026-05-26 11:00:25,057 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=2--selected_option=5--2026-05-26 11:00:25.057288
+2026-05-26 11:00:25,142 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=71--2026-05-26 11:00:25.142031
+2026-05-26 11:00:26,179 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=71--2026-05-26 11:00:26.179821
+2026-05-26 11:00:26,184 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=3--selected_option=9--2026-05-26 11:00:26.184780
+2026-05-26 11:00:26,266 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=71--2026-05-26 11:00:26.266978
+2026-05-26 11:00:27,473 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=71--2026-05-26 11:00:27.473270
+2026-05-26 11:00:27,476 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=5--selected_option=17--2026-05-26 11:00:27.476262
+2026-05-26 11:00:27,559 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=71--2026-05-26 11:00:27.559000
+2026-05-26 11:00:28,754 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=71--2026-05-26 11:00:28.754521
+2026-05-26 11:00:28,760 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=4--selected_option=13--2026-05-26 11:00:28.760939
+2026-05-26 11:00:28,846 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=71--2026-05-26 11:00:28.846900
+2026-05-26 11:00:31,614 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=71--2026-05-26 11:00:31.614747
+2026-05-26 11:00:31,619 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=6--selected_option=21--2026-05-26 11:00:31.619743
+2026-05-26 11:00:31,700 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=71--2026-05-26 11:00:31.700869
+2026-05-26 11:00:31,718 | INFO | gtests | views | finish_test | line 246 | FINISH TEST | user=root--test=Тест по электрике--score=0.0%--correct=0/6--2026-05-26 11:00:31.718520
+2026-05-26 11:00:54,135 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=None--2026-05-26 11:00:54.135990
+2026-05-26 11:00:55,729 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=72--2026-05-26 11:00:55.729440
+2026-05-26 11:00:55,733 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=5--selected_option=17--2026-05-26 11:00:55.733954
+2026-05-26 11:00:55,820 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=72--2026-05-26 11:00:55.820977
+2026-05-26 11:00:56,981 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=72--2026-05-26 11:00:56.981787
+2026-05-26 11:00:56,986 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=1--selected_option=1--2026-05-26 11:00:56.986793
+2026-05-26 11:00:57,073 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=72--2026-05-26 11:00:57.073304
+2026-05-26 11:00:58,099 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=72--2026-05-26 11:00:58.099400
+2026-05-26 11:00:58,103 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=2--selected_option=5--2026-05-26 11:00:58.103401
+2026-05-26 11:00:58,192 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=72--2026-05-26 11:00:58.192162
+2026-05-26 11:00:59,207 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=72--2026-05-26 11:00:59.207939
+2026-05-26 11:00:59,210 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=4--selected_option=13--2026-05-26 11:00:59.210912
+2026-05-26 11:00:59,293 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=72--2026-05-26 11:00:59.293387
+2026-05-26 11:01:00,426 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=72--2026-05-26 11:01:00.426412
+2026-05-26 11:01:00,432 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=3--selected_option=9--2026-05-26 11:01:00.432350
+2026-05-26 11:01:00,513 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=72--2026-05-26 11:01:00.513522
+2026-05-26 11:01:02,316 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=72--2026-05-26 11:01:02.316506
+2026-05-26 11:01:02,321 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=6--selected_option=21--2026-05-26 11:01:02.321806
+2026-05-26 11:01:02,405 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=72--2026-05-26 11:01:02.405850
+2026-05-26 11:01:02,423 | INFO | gtests | views | finish_test | line 246 | FINISH TEST | user=root--test=Тест по электрике--score=0.0%--correct=0/6--2026-05-26 11:01:02.423395
+2026-05-26 11:01:46,897 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=None--2026-05-26 11:01:46.897324
+2026-05-26 11:01:49,952 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=73--2026-05-26 11:01:49.952674
+2026-05-26 11:01:49,956 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=AlexUser--test=Тест по электрике----question_id=5--selected_option=17--2026-05-26 11:01:49.956694
+2026-05-26 11:01:50,046 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=73--2026-05-26 11:01:50.046691
+2026-05-26 11:01:51,738 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=73--2026-05-26 11:01:51.738603
+2026-05-26 11:01:51,744 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=AlexUser--test=Тест по электрике----question_id=6--selected_option=22--2026-05-26 11:01:51.744605
+2026-05-26 11:01:51,824 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=73--2026-05-26 11:01:51.824843
+2026-05-26 11:01:54,283 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=73--2026-05-26 11:01:54.283119
+2026-05-26 11:01:54,288 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=AlexUser--test=Тест по электрике----question_id=4--selected_option=14--2026-05-26 11:01:54.288166
+2026-05-26 11:01:54,374 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=73--2026-05-26 11:01:54.374186
+2026-05-26 11:02:09,589 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=73--2026-05-26 11:02:09.589119
+2026-05-26 11:02:09,594 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=AlexUser--test=Тест по электрике----question_id=1--selected_option=3--2026-05-26 11:02:09.594124
+2026-05-26 11:02:09,676 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=73--2026-05-26 11:02:09.676164
+2026-05-26 11:02:16,289 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=73--2026-05-26 11:02:16.289659
+2026-05-26 11:02:16,294 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=AlexUser--test=Тест по электрике----question_id=3--selected_option=10--2026-05-26 11:02:16.294553
+2026-05-26 11:02:16,374 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=73--2026-05-26 11:02:16.374188
+2026-05-26 11:02:18,886 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=73--2026-05-26 11:02:18.886386
+2026-05-26 11:02:18,891 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=AlexUser--test=Тест по электрике----question_id=2--selected_option=7--2026-05-26 11:02:18.891506
+2026-05-26 11:02:18,975 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=73--2026-05-26 11:02:18.975318
+2026-05-26 11:02:18,991 | INFO | gtests | views | finish_test | line 246 | FINISH TEST | user=AlexUser--test=Тест по электрике--score=83.33333333333334%--correct=5/6--2026-05-26 11:02:18.991732
+2026-05-26 11:07:44,762 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=None--2026-05-26 11:07:44.762964
+2026-05-26 11:07:59,074 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=74--2026-05-26 11:07:59.074438
+2026-05-26 11:07:59,081 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=2--selected_option=5--2026-05-26 11:07:59.081831
+2026-05-26 11:07:59,172 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=74--2026-05-26 11:07:59.172221
+2026-05-26 11:08:04,445 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=74--2026-05-26 11:08:04.445120
+2026-05-26 11:08:04,451 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=3--selected_option=9--2026-05-26 11:08:04.450753
+2026-05-26 11:08:04,536 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=74--2026-05-26 11:08:04.536823
+2026-05-26 11:08:08,969 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=74--2026-05-26 11:08:08.969498
+2026-05-26 11:08:08,975 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=1--selected_option=1--2026-05-26 11:08:08.975500
+2026-05-26 11:08:09,066 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=74--2026-05-26 11:08:09.065714
+2026-05-26 11:08:10,754 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=74--2026-05-26 11:08:10.754286
+2026-05-26 11:08:10,761 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=6--selected_option=22--2026-05-26 11:08:10.761239
+2026-05-26 11:08:10,860 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=74--2026-05-26 11:08:10.860244
+2026-05-26 11:08:14,017 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=74--2026-05-26 11:08:14.017465
+2026-05-26 11:08:14,022 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=4--selected_option=14--2026-05-26 11:08:14.022421
+2026-05-26 11:08:14,110 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=74--2026-05-26 11:08:14.110337
+2026-05-26 11:08:15,871 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=74--2026-05-26 11:08:15.871181
+2026-05-26 11:08:15,874 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=5--selected_option=19--2026-05-26 11:08:15.874919
+2026-05-26 11:08:15,955 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=74--2026-05-26 11:08:15.955718
+2026-05-26 11:08:15,973 | INFO | gtests | views | finish_test | line 246 | FINISH TEST | user=root--test=Тест по электрике--score=50.0%--correct=3/6--2026-05-26 11:08:15.973738
+2026-05-26 11:08:57,948 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=None--2026-05-26 11:08:57.948415
+2026-05-26 11:08:59,713 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=75--2026-05-26 11:08:59.713210
+2026-05-26 11:08:59,719 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=3--selected_option=11--2026-05-26 11:08:59.719841
+2026-05-26 11:08:59,809 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=75--2026-05-26 11:08:59.808213
+2026-05-26 11:09:00,787 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=75--2026-05-26 11:09:00.787350
+2026-05-26 11:09:00,795 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=1--selected_option=3--2026-05-26 11:09:00.795314
+2026-05-26 11:09:00,891 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=75--2026-05-26 11:09:00.891072
+2026-05-26 11:09:02,017 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=75--2026-05-26 11:09:02.017281
+2026-05-26 11:09:02,022 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=4--selected_option=15--2026-05-26 11:09:02.022251
+2026-05-26 11:09:02,116 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=75--2026-05-26 11:09:02.116329
+2026-05-26 11:09:07,499 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=75--2026-05-26 11:09:07.499013
+2026-05-26 11:09:07,502 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=2--selected_option=7--2026-05-26 11:09:07.502973
+2026-05-26 11:09:07,585 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=75--2026-05-26 11:09:07.585220
+2026-05-26 11:09:09,066 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=75--2026-05-26 11:09:09.066796
+2026-05-26 11:09:09,072 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=5--selected_option=18--2026-05-26 11:09:09.072738
+2026-05-26 11:09:09,161 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=75--2026-05-26 11:09:09.161851
+2026-05-26 11:09:15,139 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=75--2026-05-26 11:09:15.139904
+2026-05-26 11:09:15,144 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=6--selected_option=23--2026-05-26 11:09:15.144780
+2026-05-26 11:09:15,232 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=75--2026-05-26 11:09:15.232843
+2026-05-26 11:09:15,249 | INFO | gtests | views | finish_test | line 246 | FINISH TEST | user=root--test=Тест по электрике--score=33.33333333333333%--correct=2/6--2026-05-26 11:09:15.249426

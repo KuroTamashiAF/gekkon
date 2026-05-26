@@ -11,3 +11,6 @@ def word_ending(number:int ):
     return result
 
 
+
+
+
