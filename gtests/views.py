@@ -101,7 +101,7 @@ class TakeTestView(FormView):
         if self.attempt.completed:
             return redirect("main:index")
 
-        self.questions = list(self.test.questions.all())
+        self.questions = list(self.test.questions.all())   # вопросы 
 
         # ✅ текущий вопрос
         answered_count = self.attempt.answers.count()

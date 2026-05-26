@@ -60,13 +60,25 @@
                             <!-- ВАРИАНТЫ ОТВЕТОВ -->
                             <div class="answers_grid">
                                 {% for choice in field %}
+                                    <label class="answer-card">
+                                        
+                                        {{ choice.tag }}
+
+                                        <div class="answer-content">
+                                            {{ choice.choice_label }}
+                                        </div>
+
+                                    </label>
+                                {% endfor %}
+
+                                {% comment %} {% for choice in field %}
                                     <div class="grid_container">
                                         <label class="answer">
                                             {{ choice.tag }}
                                             <span>{{ choice.choice_label }}</span>
                                         </label>
                                     </div>
-                                {% endfor %}
+                                {% endfor %} {% endcomment %}
                             </div>
 
                         {% endfor %}

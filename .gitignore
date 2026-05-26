@@ -1,5 +1,77 @@
-venv/
-.vscode
-.sqlite3
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Media / Static
 media/
-.json
+staticfiles/
+
+# Environment variables
+.env
+.env.*
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# pytest
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+
+# coverage
+.coverage
+htmlcov/
+
+# migrations (кроме __init__.py)
+**/migrations/*
+!**/migrations/__init__.py
+
+# Logs
+logs/
+*.log
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Redis dump
+dump.rdb
+
+# Docker
+*.pid
+
+# Node
+node_modules/
+
+# SASS cache
+.sass-cache/
+
+# Compiled static
+static_collected/
+
+# Backup files
+*.bak
+*.swp

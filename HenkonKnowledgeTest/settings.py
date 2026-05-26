@@ -175,7 +175,9 @@ LOGGING = {
             "filename": LOG_DIR / "django_errors.log",          #Куда писать.
             "maxBytes": 1024 * 1024 * 5,                        #Максимальный размер:
             "backupCount": 5,                                   # Хранить 5 старых логов 
-            "formatter": "verbose",                             #Использовать подробный формат.
+            "formatter": "verbose",
+            "encoding":"utf-8",
+                                                                      #Использовать подробный формат.
         },
 
         "gtests_file": {
@@ -185,6 +187,7 @@ LOGGING = {
             "maxBytes": 1024 * 1024 * 5,
             "backupCount": 5,
             "formatter": "verbose",
+            "encoding":"utf-8",
         },
 
         "warning_file": {
@@ -194,6 +197,7 @@ LOGGING = {
             "maxBytes": 1024 * 1024 * 5,
             "backupCount": 5,
             "formatter": "verbose",
+            "encoding":"utf-8",
         },
 
         "console": {
@@ -210,6 +214,7 @@ LOGGING = {
                                             # 5 MB
             "backupCount": 5,   # 5 резервных файлов
             "formatter": "verbose", # Подробный formatter
+            "encoding":"utf-8",
         },
     },
 
