@@ -139,7 +139,19 @@ class TakeTestView(FormView):
             return self.finish_test()
 
         self.current_question = self.questions[self.q_index]
+        # перемешивание вариантов ответа в вопросе
 
+        answer_order = request.session.get("answer_order", {})
+
+        if str(self.current_question.id) not in answer_order:     # Если для текущего вопроса ещё нет порядка
+            options = list(self.current_question.options.all())   # Получаем варианты ответов
+            random.shuffle(options)  # Перемешиваем
+
+            answer_order[str(self.current_question.id)] = [    # Сохраняем порядок ID ответов
+                option.id for option in options]
+    
+            request.session["answer_order"] = answer_order # Сохраняем обратно в session
+            
         return super().dispatch(request, *args, **kwargs)
 
     # def get_success_url(self):
@@ -148,7 +160,20 @@ class TakeTestView(FormView):
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()
         kwargs["questions"] = [self.current_question]
+
+
+        answer_order = self.request.session.get("answer_order", {})
+
+        option_ids = answer_order.get(str(self.current_question.id),)
+
+        options_dict = {option.id: option for option in self.current_question.options.all()}  # Получаем ответы из БД
+
+        ordered_options = [options_dict[option_id] for option_id in option_ids if option_id in options_dict] # Восстанавливаем сохранённый порядок
+
+        kwargs["ordered_options"] = ordered_options
+
         return kwargs
+
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -259,6 +284,8 @@ class TakeTestView(FormView):
 
         self.request.session.pop("attempt_id", None)
         self.request.session.pop("question_order", None)
+        self.request.session.pop("answer_order", None)
+
 
         return redirect("gtests:test_results", pk=result.id)
 

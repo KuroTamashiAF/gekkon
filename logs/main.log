@@ -29,3 +29,8 @@
 2026-05-26 11:08:31,662 | INFO | main | views | export_attempt_excel | line 265 | EXCEL EXPORT | root-2026-05-26 11:08:31.662400
 2026-05-27 07:54:54,334 | INFO | main | views | form_valid | line 44 | LOGIN root-2026-05-27 07:54:54.334231
 2026-05-27 08:45:41,601 | INFO | main | views | form_valid | line 44 | LOGIN root-2026-05-27 08:45:41.601437
+2026-05-27 09:05:17,585 | INFO | main | views | get_context_data | line 164 | RESULT VIEW | root-2026-05-27 09:05:17.585318
+2026-05-27 09:05:19,345 | INFO | main | views | export_attempt_excel | line 265 | EXCEL EXPORT | root-2026-05-27 09:05:19.345121
+2026-05-27 09:48:58,977 | INFO | main | views | form_valid | line 44 | LOGIN root-2026-05-27 09:48:58.977963
+2026-05-27 09:49:50,653 | INFO | main | views | get_context_data | line 164 | RESULT VIEW | root-2026-05-27 09:49:50.653855
+2026-05-27 09:49:55,296 | INFO | main | views | export_attempt_excel | line 265 | EXCEL EXPORT | root-2026-05-27 09:49:55.296264

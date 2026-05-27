@@ -20,14 +20,34 @@ from gtests.models import Question, AnswerOption
 #             )
 class TestForm(forms.Form):
     def __init__(self, *args, **kwargs):
-        questions = kwargs.pop('questions')
+        questions = kwargs.pop('questions') # Получаем вопросы
+        ordered_options = kwargs.pop("ordered_options",[])
+
         super().__init__(*args, **kwargs)
 
         for question in questions:
-            self.fields[f'question_{question.id}'] = forms.ModelChoiceField(
-                queryset=question.options.all(),   # queryset вместо choices
-                widget=forms.RadioSelect,
-                empty_label=None,                  # убираем "пустой выбор"
-                required=True,
-                label=question.text
+            field_name = f"question_{question.id}"
+            field = forms.ModelChoiceField(
+                queryset=question.options.all(),  # queryset нужен Django
+                widget=forms.RadioSelect, # Radio buttons
+                empty_label=None, # Убираем пустой выбор
+                required=True, # Обязательный ответ
+                label=question.text # Текст вопроса
             )
+            field.choices = [
+
+                # value
+                # text
+                (option.id, option.text)
+
+                for option in ordered_options
+            ]
+            self.fields[field_name] = field
+
+            # self.fields[f'question_{question.id}'] = forms.ModelChoiceField(
+            #     queryset=question.options.all(),   # queryset вместо choices
+            #     widget=forms.RadioSelect,
+            #     empty_label=None,                  # убираем "пустой выбор"
+            #     required=True,
+            #     label=question.text
+            # )
