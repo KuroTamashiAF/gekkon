@@ -398,3 +398,6 @@
 2026-05-26 11:09:15,144 | INFO | gtests | views | form_valid | line 179 | ANSWEAR | user=root--test=Тест по электрике----question_id=6--selected_option=23--2026-05-26 11:09:15.144780
 2026-05-26 11:09:15,232 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=75--2026-05-26 11:09:15.232843
 2026-05-26 11:09:15,249 | INFO | gtests | views | finish_test | line 246 | FINISH TEST | user=root--test=Тест по электрике--score=33.33333333333333%--correct=2/6--2026-05-26 11:09:15.249426
+2026-05-27 08:45:08,665 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=None--2026-05-27 08:45:08.665126
+2026-05-27 08:45:08,696 | INFO | gtests | views | finish_test | line 246 | FINISH TEST | user=root--test=Электрика--score=0%--correct=0/0--2026-05-27 08:45:08.696036
+2026-05-27 08:45:44,679 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Тест по электрике--attempt_id=None--2026-05-27 08:45:44.679001

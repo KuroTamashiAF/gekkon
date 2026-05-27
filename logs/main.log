@@ -27,3 +27,5 @@
 2026-05-26 11:07:21,660 | INFO | main | views | form_valid | line 44 | LOGIN root-2026-05-26 11:07:21.659728
 2026-05-26 11:08:29,351 | INFO | main | views | get_context_data | line 164 | RESULT VIEW | root-2026-05-26 11:08:29.351438
 2026-05-26 11:08:31,662 | INFO | main | views | export_attempt_excel | line 265 | EXCEL EXPORT | root-2026-05-26 11:08:31.662400
+2026-05-27 07:54:54,334 | INFO | main | views | form_valid | line 44 | LOGIN root-2026-05-27 07:54:54.334231
+2026-05-27 08:45:41,601 | INFO | main | views | form_valid | line 44 | LOGIN root-2026-05-27 08:45:41.601437

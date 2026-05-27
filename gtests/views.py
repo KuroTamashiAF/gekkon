@@ -263,29 +263,7 @@ class TakeTestView(FormView):
         return redirect("gtests:test_results", pk=result.id)
 
 
-        
-
-        # total = self.attempt.answers.count()
-        # correct = self.attempt.answers.filter(is_correct=True).count()
-
-        # percentage = (correct / total * 100) if total > 0 else 0
-
-        # result = UserTestResult.objects.create(
-        #     user=self.request.user,
-        #     # test = self.test,
-        #     attempt=self.attempt,
-        #     score=percentage,
-        #     total_questions=total,
-        #     correct_answers=correct,
-        # )
-
-        # self.attempt.completed = True
-        # self.attempt.save()
-
-        # messages.success(self.request, f"Тест завершён! Результат: {percentage:.1f}%")
-        # self.request.session.pop("attempt_id", None)
-        # return redirect("gtests:test_results", pk=result.id)
-
+    
 
 @method_decorator(never_cache, name="dispatch")
 class TestResultsView(DetailView):
