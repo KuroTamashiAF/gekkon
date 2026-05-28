@@ -1,4 +1,4 @@
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, FileResponse
 from django.shortcuts import redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
@@ -6,6 +6,7 @@ from django.urls import reverse_lazy
 from django.views.generic import TemplateView, ListView, DetailView
 from django.contrib.auth.views import LoginView
 from django.views.generic import CreateView
+from django.conf import settings
 from main.forms import StudentLoginForm, StudentRegistrationForm
 from django.contrib import auth, messages
 from main.servises import get_available_tests_for_user
@@ -17,6 +18,13 @@ from openpyxl.styles import Alignment
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from PIL import Image as PILImage
+
+from PyPDF2 import PdfReader
+from PyPDF2 import PdfWriter
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import A4
+
+
 
 from gtests.views import UserTestAttempt
 from urllib.parse import quote
@@ -270,3 +278,106 @@ def export_attempt_excel(request, pk):
         logger.exception(f"{e}")
         
         return redirect("main:index")
+
+
+def pdf_export_result(request, pk):
+    attempt = get_object_or_404(UserTestAttempt,pk=pk)
+
+    packet = BytesIO()       # СОЗДАЁМ PDF В ПАМЯТИ
+
+    can = canvas.Canvas(
+        packet,
+        pagesize=A4
+    )
+    user = attempt.user
+
+
+    full_name = f"{user.last_name} {user.first_name} {user.surname}"
+
+
+    can.setFont("Helvetica", 12)   # ВСТАВКА ТЕКСТА В PDF  X Y координаты
+    can.drawString(150, 700, full_name)
+    can.drawString(150, 680, str(user.function))
+    can.drawString(150, 660, str(user.enterprise))
+    can.drawString(150, 640, str(user.plot))
+    can.drawString(150, 620, str(attempt.started_at.strftime("%d.%m.%Y")))
+
+    correct = attempt.answers.filter(is_correct=True).count()
+    total = attempt.answers.count()
+    percentage = (correct / total * 100) if total > 0 else 0
+
+    can.drawString(150, 600, f"{percentage:.1f}%")
+
+    y = 550
+
+    for answer in attempt.answers.all():
+
+        text = (
+            f"{answer.question.text[:50]} | "
+            f"Ответ: "
+            f"{answer.selected_option}"
+        )
+
+        can.drawString(50, y, text)
+        y -= 20
+
+    can.save()
+
+    # ==========================================
+    # ПЕРЕХОД В НАЧАЛО BUFFER
+    # ==========================================
+
+    packet.seek(0)
+
+    # ==========================================
+    # ЧИТАЕМ TEMPLATE PDF
+    # ==========================================
+
+    template_path = (
+        settings.BASE_DIR
+        / "static"
+        / "pdf"
+        / "template.pdf"
+    )
+
+    template_pdf = PdfReader(
+        open(template_path, "rb")
+    )
+
+    overlay_pdf = PdfReader(packet)
+
+    output = PdfWriter()
+
+    # ==========================================
+    # ПЕРВАЯ СТРАНИЦА
+    # ==========================================
+
+    page = template_pdf.pages[0]
+
+    page.merge_page(
+        overlay_pdf.pages[0]
+    )
+
+    output.add_page(page)
+
+    # ==========================================
+    # ОТДАЁМ PDF
+    # ==========================================
+
+    response = HttpResponse(
+        content_type="application/pdf"
+    )
+
+    filename = (
+        f"{user.last_name}_"
+        f"{attempt.test.title}.pdf"
+    )
+
+    response[
+        "Content-Disposition"
+    ] = f'attachment; filename="{filename}"'
+
+    output.write(response)
+
+    return response
+

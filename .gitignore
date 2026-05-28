@@ -75,3 +75,6 @@ static_collected/
 # Backup files
 *.bak
 *.swp
+
+#pdf
+.pdf

@@ -33,5 +33,6 @@ urlpatterns = [
     path("registration/", views.RegistrationStudentView.as_view(), name="registration"),
     path("student_result/<int:pk>/", views.StudentTestResultView.as_view(), name="student_result"),
     path("attempt/<int:pk>/export-excel/",views.export_attempt_excel, name="export_attempt_excel"),
+    path("attempt/<int:pk>/export-pdf/",views.pdf_export_result, name="export_attempt_pdf"),
     path("logout/", views.logout, name="logout"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
