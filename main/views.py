@@ -23,15 +23,15 @@ from PyPDF2 import PdfReader
 from PyPDF2 import PdfWriter
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
-
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 
 
 from gtests.views import UserTestAttempt
 from urllib.parse import quote
-import re 
+import re
 import logging
-import datetime as dt 
-
+import datetime as dt
 
 # Create your views here.
 
@@ -159,7 +159,7 @@ class StudentTestResultView(LoginRequiredMixin, DetailView):
             "answers__selected_option",
             "answers__question__options",
         )
-    
+
     def get_context_data(self, **kwargs):
         test = self.get_object().test
         context = super().get_context_data(**kwargs)
@@ -171,7 +171,6 @@ class StudentTestResultView(LoginRequiredMixin, DetailView):
         context["test"] = test
         logger.info(f"RESULT VIEW | {user.username}-{dt.datetime.now()}")
         return context
-
 
 
 @login_required
@@ -195,16 +194,18 @@ def export_attempt_excel(request, pk):
         ws = wb.active
         ws.title = "Result"
 
-        ws.append([
-            "Студент",
-            "Тест",
-            "Процент",
-            "Вопрос",
-            "Выбранный ответ",
-            "Правильный ответ",
-            "Результат",
-            "Изображение",
-        ])
+        ws.append(
+            [
+                "Студент",
+                "Тест",
+                "Процент",
+                "Вопрос",
+                "Выбранный ответ",
+                "Правильный ответ",
+                "Результат",
+                "Изображение",
+            ]
+        )
 
         score = attempt.result.score if hasattr(attempt, "result") else 0
 
@@ -213,16 +214,22 @@ def export_attempt_excel(request, pk):
         for answer in attempt.answers.all():
             correct_option = answer.question.options.filter(is_correct=True).first()
 
-            ws.append([
-                str(attempt.user),
-                str(attempt.test),
-                score,
-                answer.question.text,
-                answer.selected_option.text if answer.selected_option else "Не ответил",
-                correct_option.text if correct_option else "",
-                "Верно" if answer.is_correct else "Неверно",
-                "",
-            ])
+            ws.append(
+                [
+                    str(attempt.user),
+                    str(attempt.test),
+                    score,
+                    answer.question.text,
+                    (
+                        answer.selected_option.text
+                        if answer.selected_option
+                        else "Не ответил"
+                    ),
+                    correct_option.text if correct_option else "",
+                    "Верно" if answer.is_correct else "Неверно",
+                    "",
+                ]
+            )
 
             if answer.question.image:
                 try:
@@ -261,123 +268,120 @@ def export_attempt_excel(request, pk):
         response = HttpResponse(
             content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         )
-    
+
         filename = f"{attempt.user.first_name}_{attempt.user.last_name}_{attempt.user.surname}_{attempt.test.title}"
         filename = re.sub(r'[\\/*?:"<>|]', "", filename)
         filename = filename.replace(" ", "_")
 
-        response["Content-Disposition"] = f"attachment; filename*=UTF-8''{quote(filename)}.xlsx"
-      
+        response["Content-Disposition"] = (
+            f"attachment; filename*=UTF-8''{quote(filename)}.xlsx"
+        )
+
         wb.save(response)
-  
+
         logger.info(f"EXCEL EXPORT | {request.user.username}-{dt.datetime.now()}")
         return response
-    
+
     except Exception as e:
-        logger.exception(f"ERROR EXCEL EXPORT {request.user.username}--{dt.datetime.now()}")
+        logger.exception(
+            f"ERROR EXCEL EXPORT {request.user.username}--{dt.datetime.now()}"
+        )
         logger.exception(f"{e}")
-        
+
         return redirect("main:index")
 
 
 def pdf_export_result(request, pk):
-    attempt = get_object_or_404(UserTestAttempt,pk=pk)
+    try:
+        attempt = get_object_or_404(UserTestAttempt, pk=pk)
 
-    packet = BytesIO()       # СОЗДАЁМ PDF В ПАМЯТИ
+        packet = BytesIO()  # СОЗДАЁМ PDF В ПАМЯТИ
 
-    can = canvas.Canvas(
-        packet,
-        pagesize=A4
-    )
-    user = attempt.user
-
-
-    full_name = f"{user.last_name} {user.first_name} {user.surname}"
-
-
-    can.setFont("Helvetica", 12)   # ВСТАВКА ТЕКСТА В PDF  X Y координаты
-    can.drawString(150, 700, full_name)
-    can.drawString(150, 680, str(user.function))
-    can.drawString(150, 660, str(user.enterprise))
-    can.drawString(150, 640, str(user.plot))
-    can.drawString(150, 620, str(attempt.started_at.strftime("%d.%m.%Y")))
-
-    correct = attempt.answers.filter(is_correct=True).count()
-    total = attempt.answers.count()
-    percentage = (correct / total * 100) if total > 0 else 0
-
-    can.drawString(150, 600, f"{percentage:.1f}%")
-
-    y = 550
-
-    for answer in attempt.answers.all():
-
-        text = (
-            f"{answer.question.text[:50]} | "
-            f"Ответ: "
-            f"{answer.selected_option}"
+        pdfmetrics.registerFont(
+            TTFont("DejaVu", settings.BASE_DIR / "static" / "fonts" / "DejaVuSans.ttf")
         )
 
-        can.drawString(50, y, text)
-        y -= 20
 
-    can.save()
+        can = canvas.Canvas(packet, pagesize=A4)
+        user = attempt.user
 
-    # ==========================================
-    # ПЕРЕХОД В НАЧАЛО BUFFER
-    # ==========================================
+        full_name = f"{user.last_name} {user.first_name} {user.surname}"
 
-    packet.seek(0)
+        can.setFont("DejaVu", 12)  # ВСТАВКА ТЕКСТА В PDF  X Y координаты
+        can.drawString(100, 700, f"ФИО: {full_name}")
+        can.drawString(100, 680, f"Должность: {user.function}")
+        can.drawString(100, 660, f"Предприятие: {user.enterprise}")
+        can.drawString(100, 640, f"Участок: {user.plot}")
 
-    # ==========================================
-    # ЧИТАЕМ TEMPLATE PDF
-    # ==========================================
+        can.drawString(100, 620, f"Дата теста: {attempt.started_at.strftime('%d.%m.%Y')}")
 
-    template_path = (
-        settings.BASE_DIR
-        / "static"
-        / "pdf"
-        / "template.pdf"
-    )
+        correct = attempt.answers.filter(is_correct=True).count()
+        total = attempt.answers.count()
+        percentage = (correct / total * 100) if total > 0 else 0
 
-    template_pdf = PdfReader(
-        open(template_path, "rb")
-    )
+        can.drawString(100, 600, f"Процент правильных ответов: {percentage:.1f}%")
 
-    overlay_pdf = PdfReader(packet)
+        y = 550
 
-    output = PdfWriter()
+        for answer in attempt.answers.all():
 
-    # ==========================================
-    # ПЕРВАЯ СТРАНИЦА
-    # ==========================================
+            text = f"{answer.question.text[:50]} | " f"Ответ: " f"{answer.selected_option}"
 
-    page = template_pdf.pages[0]
+            can.drawString(50, y, text)
+            y -= 20
 
-    page.merge_page(
-        overlay_pdf.pages[0]
-    )
+        can.save()
 
-    output.add_page(page)
+        # ==========================================
+        # ПЕРЕХОД В НАЧАЛО BUFFER
+        # ==========================================
 
-    # ==========================================
-    # ОТДАЁМ PDF
-    # ==========================================
+        packet.seek(0)
 
-    response = HttpResponse(
-        content_type="application/pdf"
-    )
+        # ==========================================
+        # ЧИТАЕМ TEMPLATE PDF
+        # ==========================================
 
-    filename = (
-        f"{user.last_name}_"
-        f"{attempt.test.title}.pdf"
-    )
+        template_path = settings.BASE_DIR / "static" / "pdf" / "template.pdf"
 
-    response[
-        "Content-Disposition"
-    ] = f'attachment; filename="{filename}"'
+        template_pdf = PdfReader(open(template_path, "rb"))
 
-    output.write(response)
+        overlay_pdf = PdfReader(packet)
 
-    return response
+        output = PdfWriter()
+
+        # ==========================================
+        # ПЕРВАЯ СТРАНИЦА
+        # ==========================================
+
+        page = template_pdf.pages[0]
+
+        page.merge_page(overlay_pdf.pages[0])
+
+        output.add_page(page)
+
+        # ==========================================
+        # ОТДАЁМ PDF
+        # ==========================================
+
+        response = HttpResponse(content_type="application/pdf")
+
+        # filename = f"{user.last_name}_{attempt.test.title}.pdf"
+
+        filename = f"{attempt.user.last_name}_{attempt.user.first_name}_{attempt.user.surname}_{attempt.test.title}.pdf"
+        filename = re.sub(r'[\\/*?:"<>|]', "", filename)
+        filename = filename.replace(" ", "_")
+
+        response["Content-Disposition"] = f'attachment; filename="{filename}"'
+
+        output.write(response)
+
+        logger.info(f"PDF EXPORT {request.user.username}-{dt.datetime.now()}")
+        return response
+    
+    except Exception as e:
+        logger.exception(f"ERROR PDF EXPORT {request.user.username}-{dt.datetime.now()}")
+        logger.exception(f"{e}")
+
+
 

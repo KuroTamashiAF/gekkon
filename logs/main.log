@@ -44,3 +44,12 @@
 2026-05-28 08:40:04,530 | INFO | main | views | get_context_data | line 164 | RESULT VIEW | root-2026-05-28 08:40:04.530179
 2026-05-28 08:40:09,029 | INFO | main | views | export_attempt_excel | line 265 | EXCEL EXPORT | root-2026-05-28 08:40:09.029888
 2026-05-28 09:43:03,763 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-05-28 09:43:03.763966
+2026-05-28 15:45:31,003 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-05-28 15:45:31.003861
+2026-05-28 16:02:36,472 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-05-28 16:02:36.472867
+2026-05-28 16:04:24,779 | INFO | main | views | pdf_export_result | line 387 | PDF EXPORT | root-2026-05-28 16:04:24.778084
+2026-05-28 16:06:25,451 | INFO | main | views | pdf_export_result | line 387 | PDF EXPORT | root-2026-05-28 16:06:25.451503
+2026-05-28 16:07:02,702 | INFO | main | views | pdf_export_result | line 387 | PDF EXPORT | root-2026-05-28 16:07:02.702116
+2026-05-28 16:10:14,028 | INFO | main | views | pdf_export_result | line 378 | PDF EXPORT | root-2026-05-28 16:10:14.028630
+2026-05-28 16:12:21,386 | INFO | main | views | pdf_export_result | line 378 | PDF EXPORT | root-2026-05-28 16:12:21.386036
+2026-05-28 16:24:12,292 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-05-28 16:24:12.292032
+2026-05-28 16:28:16,712 | INFO | main | views | pdf_export_result | line 379 | PDF EXPORT root-2026-05-28 16:28:16.712448
