@@ -16,7 +16,7 @@
     <div class="take_tests_container">
         <a class="link_to_main" href="{% url "main:index" %}"> <-- К списку доступных тестов </a>
 
-        <h2>Результат теста: {{ result.test.title }}</h2>
+        <h2 class="test_result">Результат теста: {{ result.test.title }}</h2>
 
         <div class="alert alert-info mt-3">
             <strong>Баллы:</strong> {{ result.score|floatformat:1 }}% <br>

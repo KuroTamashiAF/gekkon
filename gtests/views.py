@@ -279,8 +279,7 @@ class TakeTestView(FormView):
 
         messages.success(
             self.request,
-            f"Тест завершён! Результат: {percentage:.1f}%"
-        )
+            f"Тест завершён! Результат: {percentage:.1f}%")
 
         self.request.session.pop("attempt_id", None)
         self.request.session.pop("question_order", None)

@@ -1,6 +1,7 @@
 
 
 .take_tests_content_container {
+  
     padding: 0vh 20vh 0vh 20vh;
     margin: 2vh 0vh 15vh 5vh;
     font-family: "Shopen";
@@ -198,10 +199,6 @@
             scale(2);
     }
 }
-
-
-
-
 
 
 @media (max-width: 900px) {
