@@ -1,0 +1,343 @@
+2026-06-01 09:05:05,482 | ERROR | main | servises | pdf_render_function | line 248 | 
+raised by class KeepTogether(reportlab.platypus.flowables)@0x251d2e94dd0 wrap
+ 
+fileName='C:\\Python_Projects\\knowledge\\app\\static\\signatures\\director_sign.png' identity=[ImageReader@0x251d13b04a0 filename='C:\\Python_Projects\\knowledge\\app\\static\\signatures\\director_sign.png'] Cannot open resource "C:\Python_Projects\knowledge\app\static\signatures\director_sign.png"
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 525, in open_for_read
+    return open_for_read_by_name(name,mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+           ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\static\\signatures\\director_sign.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 532, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 478, in rlUrlRead
+    return urlopen(Request(name,headers=headers)).read()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\A.Fedorov\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\A.Fedorov\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\A.Fedorov\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 537, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\A.Fedorov\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Users\A.Fedorov\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 1420, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: c>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 647, in __init__
+    fp = open_for_read(fileName,'b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "C:\Python_Projects\knowledge\app\static\signatures\director_sign.png"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 711, in wrap
+    W,H = _listWrapOn(self._content,aW,self.canv,dims=dims)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 637, in _listWrapOn
+    w,h = f.wrapOn(canv,availWidth,0xfffffff)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 123, in wrapOn
+    w, h = self.wrap(aW,aH)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 510, in wrap
+    return self.drawWidth, self.drawHeight
+           ^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 504, in __getattr__
+    self._setup_inner()
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 461, in _setup_inner
+    img = self._img
+          ^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 498, in __getattr__
+    self._img = ImageReader(self._file)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 659, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 1180, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 647, in __init__
+    fp = open_for_read(fileName,'b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+fileName='C:\\Python_Projects\\knowledge\\app\\static\\signatures\\director_sign.png' identity=[ImageReader@0x251d13b04a0 filename='C:\\Python_Projects\\knowledge\\app\\static\\signatures\\director_sign.png'] Cannot open resource "C:\Python_Projects\knowledge\app\static\signatures\director_sign.png"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\servises.py", line 191, in pdf_render_function
+    doc.build(
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\doctemplate.py", line 1322, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\doctemplate.py", line 1083, in build
+    self.handle_flowable(flowables)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\doctemplate.py", line 932, in handle_flowable
+    if frame.add(f, canv, trySplit=self.allowSplitting):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\frames.py", line 158, in _add
+    w, h = flowable.wrap(aW, h)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 713, in wrap
+    annotateException('\nraised by class %s(%s)@0x%8.8x wrap\n' % (self.__class__.__name__,self.__class__.__module__,id(self)))
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 1180, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 711, in wrap
+    W,H = _listWrapOn(self._content,aW,self.canv,dims=dims)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 637, in _listWrapOn
+    w,h = f.wrapOn(canv,availWidth,0xfffffff)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 123, in wrapOn
+    w, h = self.wrap(aW,aH)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 510, in wrap
+    return self.drawWidth, self.drawHeight
+           ^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 504, in __getattr__
+    self._setup_inner()
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 461, in _setup_inner
+    img = self._img
+          ^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 498, in __getattr__
+    self._img = ImageReader(self._file)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 659, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 1180, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 647, in __init__
+    fp = open_for_read(fileName,'b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+raised by class KeepTogether(reportlab.platypus.flowables)@0x251d2e94dd0 wrap
+ 
+fileName='C:\\Python_Projects\\knowledge\\app\\static\\signatures\\director_sign.png' identity=[ImageReader@0x251d13b04a0 filename='C:\\Python_Projects\\knowledge\\app\\static\\signatures\\director_sign.png'] Cannot open resource "C:\Python_Projects\knowledge\app\static\signatures\director_sign.png"
+2026-06-01 09:09:29,060 | ERROR | main | servises | pdf_render_function | line 248 | 
+raised by class KeepTogether(reportlab.platypus.flowables)@0x2a45abe45c0 wrap
+ 
+fileName='C:\\Python_Projects\\knowledge\\app\\static\\signatures\\director_sign.png' identity=[ImageReader@0x2a459180ec0 filename='C:\\Python_Projects\\knowledge\\app\\static\\signatures\\director_sign.png'] Cannot open resource "C:\Python_Projects\knowledge\app\static\signatures\director_sign.png"
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 525, in open_for_read
+    return open_for_read_by_name(name,mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+           ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\static\\signatures\\director_sign.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 532, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 478, in rlUrlRead
+    return urlopen(Request(name,headers=headers)).read()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\A.Fedorov\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\A.Fedorov\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\A.Fedorov\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 537, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\A.Fedorov\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Users\A.Fedorov\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py", line 1420, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: c>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 647, in __init__
+    fp = open_for_read(fileName,'b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "C:\Python_Projects\knowledge\app\static\signatures\director_sign.png"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 711, in wrap
+    W,H = _listWrapOn(self._content,aW,self.canv,dims=dims)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 637, in _listWrapOn
+    w,h = f.wrapOn(canv,availWidth,0xfffffff)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 123, in wrapOn
+    w, h = self.wrap(aW,aH)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 510, in wrap
+    return self.drawWidth, self.drawHeight
+           ^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 504, in __getattr__
+    self._setup_inner()
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 461, in _setup_inner
+    img = self._img
+          ^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 498, in __getattr__
+    self._img = ImageReader(self._file)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 659, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 1180, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 647, in __init__
+    fp = open_for_read(fileName,'b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+fileName='C:\\Python_Projects\\knowledge\\app\\static\\signatures\\director_sign.png' identity=[ImageReader@0x2a459180ec0 filename='C:\\Python_Projects\\knowledge\\app\\static\\signatures\\director_sign.png'] Cannot open resource "C:\Python_Projects\knowledge\app\static\signatures\director_sign.png"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\servises.py", line 191, in pdf_render_function
+    doc.build(
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\doctemplate.py", line 1322, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\doctemplate.py", line 1083, in build
+    self.handle_flowable(flowables)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\doctemplate.py", line 932, in handle_flowable
+    if frame.add(f, canv, trySplit=self.allowSplitting):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\frames.py", line 158, in _add
+    w, h = flowable.wrap(aW, h)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 713, in wrap
+    annotateException('\nraised by class %s(%s)@0x%8.8x wrap\n' % (self.__class__.__name__,self.__class__.__module__,id(self)))
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 1180, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 711, in wrap
+    W,H = _listWrapOn(self._content,aW,self.canv,dims=dims)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 637, in _listWrapOn
+    w,h = f.wrapOn(canv,availWidth,0xfffffff)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 123, in wrapOn
+    w, h = self.wrap(aW,aH)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 510, in wrap
+    return self.drawWidth, self.drawHeight
+           ^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 504, in __getattr__
+    self._setup_inner()
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 461, in _setup_inner
+    img = self._img
+          ^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\flowables.py", line 498, in __getattr__
+    self._img = ImageReader(self._file)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 659, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 1180, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 647, in __init__
+    fp = open_for_read(fileName,'b')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+raised by class KeepTogether(reportlab.platypus.flowables)@0x2a45abe45c0 wrap
+ 
+fileName='C:\\Python_Projects\\knowledge\\app\\static\\signatures\\director_sign.png' identity=[ImageReader@0x2a459180ec0 filename='C:\\Python_Projects\\knowledge\\app\\static\\signatures\\director_sign.png'] Cannot open resource "C:\Python_Projects\knowledge\app\static\signatures\director_sign.png"
+2026-06-01 10:06:10,938 | ERROR | main | servises | pdf_render_function | line 250 | list.append() takes exactly one argument (2 given)
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\servises.py", line 109, in pdf_render_function
+    elements.append(Paragraph("<b>Ответы</b>:"), style)
+TypeError: list.append() takes exactly one argument (2 given)
+2026-06-01 10:06:21,186 | ERROR | main | servises | pdf_render_function | line 250 | list.append() takes exactly one argument (2 given)
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\servises.py", line 109, in pdf_render_function
+    elements.append(Paragraph("<b>Ответы</b>:"), style)
+TypeError: list.append() takes exactly one argument (2 given)
+2026-06-01 10:09:53,247 | ERROR | main | servises | pdf_render_function | line 250 | 'list' object has no attribute 'split'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\servises.py", line 128, in pdf_render_function
+    table_data.append(Paragraph([ question_text, selected_answer, result_text ],style)) # Добавляем строку
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\paragraph.py", line 1861, in __init__
+    self._setup(text, style, bulletText or getattr(style,'bulletText',None), frags, cleanBlockQuotedText)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\paragraph.py", line 1879, in _setup
+    text = cleaner(text)
+           ^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\paragraph.py", line 139, in cleanBlockQuotedText
+    L=list(filter(truth,list(map(_lineClean, split(text, '\n')))))
+                                             ^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\paragraph.py", line 96, in split
+    return [uword for uword in (_wsc_re_split(text) if delim is None and '\xa0' in text else text.split(delim))]
+                                                                                             ^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'split'
+2026-06-01 10:10:28,679 | ERROR | main | servises | pdf_render_function | line 250 | 'list' object has no attribute 'split'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\servises.py", line 128, in pdf_render_function
+    table_data.append(Paragraph([ question_text, selected_answer, result_text ], style)) # Добавляем строку
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\paragraph.py", line 1861, in __init__
+    self._setup(text, style, bulletText or getattr(style,'bulletText',None), frags, cleanBlockQuotedText)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\paragraph.py", line 1879, in _setup
+    text = cleaner(text)
+           ^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\paragraph.py", line 139, in cleanBlockQuotedText
+    L=list(filter(truth,list(map(_lineClean, split(text, '\n')))))
+                                             ^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\paragraph.py", line 96, in split
+    return [uword for uword in (_wsc_re_split(text) if delim is None and '\xa0' in text else text.split(delim))]
+                                                                                             ^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'split'
+2026-06-01 10:11:05,887 | ERROR | main | servises | pdf_render_function | line 250 | 'list' object has no attribute 'split'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\servises.py", line 128, in pdf_render_function
+    table_data.append(Paragraph([ question_text, selected_answer, result_text ])) # Добавляем строку
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\paragraph.py", line 1861, in __init__
+    self._setup(text, style, bulletText or getattr(style,'bulletText',None), frags, cleanBlockQuotedText)
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\paragraph.py", line 1879, in _setup
+    text = cleaner(text)
+           ^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\paragraph.py", line 139, in cleanBlockQuotedText
+    L=list(filter(truth,list(map(_lineClean, split(text, '\n')))))
+                                             ^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\reportlab\platypus\paragraph.py", line 96, in split
+    return [uword for uword in (_wsc_re_split(text) if delim is None and '\xa0' in text else text.split(delim))]
+                                                                                             ^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'split'

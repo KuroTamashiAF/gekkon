@@ -9,7 +9,7 @@ from django.views.generic import CreateView
 from django.conf import settings
 from main.forms import StudentLoginForm, StudentRegistrationForm
 from django.contrib import auth, messages
-from main.servises import get_available_tests_for_user
+from main.servises import get_available_tests_for_user, pdf_render_function
 from gtests.models import Student, UserTestAttempt
 from io import BytesIO
 from openpyxl import Workbook
@@ -292,96 +292,99 @@ def export_attempt_excel(request, pk):
 
 
 def pdf_export_result(request, pk):
-    try:
-        attempt = get_object_or_404(UserTestAttempt, pk=pk)
-
-        packet = BytesIO()  # СОЗДАЁМ PDF В ПАМЯТИ
-
-        pdfmetrics.registerFont(
-            TTFont("DejaVu", settings.BASE_DIR / "static" / "fonts" / "DejaVuSans.ttf")
-        )
+    return pdf_render_function(request, pk)
 
 
-        can = canvas.Canvas(packet, pagesize=A4)
-        user = attempt.user
+    # try:
+    #     attempt = get_object_or_404(UserTestAttempt, pk=pk)
 
-        full_name = f"{user.last_name} {user.first_name} {user.surname}"
+    #     packet = BytesIO()  # СОЗДАЁМ PDF В ПАМЯТИ
 
-        can.setFont("DejaVu", 12)  # ВСТАВКА ТЕКСТА В PDF  X Y координаты
-        can.drawString(100, 700, f"ФИО: {full_name}")
-        can.drawString(100, 680, f"Должность: {user.function}")
-        can.drawString(100, 660, f"Предприятие: {user.enterprise}")
-        can.drawString(100, 640, f"Участок: {user.plot}")
+    #     pdfmetrics.registerFont(
+    #         TTFont("DejaVu", settings.BASE_DIR / "static" / "fonts" / "DejaVuSans.ttf")
+    #     )
 
-        can.drawString(100, 620, f"Дата теста: {attempt.started_at.strftime('%d.%m.%Y')}")
 
-        correct = attempt.answers.filter(is_correct=True).count()
-        total = attempt.answers.count()
-        percentage = (correct / total * 100) if total > 0 else 0
+    #     can = canvas.Canvas(packet, pagesize=A4)
+    #     user = attempt.user
 
-        can.drawString(100, 600, f"Процент правильных ответов: {percentage:.1f}%")
+    #     full_name = f"{user.last_name} {user.first_name} {user.surname}"
 
-        y = 550
+    #     can.setFont("DejaVu", 12)  # ВСТАВКА ТЕКСТА В PDF  X Y координаты
+    #     can.drawString(100, 700, f"ФИО: {full_name}")
+    #     can.drawString(100, 680, f"Должность: {user.function}")
+    #     can.drawString(100, 660, f"Предприятие: {user.enterprise}")
+    #     can.drawString(100, 640, f"Участок: {user.plot}")
 
-        for answer in attempt.answers.all():
+    #     can.drawString(100, 620, f"Дата теста: {attempt.started_at.strftime('%d.%m.%Y')}")
 
-            text = f"{answer.question.text[:50]} | " f"Ответ: " f"{answer.selected_option}"
+    #     correct = attempt.answers.filter(is_correct=True).count()
+    #     total = attempt.answers.count()
+    #     percentage = (correct / total * 100) if total > 0 else 0
 
-            can.drawString(50, y, text)
-            y -= 20
+    #     can.drawString(100, 600, f"Процент правильных ответов: {percentage:.1f}%")
 
-        can.save()
+    #     y = 550
 
-        # ==========================================
-        # ПЕРЕХОД В НАЧАЛО BUFFER
-        # ==========================================
+    #     for answer in attempt.answers.all():
 
-        packet.seek(0)
+    #         text = f"{answer.question.text[:50]} | " f"Ответ: " f"{answer.selected_option}"
 
-        # ==========================================
-        # ЧИТАЕМ TEMPLATE PDF
-        # ==========================================
+    #         can.drawString(50, y, text)
+    #         y -= 20
 
-        template_path = settings.BASE_DIR / "static" / "pdf" / "template.pdf"
+    #     can.save()
 
-        template_pdf = PdfReader(open(template_path, "rb"))
+    #     # ==========================================
+    #     # ПЕРЕХОД В НАЧАЛО BUFFER
+    #     # ==========================================
 
-        overlay_pdf = PdfReader(packet)
+    #     packet.seek(0)
 
-        output = PdfWriter()
+    #     # ==========================================
+    #     # ЧИТАЕМ TEMPLATE PDF
+    #     # ==========================================
 
-        # ==========================================
-        # ПЕРВАЯ СТРАНИЦА
-        # ==========================================
+    #     template_path = settings.BASE_DIR / "static" / "pdf" / "template.pdf"
 
-        page = template_pdf.pages[0]
+    #     template_pdf = PdfReader(open(template_path, "rb"))
 
-        page.merge_page(overlay_pdf.pages[0])
+    #     overlay_pdf = PdfReader(packet)
 
-        output.add_page(page)
+    #     output = PdfWriter()
 
-        # ==========================================
-        # ОТДАЁМ PDF
-        # ==========================================
+    #     # ==========================================
+    #     # ПЕРВАЯ СТРАНИЦА
+    #     # ==========================================
 
-        response = HttpResponse(content_type="application/pdf")
+    #     page = template_pdf.pages[0]
 
-        # filename = f"{user.last_name}_{attempt.test.title}.pdf"
+    #     page.merge_page(overlay_pdf.pages[0])
 
-        filename = f"{attempt.user.last_name}_{attempt.user.first_name}_{attempt.user.surname}_{attempt.test.title}.pdf"
-        filename = re.sub(r'[\\/*?:"<>|]', "", filename)
-        filename = filename.replace(" ", "_")
+    #     output.add_page(page)
 
-        response["Content-Disposition"] = f'attachment; filename="{filename}"'
+    #     # ==========================================
+    #     # ОТДАЁМ PDF
+    #     # ==========================================
 
-        output.write(response)
+    #     response = HttpResponse(content_type="application/pdf")
 
-        logger.info(f"PDF EXPORT {request.user.username}-{dt.datetime.now()}")
-        return response
+    #     # filename = f"{user.last_name}_{attempt.test.title}.pdf"
+
+    #     filename = f"{attempt.user.last_name}_{attempt.user.first_name}_{attempt.user.surname}_{attempt.test.title}.pdf"
+    #     filename = re.sub(r'[\\/*?:"<>|]', "", filename)
+    #     filename = filename.replace(" ", "_")
+
+    #     response["Content-Disposition"] = f'attachment; filename="{filename}"'
+
+    #     output.write(response)
+
+    #     logger.info(f"PDF EXPORT {request.user.username}-{dt.datetime.now()}")
+    #     return response
     
-    except Exception as e:
-        logger.exception(f"ERROR PDF EXPORT {request.user.username}-{dt.datetime.now()}")
-        logger.exception(f"{e}")
+    # except Exception as e:
+    #     logger.exception(f"ERROR PDF EXPORT {request.user.username}-{dt.datetime.now()}")
+    #     logger.exception(f"{e}")
 
 
 
