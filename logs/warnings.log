@@ -341,3 +341,21 @@ Traceback (most recent call last):
     return [uword for uword in (_wsc_re_split(text) if delim is None and '\xa0' in text else text.split(delim))]
                                                                                              ^^^^^^^^^^
 AttributeError: 'list' object has no attribute 'split'
+2026-06-01 12:48:42,110 | ERROR | main | servises | pdf_render_function | line 265 | 'ParagraphStyle' object has no attribute 'style'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\servises.py", line 85, in pdf_render_function
+    first_page_style.style.fontSize = 15  # Размер текста
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ParagraphStyle' object has no attribute 'style'
+2026-06-01 12:48:44,550 | ERROR | main | servises | pdf_render_function | line 265 | 'ParagraphStyle' object has no attribute 'style'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\servises.py", line 85, in pdf_render_function
+    first_page_style.style.fontSize = 15  # Размер текста
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ParagraphStyle' object has no attribute 'style'
+2026-06-01 13:30:39,245 | ERROR | main | servises | pdf_render_function | line 264 | name 'TA_CENTER' is not defined
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\servises.py", line 94, in pdf_render_function
+    response_title.alignment = TA_CENTER  # Выравнивание по левому краю
+                               ^^^^^^^^^
+NameError: name 'TA_CENTER' is not defined

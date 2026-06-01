@@ -107,3 +107,9 @@ ValueError: The view main.views.pdf_export_result didn't return an HttpResponse 
 2026-06-01 10:10:28,683 | ERROR | django.server | basehttp | log_message | line 213 | "GET /attempt/84/export-pdf/ HTTP/1.1" 500 16
 2026-06-01 10:11:05,891 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /attempt/84/export-pdf/
 2026-06-01 10:11:05,892 | ERROR | django.server | basehttp | log_message | line 213 | "GET /attempt/84/export-pdf/ HTTP/1.1" 500 16
+2026-06-01 12:48:42,112 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /attempt/84/export-pdf/
+2026-06-01 12:48:42,113 | ERROR | django.server | basehttp | log_message | line 213 | "GET /attempt/84/export-pdf/ HTTP/1.1" 500 16
+2026-06-01 12:48:44,552 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /attempt/84/export-pdf/
+2026-06-01 12:48:44,553 | ERROR | django.server | basehttp | log_message | line 213 | "GET /attempt/84/export-pdf/ HTTP/1.1" 500 16
+2026-06-01 13:30:39,249 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /attempt/84/export-pdf/
+2026-06-01 13:30:39,251 | ERROR | django.server | basehttp | log_message | line 213 | "GET /attempt/84/export-pdf/ HTTP/1.1" 500 16

@@ -414,3 +414,53 @@ Traceback (most recent call last):
     return [uword for uword in (_wsc_re_split(text) if delim is None and '\xa0' in text else text.split(delim))]
                                                                                              ^^^^^^^^^^
 AttributeError: 'list' object has no attribute 'split'
+2026-06-01 12:19:13,731 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-06-01 12:19:13.731544
+2026-06-01 12:22:31,606 | INFO | main | views | export_attempt_excel | line 282 | EXCEL EXPORT | root-2026-06-01 12:22:31.606875
+2026-06-01 12:23:17,161 | INFO | main | servises | pdf_render_function | line 249 | PDF Export AlexUser
+2026-06-01 12:25:06,408 | INFO | main | servises | pdf_render_function | line 250 | PDF Export root
+2026-06-01 12:37:13,688 | INFO | main | servises | pdf_render_function | line 245 | PDF Export root
+2026-06-01 12:37:22,281 | INFO | main | servises | pdf_render_function | line 245 | PDF Export root
+2026-06-01 12:37:32,781 | INFO | main | servises | pdf_render_function | line 245 | PDF Export root
+2026-06-01 12:37:53,386 | INFO | main | servises | pdf_render_function | line 245 | PDF Export root
+2026-06-01 12:38:04,529 | INFO | main | servises | pdf_render_function | line 245 | PDF Export root
+2026-06-01 12:38:18,244 | INFO | main | servises | pdf_render_function | line 245 | PDF Export root
+2026-06-01 12:38:32,376 | INFO | main | servises | pdf_render_function | line 245 | PDF Export root
+2026-06-01 12:38:49,605 | INFO | main | servises | pdf_render_function | line 245 | PDF Export root
+2026-06-01 12:39:10,784 | INFO | main | servises | pdf_render_function | line 245 | PDF Export root
+2026-06-01 12:45:03,146 | INFO | main | servises | pdf_render_function | line 245 | PDF Export root
+2026-06-01 12:45:14,537 | INFO | main | servises | pdf_render_function | line 245 | PDF Export root
+2026-06-01 12:48:42,110 | ERROR | main | servises | pdf_render_function | line 265 | 'ParagraphStyle' object has no attribute 'style'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\servises.py", line 85, in pdf_render_function
+    first_page_style.style.fontSize = 15  # Размер текста
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ParagraphStyle' object has no attribute 'style'
+2026-06-01 12:48:44,550 | ERROR | main | servises | pdf_render_function | line 265 | 'ParagraphStyle' object has no attribute 'style'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\servises.py", line 85, in pdf_render_function
+    first_page_style.style.fontSize = 15  # Размер текста
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ParagraphStyle' object has no attribute 'style'
+2026-06-01 12:49:36,308 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-01 12:50:05,141 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-01 12:50:23,429 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-01 12:50:27,947 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-01 12:51:27,547 | INFO | main | servises | pdf_render_function | line 255 | PDF Export root
+2026-06-01 12:51:36,896 | INFO | main | servises | pdf_render_function | line 255 | PDF Export root
+2026-06-01 12:51:45,534 | INFO | main | servises | pdf_render_function | line 255 | PDF Export root
+2026-06-01 13:06:31,457 | INFO | main | servises | pdf_render_function | line 255 | PDF Export root
+2026-06-01 13:06:44,672 | INFO | main | servises | pdf_render_function | line 255 | PDF Export root
+2026-06-01 13:06:47,104 | INFO | main | servises | pdf_render_function | line 255 | PDF Export root
+2026-06-01 13:06:49,556 | INFO | main | servises | pdf_render_function | line 255 | PDF Export root
+2026-06-01 13:06:56,586 | INFO | main | servises | pdf_render_function | line 255 | PDF Export root
+2026-06-01 13:07:06,379 | INFO | main | servises | pdf_render_function | line 255 | PDF Export root
+2026-06-01 13:07:06,735 | INFO | main | servises | pdf_render_function | line 255 | PDF Export root
+2026-06-01 13:30:39,245 | ERROR | main | servises | pdf_render_function | line 264 | name 'TA_CENTER' is not defined
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\servises.py", line 94, in pdf_render_function
+    response_title.alignment = TA_CENTER  # Выравнивание по левому краю
+                               ^^^^^^^^^
+NameError: name 'TA_CENTER' is not defined
+2026-06-01 13:31:14,126 | INFO | main | servises | pdf_render_function | line 261 | PDF Export root
+2026-06-01 13:31:41,500 | INFO | main | servises | pdf_render_function | line 261 | PDF Export root
+2026-06-01 13:32:34,144 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root

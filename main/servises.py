@@ -7,7 +7,7 @@ from django.shortcuts import get_object_or_404
 from PyPDF2 import PdfReader
 from PyPDF2 import PdfWriter
 from reportlab.lib import colors
-from reportlab.lib.enums import TA_LEFT
+from reportlab.lib.enums import TA_LEFT, TA_CENTER
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.pdfbase import pdfmetrics
@@ -41,6 +41,7 @@ def get_available_tests_for_user(user):
 
 def pdf_render_function(request, pk):
     if request.user.is_authenticated:
+        root_user = request.user
         try:
             attempt = get_object_or_404(UserTestAttempt, pk=pk)  # получаем попытку
             user = attempt.user  # получаем пользователя
@@ -78,6 +79,23 @@ def pdf_render_function(request, pk):
             style.leading = 14  # Межстрочный интервал
             style.alignment = TA_LEFT  # Выравнивание по левому краю
 
+            first_page_styles = getSampleStyleSheet()
+            first_page_style = first_page_styles["BodyText"]
+            first_page_style.fontName = "DejaVu"
+            first_page_style.fontSize = 15  # Размер текста
+            first_page_style.leading = 14  # Межстрочный интервал
+            first_page_style.alignment = TA_LEFT  # Выравнивание по левому краю
+
+            response_titles = getSampleStyleSheet()
+            response_title = response_titles["BodyText"]
+            response_title.fontName = "DejaVu"
+            response_title.fontSize = 20  # Размер текста
+            response_title.leading = 14  # Межстрочный интервал
+            response_title.alignment = TA_CENTER  # Выравнивание по левому краю
+        
+
+
+
             full_name = (
                 f"{user.last_name} " f"{user.first_name} " f"{user.surname}"
             )  # ФИО ПОЛЬЗОВАТЕЛЯ
@@ -92,21 +110,21 @@ def pdf_render_function(request, pk):
 
             # ИНФОРМАЦИЯ О СТУДЕНТЕ
 
-            elements.append(Paragraph(f"<b>ФИО:</b> {full_name}", style))
+            elements.append(Paragraph(f"<b>ФИО:</b> {full_name}", first_page_style))
             elements.append(Spacer(1, 12))
-            elements.append(Paragraph(f"<b>Должность</b> {user.function}",style))
+            elements.append(Paragraph(f"<b>Должность</b> {user.function}",first_page_style))
             elements.append(Spacer(1, 12))
-            elements.append(Paragraph( f"<b>Предприятие:</b> {user.enterprise}", style ) )
+            elements.append(Paragraph( f"<b>Предприятие:</b> {user.enterprise}", first_page_style ) )
             elements.append(Spacer(1, 12))
-            elements.append( Paragraph( f"<b>Участок:</b> {user.plot}", style ) )
+            elements.append( Paragraph( f"<b>Участок:</b> {user.plot}", first_page_style ) )
             elements.append(Spacer(1, 12))
-            elements.append( Paragraph( f"<b>Дата тестирования:</b> " f"{attempt.started_at.strftime('%d.%m.%Y')}", style ) )
+            elements.append( Paragraph( f"<b>Дата тестирования:</b> " f"{attempt.started_at.strftime('%d.%m.%Y')}", first_page_style ) )
             elements.append(Spacer(1, 12))
-            elements.append( Paragraph( f"<b>Тест:</b> " f"{attempt.test.title}", style ) )
+            elements.append( Paragraph( f"<b>Тест:</b> " f"{attempt.test.title}", first_page_style ) )
             elements.append(Spacer(1, 12))
-            elements.append( Paragraph( f"<b>Результат:</b> " f"{percentage:.1f}%", style ) )
-            elements.append(Spacer(1, 12))
-            elements.append(Paragraph("<b>Ответы</b>:", style))
+            elements.append( Paragraph( f"<b>Результат:</b> " f"{percentage:.1f}%", first_page_style ) )
+            elements.append(Spacer(1, 100))
+            elements.append(Paragraph("<b>Ответы</b>:", response_title))
             elements.append(Spacer(1, 30))
 
 
@@ -174,7 +192,7 @@ def pdf_render_function(request, pk):
             # KeepTogether запрещает 
             # # разрывать подпись между страницами
 
-            elements.append( KeepTogether([ Paragraph( "<b>Руководитель:</b> И.Ю. Иванов", style ), Spacer(1, 15), signature ]) )
+            elements.append( KeepTogether([ Paragraph( "<b>Руководитель:</b> И.Ю. Иванов", style ), Spacer(1, -35), signature ]) )
 
 
             # FOOTER
@@ -213,12 +231,9 @@ def pdf_render_function(request, pk):
 
             template_pdf = PdfReader( open(template_path, "rb") )
 
-
             # ИТОГОВЫЙ PDF
 
-
             output = PdfWriter()
-
 
             # НАКЛАДЫВАЕМ TEMPLATE # НА КАЖДУЮ СТРАНИЦУ
 
@@ -227,8 +242,6 @@ def pdf_render_function(request, pk):
                 template_page.merge_page(page) #    Накладываем контент 
                 output.add_page(template_page) #    Добавляем страницу 
 
-
-            
             # HTTP RESPONSE
 
             response = HttpResponse( content_type="application/pdf" )
@@ -246,7 +259,7 @@ def pdf_render_function(request, pk):
             output.write(response)
 
             # ОТДАЕМ PDF
-
+            logger.info(f"PDF Export {root_user.username}")
             return response
         except Exception as e:
             logger.exception(e)
