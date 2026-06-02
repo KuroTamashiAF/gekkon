@@ -78,3 +78,5 @@ static_collected/
 
 #pdf
 .pdf
+
+for_tests_json/

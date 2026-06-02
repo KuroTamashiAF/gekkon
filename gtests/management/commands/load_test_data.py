@@ -11,33 +11,47 @@ class Command(BaseCommand):
     help = "Загрузка тестов из JSON"
 
     def handle(self, *args, **kwargs):
-        file_path = os.path.join(settings.BASE_DIR, "electric_test.json")
 
-        if not os.path.exists(file_path):
-            self.stdout.write(self.style.ERROR("Файл не найден"))
-            return
 
-        with open(file_path, encoding="utf-8") as f:
-            data = json.load(f)
+        file_names = os.listdir(os.path.join(settings.BASE_DIR / "for_tests_json"))
+        count_tests = 0
 
-        # создаём тест
-        test = Test.objects.create(
-            title="Тест по электрике",
-            description="Автоматически загружен из JSON"
-        )
 
-        for q in data["questions"]:
-            question = Question.objects.create(
-                test=test,
-                text=q["question"],
-                image=q.get("image")  # если есть
+        for file_name in file_names:
+
+            file_path = os.path.join(settings.BASE_DIR / "for_tests_json" , file_name)
+            print(file_path)
+
+
+            if not os.path.exists(file_path):
+                self.stdout.write(self.style.ERROR("Файл не найден"))
+                return
+
+            with open(file_path, encoding="utf-8") as f:
+                data = json.load(f)
+            # создаём тест
+            
+                # print(data["test_description"])
+            
+            test = Test.objects.create(
+            title=data["tests_title"],
+            description=data["test_description"]
             )
 
-            for opt in q["options"]:
-                AnswerOption.objects.create(
-                    question=question,
-                    text=opt["text"],
-                    is_correct=opt["is_correct"]
+            for q in data["questions"]:
+    
+                question = Question.objects.create(
+                    test=test,
+                    text=q["question"],
+                    image=q.get("image")  # если есть
                 )
 
-        self.stdout.write(self.style.SUCCESS("Тест успешно загружен!"))
+                for opt in q["options"]:
+                    AnswerOption.objects.create(
+                        question=question,
+                        text=opt["text"],
+                        is_correct=opt["is_correct"]
+                    )
+            count_tests+=1
+
+        self.stdout.write(self.style.SUCCESS(f"Тесты успешно загружены!= {count_tests}"))

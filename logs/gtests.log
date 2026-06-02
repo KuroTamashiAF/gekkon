@@ -490,3 +490,45 @@
 2026-05-28 08:39:46,425 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=AlexUser--test=Тест по электрике----question_id=6--selected_option=22--2026-05-28 08:39:46.425025
 2026-05-28 08:39:46,507 | INFO | gtests | views | dispatch | line 85 | START TEST | user=AlexUser--test=Тест по электрике--attempt_id=84--2026-05-28 08:39:46.507016
 2026-05-28 08:39:46,524 | INFO | gtests | views | finish_test | line 271 | FINISH TEST | user=AlexUser--test=Тест по электрике--score=100.0%--correct=6/6--2026-05-28 08:39:46.524012
+2026-06-02 08:29:19,655 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=kkkkk--attempt_id=None--2026-06-02 08:29:19.655402
+2026-06-02 08:29:36,206 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=kkkkk--attempt_id=85--2026-06-02 08:29:36.206789
+2026-06-02 08:29:36,210 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=kkkkk----question_id=42--selected_option=167--2026-06-02 08:29:36.210789
+2026-06-02 08:29:36,303 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=kkkkk--attempt_id=85--2026-06-02 08:29:36.303885
+2026-06-02 08:29:38,106 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=kkkkk--attempt_id=85--2026-06-02 08:29:38.106230
+2026-06-02 08:29:38,112 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=kkkkk----question_id=44--selected_option=174--2026-06-02 08:29:38.112291
+2026-06-02 08:29:38,191 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=kkkkk--attempt_id=85--2026-06-02 08:29:38.191079
+2026-06-02 08:29:39,084 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=kkkkk--attempt_id=85--2026-06-02 08:29:39.084557
+2026-06-02 08:29:39,091 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=kkkkk----question_id=43--selected_option=171--2026-06-02 08:29:39.091477
+2026-06-02 08:29:39,173 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=kkkkk--attempt_id=85--2026-06-02 08:29:39.173127
+2026-06-02 08:29:40,036 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=kkkkk--attempt_id=85--2026-06-02 08:29:40.036738
+2026-06-02 08:29:40,041 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=kkkkk----question_id=45--selected_option=179--2026-06-02 08:29:40.041743
+2026-06-02 08:29:40,123 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=kkkkk--attempt_id=85--2026-06-02 08:29:40.123099
+2026-06-02 08:29:40,900 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=kkkkk--attempt_id=85--2026-06-02 08:29:40.900564
+2026-06-02 08:29:40,907 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=kkkkk----question_id=46--selected_option=183--2026-06-02 08:29:40.906515
+2026-06-02 08:29:40,987 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=kkkkk--attempt_id=85--2026-06-02 08:29:40.987166
+2026-06-02 08:29:41,023 | INFO | gtests | views | finish_test | line 271 | FINISH TEST | user=root--test=kkkkk--score=20.0%--correct=1/5--2026-06-02 08:29:41.023970
+2026-06-02 09:07:14,998 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=None--2026-06-02 09:07:14.998034
+2026-06-02 09:07:16,429 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=86--2026-06-02 09:07:16.429485
+2026-06-02 09:07:16,435 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Электрика----question_id=50--selected_option=197--2026-06-02 09:07:16.435483
+2026-06-02 09:07:16,543 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=86--2026-06-02 09:07:16.543987
+2026-06-02 09:07:17,691 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=86--2026-06-02 09:07:17.691338
+2026-06-02 09:07:17,699 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Электрика----question_id=48--selected_option=190--2026-06-02 09:07:17.699674
+2026-06-02 09:07:17,802 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=86--2026-06-02 09:07:17.802910
+2026-06-02 09:07:18,830 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=86--2026-06-02 09:07:18.830478
+2026-06-02 09:07:18,835 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Электрика----question_id=49--selected_option=193--2026-06-02 09:07:18.835874
+2026-06-02 09:07:18,939 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=86--2026-06-02 09:07:18.939786
+2026-06-02 09:07:19,929 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=86--2026-06-02 09:07:19.929631
+2026-06-02 09:07:19,935 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Электрика----question_id=47--selected_option=184--2026-06-02 09:07:19.935631
+2026-06-02 09:07:20,033 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=86--2026-06-02 09:07:20.033133
+2026-06-02 09:07:21,018 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=86--2026-06-02 09:07:21.018458
+2026-06-02 09:07:21,027 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Электрика----question_id=51--selected_option=201--2026-06-02 09:07:21.027491
+2026-06-02 09:07:21,120 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=86--2026-06-02 09:07:21.120654
+2026-06-02 09:07:21,148 | INFO | gtests | views | finish_test | line 271 | FINISH TEST | user=root--test=Электрика--score=60.0%--correct=3/5--2026-06-02 09:07:21.148070
+2026-06-02 09:07:53,305 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Вводная программа по эксплуатации и обслуживанию подземной свмоходной техники Хенкон--attempt_id=None--2026-06-02 09:07:53.304936
+2026-06-02 09:07:59,056 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Вводная программа по эксплуатации и обслуживанию подземной свмоходной техники Хенкон--attempt_id=87--2026-06-02 09:07:59.056206
+2026-06-02 09:07:59,062 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Вводная программа по эксплуатации и обслуживанию подземной свмоходной техники Хенкон----question_id=53--selected_option=208--2026-06-02 09:07:59.062089
+2026-06-02 09:07:59,165 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Вводная программа по эксплуатации и обслуживанию подземной свмоходной техники Хенкон--attempt_id=87--2026-06-02 09:07:59.165846
+2026-06-02 09:08:07,619 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Вводная программа по эксплуатации и обслуживанию подземной свмоходной техники Хенкон--attempt_id=87--2026-06-02 09:08:07.619108
+2026-06-02 09:08:07,625 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Вводная программа по эксплуатации и обслуживанию подземной свмоходной техники Хенкон----question_id=52--selected_option=206--2026-06-02 09:08:07.625010
+2026-06-02 09:08:07,727 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Вводная программа по эксплуатации и обслуживанию подземной свмоходной техники Хенкон--attempt_id=87--2026-06-02 09:08:07.727644
+2026-06-02 09:08:07,746 | INFO | gtests | views | finish_test | line 271 | FINISH TEST | user=root--test=Вводная программа по эксплуатации и обслуживанию подземной свмоходной техники Хенкон--score=100.0%--correct=2/2--2026-06-02 09:08:07.746582

@@ -464,3 +464,20 @@ NameError: name 'TA_CENTER' is not defined
 2026-06-01 13:31:14,126 | INFO | main | servises | pdf_render_function | line 261 | PDF Export root
 2026-06-01 13:31:41,500 | INFO | main | servises | pdf_render_function | line 261 | PDF Export root
 2026-06-01 13:32:34,144 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-01 17:07:37,249 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-01 17:07:37.249554
+2026-06-01 17:07:43,104 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-06-01 17:07:43.104940
+2026-06-01 17:07:46,183 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-02 08:19:24,452 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-02 08:19:24.452503
+2026-06-02 08:20:44,590 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-02 08:20:44.590228
+2026-06-02 08:29:15,378 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-02 08:29:15.378409
+2026-06-02 08:29:48,682 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-06-02 08:29:48.682141
+2026-06-02 08:29:53,078 | INFO | main | views | export_attempt_excel | line 282 | EXCEL EXPORT | root-2026-06-02 08:29:53.078512
+2026-06-02 08:29:55,475 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-02 08:52:20,436 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-02 08:52:20.436083
+2026-06-02 08:52:52,774 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-02 08:52:52.774209
+2026-06-02 09:05:15,288 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-02 09:05:15.288074
+2026-06-02 09:06:17,752 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-02 09:06:17.752338
+2026-06-02 09:06:57,616 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-02 09:06:57.616711
+2026-06-02 09:08:12,984 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-06-02 09:08:12.984688
+2026-06-02 09:08:15,538 | INFO | main | views | export_attempt_excel | line 282 | EXCEL EXPORT | root-2026-06-02 09:08:15.538551
+2026-06-02 09:08:17,293 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
