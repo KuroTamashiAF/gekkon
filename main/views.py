@@ -175,6 +175,7 @@ class StudentTestResultView(LoginRequiredMixin, DetailView):
 
 @login_required
 def logout(request):
+    logger.info(f"LOGOUT {request.user.username}-{dt.datetime.now()}")
     auth.logout(request)
     return redirect("main:login")
 
@@ -293,98 +294,4 @@ def export_attempt_excel(request, pk):
 
 def pdf_export_result(request, pk):
     return pdf_render_function(request, pk)
-
-
-    # try:
-    #     attempt = get_object_or_404(UserTestAttempt, pk=pk)
-
-    #     packet = BytesIO()  # СОЗДАЁМ PDF В ПАМЯТИ
-
-    #     pdfmetrics.registerFont(
-    #         TTFont("DejaVu", settings.BASE_DIR / "static" / "fonts" / "DejaVuSans.ttf")
-    #     )
-
-
-    #     can = canvas.Canvas(packet, pagesize=A4)
-    #     user = attempt.user
-
-    #     full_name = f"{user.last_name} {user.first_name} {user.surname}"
-
-    #     can.setFont("DejaVu", 12)  # ВСТАВКА ТЕКСТА В PDF  X Y координаты
-    #     can.drawString(100, 700, f"ФИО: {full_name}")
-    #     can.drawString(100, 680, f"Должность: {user.function}")
-    #     can.drawString(100, 660, f"Предприятие: {user.enterprise}")
-    #     can.drawString(100, 640, f"Участок: {user.plot}")
-
-    #     can.drawString(100, 620, f"Дата теста: {attempt.started_at.strftime('%d.%m.%Y')}")
-
-    #     correct = attempt.answers.filter(is_correct=True).count()
-    #     total = attempt.answers.count()
-    #     percentage = (correct / total * 100) if total > 0 else 0
-
-    #     can.drawString(100, 600, f"Процент правильных ответов: {percentage:.1f}%")
-
-    #     y = 550
-
-    #     for answer in attempt.answers.all():
-
-    #         text = f"{answer.question.text[:50]} | " f"Ответ: " f"{answer.selected_option}"
-
-    #         can.drawString(50, y, text)
-    #         y -= 20
-
-    #     can.save()
-
-    #     # ==========================================
-    #     # ПЕРЕХОД В НАЧАЛО BUFFER
-    #     # ==========================================
-
-    #     packet.seek(0)
-
-    #     # ==========================================
-    #     # ЧИТАЕМ TEMPLATE PDF
-    #     # ==========================================
-
-    #     template_path = settings.BASE_DIR / "static" / "pdf" / "template.pdf"
-
-    #     template_pdf = PdfReader(open(template_path, "rb"))
-
-    #     overlay_pdf = PdfReader(packet)
-
-    #     output = PdfWriter()
-
-    #     # ==========================================
-    #     # ПЕРВАЯ СТРАНИЦА
-    #     # ==========================================
-
-    #     page = template_pdf.pages[0]
-
-    #     page.merge_page(overlay_pdf.pages[0])
-
-    #     output.add_page(page)
-
-    #     # ==========================================
-    #     # ОТДАЁМ PDF
-    #     # ==========================================
-
-    #     response = HttpResponse(content_type="application/pdf")
-
-    #     # filename = f"{user.last_name}_{attempt.test.title}.pdf"
-
-    #     filename = f"{attempt.user.last_name}_{attempt.user.first_name}_{attempt.user.surname}_{attempt.test.title}.pdf"
-    #     filename = re.sub(r'[\\/*?:"<>|]', "", filename)
-    #     filename = filename.replace(" ", "_")
-
-    #     response["Content-Disposition"] = f'attachment; filename="{filename}"'
-
-    #     output.write(response)
-
-    #     logger.info(f"PDF EXPORT {request.user.username}-{dt.datetime.now()}")
-    #     return response
-    
-    # except Exception as e:
-    #     logger.exception(f"ERROR PDF EXPORT {request.user.username}-{dt.datetime.now()}")
-    #     logger.exception(f"{e}")
-
-
 

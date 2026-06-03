@@ -185,14 +185,14 @@ def pdf_render_function(request, pk):
             # ПОДПИСЬ РУКОВОДИТЕЛЯ
 
 
-            signature = Image( str( settings.BASE_DIR / "static" / "signatures" / "director_sign.png" ), width=140, height=60 )
+            # signature = Image( str( settings.BASE_DIR / "static" / "signatures" / "director_sign.png" ), width=140, height=60 )
 
             # БЛОК ПОДПИСИ
 
             # KeepTogether запрещает 
             # # разрывать подпись между страницами
 
-            elements.append( KeepTogether([ Paragraph( "<b>Руководитель:</b> И.Ю. Иванов", style ), Spacer(1, -35), signature ]) )
+            # elements.append( KeepTogether([ Paragraph( "<b>Руководитель:</b> И.Ю. Иванов", style ), Spacer(1, -35), signature ]) )
 
 
             # FOOTER

@@ -481,3 +481,31 @@ NameError: name 'TA_CENTER' is not defined
 2026-06-02 09:08:12,984 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-06-02 09:08:12.984688
 2026-06-02 09:08:15,538 | INFO | main | views | export_attempt_excel | line 282 | EXCEL EXPORT | root-2026-06-02 09:08:15.538551
 2026-06-02 09:08:17,293 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-02 13:53:05,470 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-02 13:53:05.470580
+2026-06-02 13:53:29,281 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-06-02 13:53:29.281818
+2026-06-02 13:53:33,399 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-02 13:54:45,332 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-02 13:54:45.332545
+2026-06-02 13:57:30,774 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-06-02 13:57:30.774467
+2026-06-02 13:57:33,258 | INFO | main | views | export_attempt_excel | line 282 | EXCEL EXPORT | root-2026-06-02 13:57:33.258144
+2026-06-02 13:57:42,923 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-03 08:49:33,227 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-03 08:49:33.227848
+2026-06-03 08:51:19,421 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-03 08:51:19.421035
+2026-06-03 08:51:37,150 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-03 08:51:37.150592
+2026-06-03 09:03:41,461 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-06-03 09:03:41.461125
+2026-06-03 09:05:08,183 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-06-03 09:05:08.183465
+2026-06-03 09:05:09,648 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-03 09:05:37,237 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-06-03 09:05:37.237945
+2026-06-03 09:05:38,749 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-03 09:08:00,785 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-03 09:08:00.785670
+2026-06-03 09:08:03,323 | INFO | main | views | logout | line 179 | LOGOUT 
+2026-06-03 09:10:16,099 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-03 09:10:16.099449
+2026-06-03 09:10:17,864 | INFO | main | views | logout | line 179 | LOGOUT AnonymousUser
+2026-06-03 09:10:52,725 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-03 09:10:52.725595
+2026-06-03 09:10:58,446 | INFO | main | views | logout | line 179 | LOGOUT AnonymousUser
+2026-06-03 09:13:16,951 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-03 09:13:16.951133
+2026-06-03 09:13:18,298 | INFO | main | views | logout | line 178 | LOGOUT root
+2026-06-03 09:14:37,872 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-03 09:14:37.872766
+2026-06-03 09:14:42,184 | INFO | main | views | logout | line 178 | LOGOUT root-2026-06-03 09:14:42.184711
+2026-06-03 09:19:34,617 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-03 09:19:34.617913
+2026-06-03 09:19:41,484 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-06-03 09:19:41.484767
+2026-06-03 09:19:43,500 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
