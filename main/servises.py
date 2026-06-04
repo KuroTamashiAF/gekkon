@@ -66,9 +66,9 @@ def pdf_render_function(request, pk):
                 # # Отступ слева
                 leftMargin=40,
                 # # Верхний отступ
-                topMargin=200,
+                topMargin=150,
                 # # Нижний отступ
-                bottomMargin=60,
+                bottomMargin=90,
             )
 
             elements = []  # ВСЕ ЭЛЕМЕНТЫ PDF
@@ -125,7 +125,7 @@ def pdf_render_function(request, pk):
             elements.append( Paragraph( f"<b>Результат:</b> " f"{percentage:.1f}%", first_page_style ) )
             elements.append(Spacer(1, 100))
             elements.append(Paragraph("<b>Ответы</b>:", response_title))
-            elements.append(Spacer(1, 30))
+            elements.append(Spacer(1, 10))
 
 
             # РАЗРЫВ СТРАНИЦЫ

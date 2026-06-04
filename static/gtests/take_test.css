@@ -62,7 +62,7 @@
 .answers_grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(220px, 1fr));
-    gap: 20px;
+    gap: 40px;
     margin-top: 25px;
     align-items: start;
 }
@@ -115,7 +115,7 @@
 }
 
 .submit-block{
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 /* ОБЫЧНАЯ КАРТИНКА */

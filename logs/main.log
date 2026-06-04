@@ -509,3 +509,13 @@ NameError: name 'TA_CENTER' is not defined
 2026-06-03 09:19:34,617 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-03 09:19:34.617913
 2026-06-03 09:19:41,484 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-06-03 09:19:41.484767
 2026-06-03 09:19:43,500 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-04 08:37:52,127 | INFO | main | views | logout | line 178 | LOGOUT root-2026-06-04 08:37:52.127423
+2026-06-04 08:37:57,694 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-04 08:37:57.694093
+2026-06-04 08:39:27,745 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-06-04 08:39:27.745756
+2026-06-04 08:43:00,424 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-06-04 08:43:00.424478
+2026-06-04 08:43:02,591 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-04 08:45:50,907 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-04 08:45:52,759 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-04 08:46:52,446 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-04 08:47:12,408 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-04 08:47:53,131 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
