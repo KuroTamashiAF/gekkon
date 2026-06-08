@@ -22,8 +22,8 @@ body {
 }
 .logo_container{
     /* display: flex;
-    justify-content: center; */
-    margin: 0 0 50px 0;
+    justify-content: end; */
+    margin: 0px 0 50px 0;
 }
 
 .flex {
@@ -37,7 +37,7 @@ body {
 } */
 
 .enter_label {
-    font-size: 50px;
+    font-size: 30px;
     font-family: "Black ops";
 }
 
@@ -67,7 +67,7 @@ body {
     border-color: black;
     border-radius: 5PX;
     font-family: "Black ops";
-    font-size: 26px;
+    font-size: 30px;
 }
 
 .psswd_inp {
@@ -76,7 +76,7 @@ body {
     border-color: black;
     border-radius: 5px;
     font-family: "Black ops";
-    font-size: 26px;
+    font-size: 30px;
 }
 
 .button_ {
@@ -94,8 +94,11 @@ body {
 }
 
 
-.footer {
-    /* background-color: brown; */
+
+
+.logo_img{
+    width: 300px;
+    height: 100px;
 }
 
 @font-face {

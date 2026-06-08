@@ -519,3 +519,13 @@ NameError: name 'TA_CENTER' is not defined
 2026-06-04 08:46:52,446 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
 2026-06-04 08:47:12,408 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
 2026-06-04 08:47:53,131 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-05 11:05:23,901 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-05 11:05:23.901914
+2026-06-05 11:06:04,120 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-06-05 11:06:04.120823
+2026-06-05 11:06:15,666 | INFO | main | views | export_attempt_excel | line 283 | EXCEL EXPORT | root-2026-06-05 11:06:15.665123
+2026-06-05 11:07:12,048 | INFO | main | views | get_context_data | line 172 | RESULT VIEW | root-2026-06-05 11:07:12.048455
+2026-06-05 11:07:29,027 | INFO | main | views | export_attempt_excel | line 283 | EXCEL EXPORT | root-2026-06-05 11:07:29.027438
+2026-06-05 11:07:43,125 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-05 11:08:25,827 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-05 11:08:45,772 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-05 11:09:20,091 | INFO | main | views | logout | line 178 | LOGOUT root-2026-06-05 11:09:20.091036
+2026-06-08 08:19:53,199 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-08 08:19:53.199398
