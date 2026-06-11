@@ -724,3 +724,44 @@
 2026-06-11 11:24:11,797 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=92--2026-06-11 11:24:11.796846
 2026-06-11 11:24:11,803 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Электрика----question_id=87--selected_option=314--2026-06-11 11:24:11.803946
 2026-06-11 11:24:11,903 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=92--2026-06-11 11:24:11.903179
+2026-06-11 13:51:17,874 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=None--2026-06-11 13:51:17.874861
+2026-06-11 13:51:21,494 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=93--2026-06-11 13:51:21.494336
+2026-06-11 13:51:21,499 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Электрика----question_id=55--selected_option=216--2026-06-11 13:51:21.499341
+2026-06-11 13:51:21,587 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=93--2026-06-11 13:51:21.587519
+2026-06-11 13:51:24,792 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=93--2026-06-11 13:51:24.792679
+2026-06-11 13:51:24,798 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Электрика----question_id=56--selected_option=219--2026-06-11 13:51:24.798679
+2026-06-11 13:51:24,882 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=93--2026-06-11 13:51:24.882741
+2026-06-11 13:51:38,930 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=93--2026-06-11 13:51:38.930449
+2026-06-11 13:51:38,976 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Электрика----question_id=57--selected_option=223--2026-06-11 13:51:38.976493
+2026-06-11 13:51:39,052 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=93--2026-06-11 13:51:39.052247
+2026-06-11 13:51:42,872 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=93--2026-06-11 13:51:42.872786
+2026-06-11 13:51:42,877 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Электрика----question_id=54--selected_option=212--2026-06-11 13:51:42.877889
+2026-06-11 13:51:42,957 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=93--2026-06-11 13:51:42.957686
+2026-06-11 13:51:46,949 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=93--2026-06-11 13:51:46.949014
+2026-06-11 13:51:46,954 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Электрика----question_id=87--selected_option=316--2026-06-11 13:51:46.954033
+2026-06-11 13:51:47,042 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=93--2026-06-11 13:51:47.042186
+2026-06-11 13:51:49,789 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=93--2026-06-11 13:51:49.789917
+2026-06-11 13:51:49,795 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Электрика----question_id=58--selected_option=228--2026-06-11 13:51:49.795782
+2026-06-11 13:51:49,871 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=93--2026-06-11 13:51:49.871255
+2026-06-11 13:51:49,901 | INFO | gtests | views | finish_test | line 270 | FINISH TEST | user=root--test=Электрика--score=100.0%--correct=6/6--2026-06-11 13:51:49.901230
+2026-06-11 13:56:45,061 | INFO | gtests | views | dispatch | line 85 | START TEST | user=IvanChief--test=Электрика--attempt_id=None--2026-06-11 13:56:45.061138
+2026-06-11 13:56:46,473 | INFO | gtests | views | dispatch | line 85 | START TEST | user=IvanChief--test=Электрика--attempt_id=94--2026-06-11 13:56:46.473258
+2026-06-11 13:56:46,480 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=IvanChief--test=Электрика----question_id=55--selected_option=214--2026-06-11 13:56:46.480024
+2026-06-11 13:56:46,577 | INFO | gtests | views | dispatch | line 85 | START TEST | user=IvanChief--test=Электрика--attempt_id=94--2026-06-11 13:56:46.577849
+2026-06-11 13:56:47,795 | INFO | gtests | views | dispatch | line 85 | START TEST | user=IvanChief--test=Электрика--attempt_id=94--2026-06-11 13:56:47.795099
+2026-06-11 13:56:47,800 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=IvanChief--test=Электрика----question_id=54--selected_option=213--2026-06-11 13:56:47.800212
+2026-06-11 13:56:47,893 | INFO | gtests | views | dispatch | line 85 | START TEST | user=IvanChief--test=Электрика--attempt_id=94--2026-06-11 13:56:47.893276
+2026-06-11 13:56:49,624 | INFO | gtests | views | dispatch | line 85 | START TEST | user=IvanChief--test=Электрика--attempt_id=94--2026-06-11 13:56:49.624290
+2026-06-11 13:56:49,630 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=IvanChief--test=Электрика----question_id=87--selected_option=316--2026-06-11 13:56:49.630373
+2026-06-11 13:56:49,714 | INFO | gtests | views | dispatch | line 85 | START TEST | user=IvanChief--test=Электрика--attempt_id=94--2026-06-11 13:56:49.714191
+2026-06-11 13:56:50,885 | INFO | gtests | views | dispatch | line 85 | START TEST | user=IvanChief--test=Электрика--attempt_id=94--2026-06-11 13:56:50.884418
+2026-06-11 13:56:50,893 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=IvanChief--test=Электрика----question_id=57--selected_option=223--2026-06-11 13:56:50.893340
+2026-06-11 13:56:50,991 | INFO | gtests | views | dispatch | line 85 | START TEST | user=IvanChief--test=Электрика--attempt_id=94--2026-06-11 13:56:50.991193
+2026-06-11 13:56:52,157 | INFO | gtests | views | dispatch | line 85 | START TEST | user=IvanChief--test=Электрика--attempt_id=94--2026-06-11 13:56:52.157729
+2026-06-11 13:56:52,163 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=IvanChief--test=Электрика----question_id=56--selected_option=221--2026-06-11 13:56:52.163702
+2026-06-11 13:56:52,261 | INFO | gtests | views | dispatch | line 85 | START TEST | user=IvanChief--test=Электрика--attempt_id=94--2026-06-11 13:56:52.261767
+2026-06-11 13:56:54,204 | INFO | gtests | views | dispatch | line 85 | START TEST | user=IvanChief--test=Электрика--attempt_id=94--2026-06-11 13:56:54.204473
+2026-06-11 13:56:54,209 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=IvanChief--test=Электрика----question_id=58--selected_option=228--2026-06-11 13:56:54.209439
+2026-06-11 13:56:54,298 | INFO | gtests | views | dispatch | line 85 | START TEST | user=IvanChief--test=Электрика--attempt_id=94--2026-06-11 13:56:54.298285
+2026-06-11 13:56:54,316 | INFO | gtests | views | finish_test | line 270 | FINISH TEST | user=IvanChief--test=Электрика--score=50.0%--correct=3/6--2026-06-11 13:56:54.316234
+2026-06-11 14:14:50,383 | INFO | gtests | views | dispatch | line 85 | START TEST | user=IvanChief--test=Электрика--attempt_id=None--2026-06-11 14:14:50.383602

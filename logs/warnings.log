@@ -359,3 +359,57 @@ Traceback (most recent call last):
     response_title.alignment = TA_CENTER  # Выравнивание по левому краю
                                ^^^^^^^^^
 NameError: name 'TA_CENTER' is not defined
+2026-06-11 13:51:58,782 | ERROR | main | views | export_attempt_excel | line 251 | EXCEL EXPORT IMAGE|[Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\series.png'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\views.py", line 238, in export_attempt_excel
+    pil_img = PILImage.open(img_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\PIL\Image.py", line 3635, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\series.png'
+2026-06-11 13:51:58,790 | ERROR | main | views | export_attempt_excel | line 251 | EXCEL EXPORT IMAGE|[Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\parallel.png'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\views.py", line 238, in export_attempt_excel
+    pil_img = PILImage.open(img_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\PIL\Image.py", line 3635, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\parallel.png'
+2026-06-11 13:57:17,570 | ERROR | main | views | export_attempt_excel | line 251 | EXCEL EXPORT IMAGE|[Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\parallel.png'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\views.py", line 238, in export_attempt_excel
+    pil_img = PILImage.open(img_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\PIL\Image.py", line 3635, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\parallel.png'
+2026-06-11 13:57:17,573 | ERROR | main | views | export_attempt_excel | line 251 | EXCEL EXPORT IMAGE|[Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\series.png'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\views.py", line 238, in export_attempt_excel
+    pil_img = PILImage.open(img_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\PIL\Image.py", line 3635, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\series.png'
+2026-06-11 14:21:29,300 | ERROR | main | views | export_attempt_excel | line 251 | EXCEL EXPORT IMAGE|[Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\series.png'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\views.py", line 238, in export_attempt_excel
+    pil_img = PILImage.open(img_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\PIL\Image.py", line 3635, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\series.png'
+2026-06-11 14:21:29,305 | ERROR | main | views | export_attempt_excel | line 251 | EXCEL EXPORT IMAGE|[Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\parallel.png'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\views.py", line 238, in export_attempt_excel
+    pil_img = PILImage.open(img_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\PIL\Image.py", line 3635, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\parallel.png'

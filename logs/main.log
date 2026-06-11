@@ -534,3 +534,82 @@ NameError: name 'TA_CENTER' is not defined
 2026-06-11 11:24:13,487 | INFO | main | views | logout | line 178 | LOGOUT root-2026-06-11 11:24:13.487975
 2026-06-11 13:37:17,168 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-11 13:37:17.168626
 2026-06-11 13:41:34,155 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-11 13:41:34.155401
+2026-06-11 13:50:42,371 | INFO | main | views | logout | line 177 | LOGOUT root-2026-06-11 13:50:42.371988
+2026-06-11 13:50:48,259 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-11 13:50:48.259448
+2026-06-11 13:51:54,992 | INFO | main | views | get_context_data | line 171 | RESULT VIEW | root-2026-06-11 13:51:54.992930
+2026-06-11 13:51:58,782 | ERROR | main | views | export_attempt_excel | line 251 | EXCEL EXPORT IMAGE|[Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\series.png'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\views.py", line 238, in export_attempt_excel
+    pil_img = PILImage.open(img_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\PIL\Image.py", line 3635, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\series.png'
+2026-06-11 13:51:58,790 | ERROR | main | views | export_attempt_excel | line 251 | EXCEL EXPORT IMAGE|[Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\parallel.png'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\views.py", line 238, in export_attempt_excel
+    pil_img = PILImage.open(img_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\PIL\Image.py", line 3635, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\parallel.png'
+2026-06-11 13:51:58,878 | INFO | main | views | export_attempt_excel | line 282 | EXCEL EXPORT | root-2026-06-11 13:51:58.878201
+2026-06-11 13:53:20,555 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-11 13:55:34,071 | INFO | main | views | form_valid | line 98 | REGISTRATION SUCCES | IvanChief-2026-06-11 13:55:34.071925
+2026-06-11 13:55:39,110 | INFO | main | views | logout | line 177 | LOGOUT root-2026-06-11 13:55:39.110450
+2026-06-11 13:55:45,511 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-11 13:55:45.511961
+2026-06-11 13:56:37,460 | INFO | main | views | form_valid | line 52 | LOGIN IvanChief-2026-06-11 13:56:37.460454
+2026-06-11 13:56:57,383 | INFO | main | views | logout | line 177 | LOGOUT IvanChief-2026-06-11 13:56:57.383543
+2026-06-11 13:57:03,917 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-11 13:57:03.917096
+2026-06-11 13:57:14,767 | INFO | main | views | get_context_data | line 171 | RESULT VIEW | root-2026-06-11 13:57:14.767912
+2026-06-11 13:57:17,570 | ERROR | main | views | export_attempt_excel | line 251 | EXCEL EXPORT IMAGE|[Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\parallel.png'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\views.py", line 238, in export_attempt_excel
+    pil_img = PILImage.open(img_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\PIL\Image.py", line 3635, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\parallel.png'
+2026-06-11 13:57:17,573 | ERROR | main | views | export_attempt_excel | line 251 | EXCEL EXPORT IMAGE|[Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\series.png'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\views.py", line 238, in export_attempt_excel
+    pil_img = PILImage.open(img_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\PIL\Image.py", line 3635, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\series.png'
+2026-06-11 13:57:17,590 | INFO | main | views | export_attempt_excel | line 282 | EXCEL EXPORT | root-2026-06-11 13:57:17.590427
+2026-06-11 13:57:18,442 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-11 13:57:37,057 | INFO | main | views | logout | line 177 | LOGOUT root-2026-06-11 13:57:37.057570
+2026-06-11 14:02:24,753 | INFO | main | views | form_valid | line 52 | LOGIN IvanChief-2026-06-11 14:02:24.753826
+2026-06-11 14:15:16,503 | INFO | main | views | logout | line 177 | LOGOUT IvanChief-2026-06-11 14:15:16.503372
+2026-06-11 14:16:11,381 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-11 14:16:11.381556
+2026-06-11 14:18:30,311 | INFO | main | views | form_valid | line 52 | LOGIN IvanChief-2026-06-11 14:18:30.311241
+2026-06-11 14:21:26,380 | INFO | main | views | get_context_data | line 171 | RESULT VIEW | IvanChief-2026-06-11 14:21:26.380407
+2026-06-11 14:21:29,300 | ERROR | main | views | export_attempt_excel | line 251 | EXCEL EXPORT IMAGE|[Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\series.png'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\views.py", line 238, in export_attempt_excel
+    pil_img = PILImage.open(img_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\PIL\Image.py", line 3635, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\series.png'
+2026-06-11 14:21:29,305 | ERROR | main | views | export_attempt_excel | line 251 | EXCEL EXPORT IMAGE|[Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\parallel.png'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\views.py", line 238, in export_attempt_excel
+    pil_img = PILImage.open(img_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\PIL\Image.py", line 3635, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\parallel.png'
+2026-06-11 14:21:29,379 | INFO | main | views | export_attempt_excel | line 282 | EXCEL EXPORT | IvanChief-2026-06-11 14:21:29.379024
+2026-06-11 14:21:29,869 | INFO | main | servises | pdf_render_function | line 262 | PDF Export IvanChief
+2026-06-11 14:21:49,783 | INFO | main | views | logout | line 177 | LOGOUT IvanChief-2026-06-11 14:21:49.782866
+2026-06-11 14:59:56,404 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-11 14:59:56.404432
+2026-06-11 14:59:59,227 | INFO | main | views | logout | line 177 | LOGOUT root-2026-06-11 14:59:59.227543

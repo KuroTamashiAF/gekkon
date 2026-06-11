@@ -218,7 +218,6 @@ class TakeTestView(FormView):
         return redirect(f"{self.request.path}?q={self.q_index + 1}")
 
     def form_invalid(self, form):
-        print(form.errors)
         return super().form_invalid(form)
 
     def save_user_answers(self, cleaned_data):

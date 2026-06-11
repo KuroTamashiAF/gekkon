@@ -20,7 +20,6 @@ class Command(BaseCommand):
         for file_name in file_names:
 
             file_path = os.path.join(settings.BASE_DIR / "for_tests_json" , file_name)
-            print(file_path)
 
 
             if not os.path.exists(file_path):
@@ -31,7 +30,6 @@ class Command(BaseCommand):
                 data = json.load(f)
             # создаём тест
             
-                # print(data["test_description"])
             
             test = Test.objects.create(
             title=data["tests_title"],

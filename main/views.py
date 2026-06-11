@@ -94,7 +94,6 @@ class RegistrationStudentView(LoginRequiredMixin, CreateView):  # Доделат
         user = form.instance
         if user:
             form.save()
-            # print("Данные записаны")
             messages.success(self.request, "Данные сохранены")
             logger.info(f"REGISTRATION SUCCES | {user.username}-{dt.datetime.now()}")
 
@@ -249,7 +248,7 @@ def export_attempt_excel(request, pk):
                     ws.row_dimensions[row_num].height = 100
 
                 except Exception as e:
-                    print(e)
+                    logger.exception(f"EXCEL EXPORT IMAGE|{e}")
 
             row_num += 1
 
@@ -294,4 +293,3 @@ def export_attempt_excel(request, pk):
 
 def pdf_export_result(request, pk):
     return pdf_render_function(request, pk)
-
