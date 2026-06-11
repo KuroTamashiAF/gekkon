@@ -703,3 +703,24 @@
 2026-06-04 08:42:47,584 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Вводная программа по эксплуатации и обслуживанию подземной самоходной техники Хенкон----question_id=80--selected_option=294--2026-06-04 08:42:47.584529
 2026-06-04 08:42:47,683 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Вводная программа по эксплуатации и обслуживанию подземной самоходной техники Хенкон--attempt_id=90--2026-06-04 08:42:47.683825
 2026-06-04 08:42:47,706 | INFO | gtests | views | finish_test | line 271 | FINISH TEST | user=root--test=Вводная программа по эксплуатации и обслуживанию подземной самоходной техники Хенкон--score=35.714285714285715%--correct=10/28--2026-06-04 08:42:47.706919
+2026-06-11 11:20:01,847 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=None--2026-06-11 11:20:01.847774
+2026-06-11 11:20:07,431 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=91--2026-06-11 11:20:07.431470
+2026-06-11 11:20:07,437 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Электрика----question_id=56--selected_option=219--2026-06-11 11:20:07.437512
+2026-06-11 11:20:07,553 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=91--2026-06-11 11:20:07.553940
+2026-06-11 11:20:08,599 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=91--2026-06-11 11:20:08.599516
+2026-06-11 11:20:08,607 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Электрика----question_id=57--selected_option=223--2026-06-11 11:20:08.607513
+2026-06-11 11:20:08,727 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=91--2026-06-11 11:20:08.727475
+2026-06-11 11:20:09,486 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=91--2026-06-11 11:20:09.486811
+2026-06-11 11:20:09,493 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Электрика----question_id=58--selected_option=226--2026-06-11 11:20:09.493786
+2026-06-11 11:20:09,598 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=91--2026-06-11 11:20:09.598405
+2026-06-11 11:20:10,474 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=91--2026-06-11 11:20:10.474584
+2026-06-11 11:20:10,481 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Электрика----question_id=54--selected_option=212--2026-06-11 11:20:10.481199
+2026-06-11 11:20:10,580 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=91--2026-06-11 11:20:10.580099
+2026-06-11 11:20:11,327 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=91--2026-06-11 11:20:11.327599
+2026-06-11 11:20:11,332 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Электрика----question_id=55--selected_option=216--2026-06-11 11:20:11.332577
+2026-06-11 11:20:11,440 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=91--2026-06-11 11:20:11.440843
+2026-06-11 11:20:11,476 | INFO | gtests | views | finish_test | line 271 | FINISH TEST | user=root--test=Электрика--score=80.0%--correct=4/5--2026-06-11 11:20:11.476491
+2026-06-11 11:24:02,250 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=None--2026-06-11 11:24:02.250179
+2026-06-11 11:24:11,797 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=92--2026-06-11 11:24:11.796846
+2026-06-11 11:24:11,803 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Электрика----question_id=87--selected_option=314--2026-06-11 11:24:11.803946
+2026-06-11 11:24:11,903 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Электрика--attempt_id=92--2026-06-11 11:24:11.903179

@@ -529,3 +529,8 @@ NameError: name 'TA_CENTER' is not defined
 2026-06-05 11:08:45,772 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
 2026-06-05 11:09:20,091 | INFO | main | views | logout | line 178 | LOGOUT root-2026-06-05 11:09:20.091036
 2026-06-08 08:19:53,199 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-08 08:19:53.199398
+2026-06-11 11:19:58,507 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-11 11:19:58.507054
+2026-06-11 11:23:59,553 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-11 11:23:59.553797
+2026-06-11 11:24:13,487 | INFO | main | views | logout | line 178 | LOGOUT root-2026-06-11 11:24:13.487975
+2026-06-11 13:37:17,168 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-11 13:37:17.168626
+2026-06-11 13:41:34,155 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-11 13:41:34.155401
