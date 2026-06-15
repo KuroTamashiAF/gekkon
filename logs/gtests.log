@@ -765,3 +765,4 @@
 2026-06-11 13:56:54,298 | INFO | gtests | views | dispatch | line 85 | START TEST | user=IvanChief--test=Электрика--attempt_id=94--2026-06-11 13:56:54.298285
 2026-06-11 13:56:54,316 | INFO | gtests | views | finish_test | line 270 | FINISH TEST | user=IvanChief--test=Электрика--score=50.0%--correct=3/6--2026-06-11 13:56:54.316234
 2026-06-11 14:14:50,383 | INFO | gtests | views | dispatch | line 85 | START TEST | user=IvanChief--test=Электрика--attempt_id=None--2026-06-11 14:14:50.383602
+2026-06-15 09:58:11,584 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Вводная программа по эксплуатации и обслуживанию подземной самоходной техники Хенкон--attempt_id=None--2026-06-15 09:58:11.584671

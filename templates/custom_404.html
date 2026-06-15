@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>404 - Страница не найдена</title>
+    <link rel="stylesheet" href="{% static "main/custom_404.css" %}">
+</head>
+<body>
+    <div class="error-container">
+        <!-- Бейдж 404 в стиле минималистичного статуса -->
+        <div class="badge-404">
+            <div class="code-404">HTTP 404</div>
+            <span>Маршрут не обнаружен</span>
+        </div>
+
+        <!-- Заголовок с эффектом "потерянной страницы" -->
+        <h1>Страница&nbsp;исчезла</h1>
+        <div class="glow-text">
+            Возможно, вы пытались открыть тест, который был удалён или перемещён. <br>
+            Но другие учебные материалы всё ещё доступны.
+        </div>
+
+        <!-- ТОЧНО КАК НА КАРТИНКЕ: блок "Доступные тесты" с поиском и двумя пунктами -->
+        <div class="tests-section">
+            <div class="tests-header">
+                <div class="tests-title">Доступные тесты</div>
+                <div class="search-placeholder">Поиск теста...</div>
+            </div>
+            <div class="test-list">
+                <!-- Электрика -->
+                <div class="test-item">
+                    <div class="test-name">Электрика</div>
+                    <div class="test-action">[Открыть]</div>
+                </div>
+                <!-- Вводная программа по эксплуатации и обслуживанию подземной самоходной техники Хенкон -->
+                <div class="test-item">
+                    <div class="test-name">Вводная программа по эксплуатации и обслуживанию подземной самоходной техники Хенкон</div>
+                    <div class="test-action">[Открыть]</div>
+                </div>
+            </div>
+            <!-- тонкая деталь: "похоже, вы искали несуществующий тест" -->
+            <div class="broken-sign" style="margin-top: 14px; display: inline-block;">
+                ⚠️ запрошенный ресурс не входит в перечень
+            </div>
+        </div>
+
+        <!-- Потерянный стиль с намёком на ошибку, но без активных переходов -->
+        <div class="lost-message">
+            <div class="lost-text">
+                <span class="compass-icon">🧭</span> 
+                Возможно, вы искали: <strong>«404: неизвестный путь»</strong> — проверьте адрес или вернитесь к списку.
+            </div>
+            <div class="fake-button">
+                ✖︎ ссылки отключены
+            </div>
+        </div>
+
+        <div class="footer-note">
+            • страница не найдена • код 404 • ресурс отсутствует •
+        </div>
+    </div>
+</body>
+</html>

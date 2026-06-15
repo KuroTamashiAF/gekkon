@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none; /* Отключаем выделение текста для эстетики, но оставляем доступным */
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(145deg, #0a0f1c 0%, #0c1222 100%);
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Декоративный фон в стиле "картинки" — имитация карты/схемы или абстрактных элементов */
+body::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" opacity="0.08"><path fill="none" stroke="%234a6fa5" stroke-width="1.2" d="M200,100 L350,180 L500,120 L620,190 L740,140 M180,300 L310,250 L440,310 L580,270 L700,330 M220,500 L360,440 L500,510 L630,460 L770,520 M300,700 L420,650 L550,720 L680,670 L790,730 M150,900 L280,860 L400,920 L540,870 L660,930 M400,1050 L520,990 L650,1060 L750,1020"/><circle cx="350" cy="180" r="4" fill="%234a6fa5"/><circle cx="580" cy="270" r="4" fill="%234a6fa5"/><circle cx="300" cy="700" r="4" fill="%234a6fa5"/><circle cx="680" cy="670" r="4" fill="%234a6fa5"/><path d="M120,500 L180,460 L250,520 M620,190 L680,240 L740,190" stroke="%234a6fa5" stroke-width="1.5" fill="none"/><rect x="490" y="290" width="18" height="18" fill="none" stroke="%234a6fa5" stroke-width="1"/><text x="495" y="304" font-size="10" fill="%234a6fa5" font-family="monospace">MC</text></svg>');
+    background-repeat: repeat;
+    background-size: 180px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Эффект градиентного свечения */
+body::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at 20% 40%, rgba(30, 60, 90, 0.2) 0%, rgba(5, 10, 25, 0.6) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.error-container {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    width: 100%;
+    background: rgba(18, 25, 45, 0.65);
+    backdrop-filter: blur(12px);
+    border-radius: 48px;
+    border: 1px solid rgba(74, 111, 165, 0.35);
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    padding: 40px 32px 48px;
+    transition: all 0.2s ease;
+}
+
+/* Стилизация под "картинку" — элементы в стиле тестов из референса */
+.badge-404 {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 100px;
+    padding: 8px 20px 8px 18px;
+    margin-bottom: 28px;
+    border: 1px solid rgba(74, 111, 165, 0.6);
+    backdrop-filter: blur(4px);
+    width: auto;
+}
+
+.code-404 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #9bbde2;
+    background: #0f1627;
+    padding: 4px 12px;
+    border-radius: 40px;
+    font-family: 'JetBrains Mono', monospace;
+    border: 0.5px solid #2c3f66;
+}
+
+.badge-404 span:last-child {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #c0d4ff;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+h1 {
+    font-size: 5.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #FFFFFF 20%, #8aadf0 70%, #5f8ac9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 16px;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.glow-text {
+    font-size: 1.2rem;
+    color: #bdd4ff;
+    margin-bottom: 24px;
+    font-weight: 400;
+    border-left: 3px solid #4a6fa5;
+    padding-left: 18px;
+    background: linear-gradient(90deg, rgba(74,111,165,0.2) 0%, rgba(74,111,165,0) 100%);
+}
+
+/* Секция "Доступные тесты" в стиле изображения */
+.tests-section {
+    margin: 36px 0 28px;
+    background: rgba(10, 15, 28, 0.7);
+    border-radius: 28px;
+    padding: 18px 20px 20px;
+    border: 1px solid rgba(74, 111, 165, 0.3);
+    backdrop-filter: blur(4px);
+}
+
+.tests-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 22px;
+    border-bottom: 1px dashed #2c3f66;
+    padding-bottom: 10px;
+}
+
+.tests-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ebf5ff;
+    letter-spacing: -0.2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tests-title:before {
+    content: "📋";
+    font-size: 1.2rem;
+    filter: drop-shadow(0 0 2px #4a6fa5);
+}
+
+.search-placeholder {
+    background: rgba(0, 0, 0, 0.45);
+    padding: 6px 14px;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    color: #8aa3c9;
+    border: 1px solid #2f4168;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.search-placeholder:before {
+    content: "🔍";
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+/* Список тестов в точности как на картинке: Электрика и Хенкон */
+.test-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.test-item {
+    background: rgba(22, 30, 48, 0.8);
+    border-radius: 20px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: all 0.2s;
+    border: 1px solid rgba(74, 111, 165, 0.2);
+    backdrop-filter: blur(2px);
+}
+
+.test-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #e2ecff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.test-name:before {
+    content: "⚡";
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.test-item:first-child .test-name:before {
+    content: "🔌";
+}
+
+.test-item:last-child .test-name:before {
+    content: "⛏️";
+}
+
+.test-action {
+    background: rgba(74, 111, 165, 0.25);
+    border-radius: 40px;
+    padding: 6px 18px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #b9d0ff;
+    letter-spacing: 0.5px;
+    border: 0.5px solid #4a6fa5;
+    transition: 0.15s;
+    cursor: default;
+    backdrop-filter: blur(4px);
+}
+
+/* Акцентные сообщение 404 — дополнительный блок "потерянный маршрут" */
+.lost-message {
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 24px;
+    padding: 18px 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid rgba(90, 130, 190, 0.4);
+}
+
+.lost-text {
+    font-size: 0.9rem;
+    color: #b8ceff;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lost-text strong {
+    color: #ffd966;
+    font-weight: 600;
+    background: rgba(0,0,0,0.4);
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.fake-button {
+    background: none;
+    border: 1px solid #4a6fa5;
+    padding: 8px 20px;
+    border-radius: 40px;
+    color: #c7ddff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    backdrop-filter: blur(5px);
+    transition: 0.15s;
+    cursor: default;
+    letter-spacing: 0.3px;
+}
+
+/* Стилизация в духе "без элементов управления" — никаких ссылок/кнопок навигации, только декоративные элементы */
+.footer-note {
+    margin-top: 32px;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #5f739b;
+    border-top: 1px solid rgba(74,111,165,0.2);
+    padding-top: 18px;
+    letter-spacing: 0.3px;
+}
+
+/* Адаптив */
+@media (max-width: 550px) {
+    .error-container {
+        padding: 28px 20px 32px;
+        border-radius: 32px;
+    }
+    h1 {
+        font-size: 3.8rem;
+    }
+    .glow-text {
+        font-size: 1rem;
+    }
+    .test-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .test-action {
+        align-self: flex-start;
+    }
+    .badge-404 {
+        margin-bottom: 16px;
+    }
+}
+
+/* Добавим немного анимации для тонкого эффекта */
+@keyframes softPulse {
+    0% { border-color: rgba(74, 111, 165, 0.2); box-shadow: 0 0 0 0 rgba(74,111,165,0.1);}
+    100% { border-color: rgba(74, 111, 165, 0.45); box-shadow: 0 0 0 2px rgba(74,111,165,0.2);}
+}
+.error-container {
+    animation: softPulse 3s infinite alternate;
+}
+
+/* Имитация графического элемента "потерянный маршрут" */
+.compass-icon {
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+/* Убираем все кликабельные элементы управления, курсор стандартный */
+.test-action, .fake-button {
+    cursor: default;
+    pointer-events: none;
+}
+
+/* Небольшой декоративный "разрыв" карты */
+.broken-sign {
+    background: rgba(0,0,0,0.3);
+    width: fit-content;
+    border-radius: 12px;
+    padding: 2px 12px;
+    font-size: 0.7rem;
+    font-family: monospace;
+    color: #8eaccf;
+}
+
+/* добавим маленькие искорки в духе "картинки" */
+.error-container::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(74,111,165,0.1) 0%, rgba(74,111,165,0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.error-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.error-container::before {
+    content: "⛏️🔧";
+    position: absolute;
+    bottom: -15px;
+    left: -20px;
+    font-size: 90px;
+    opacity: 0.08;
+    pointer-events: none;
+    font-family: monospace;
+    white-space: pre;
+    transform: rotate(-5deg);
+}

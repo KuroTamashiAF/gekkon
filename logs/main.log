@@ -613,3 +613,190 @@ FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\kn
 2026-06-11 14:21:49,783 | INFO | main | views | logout | line 177 | LOGOUT IvanChief-2026-06-11 14:21:49.782866
 2026-06-11 14:59:56,404 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-11 14:59:56.404432
 2026-06-11 14:59:59,227 | INFO | main | views | logout | line 177 | LOGOUT root-2026-06-11 14:59:59.227543
+2026-06-11 15:14:58,254 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-11 15:14:58.254992
+2026-06-11 15:18:23,870 | INFO | main | views | logout | line 177 | LOGOUT root-2026-06-11 15:18:23.870233
+2026-06-15 08:08:29,294 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 08:08:29.294155
+2026-06-15 08:16:22,094 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 08:16:22.094360
+2026-06-15 08:17:26,251 | INFO | main | views | logout | line 177 | LOGOUT root-2026-06-15 08:17:26.251605
+2026-06-15 08:22:56,643 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 08:22:56.643977
+2026-06-15 08:23:01,762 | INFO | main | views | logout | line 177 | LOGOUT root-2026-06-15 08:23:01.762529
+2026-06-15 08:23:21,650 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 08:23:21.649029
+2026-06-15 08:27:22,744 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 08:27:22.744420
+2026-06-15 08:39:27,706 | INFO | main | views | logout | line 177 | LOGOUT root-2026-06-15 08:39:27.706486
+2026-06-15 08:39:39,932 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 08:39:39.932235
+2026-06-15 08:41:03,988 | INFO | main | views | form_valid | line 98 | REGISTRATION SUCCES | hhhhh-2026-06-15 08:41:03.988752
+2026-06-15 08:41:32,737 | INFO | main | views | get_context_data | line 171 | RESULT VIEW | root-2026-06-15 08:41:32.737075
+2026-06-15 08:41:35,272 | ERROR | main | views | export_attempt_excel | line 251 | EXCEL EXPORT IMAGE|[Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\series.png'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\views.py", line 238, in export_attempt_excel
+    pil_img = PILImage.open(img_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\PIL\Image.py", line 3635, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\series.png'
+2026-06-15 08:41:35,276 | ERROR | main | views | export_attempt_excel | line 251 | EXCEL EXPORT IMAGE|[Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\parallel.png'
+Traceback (most recent call last):
+  File "C:\Python_Projects\knowledge\app\main\views.py", line 238, in export_attempt_excel
+    pil_img = PILImage.open(img_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_Projects\knowledge\venv\Lib\site-packages\PIL\Image.py", line 3635, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\knowledge\\app\\media\\parallel.png'
+2026-06-15 08:41:35,333 | INFO | main | views | export_attempt_excel | line 282 | EXCEL EXPORT | root-2026-06-15 08:41:35.333221
+2026-06-15 08:41:36,177 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-15 08:42:20,682 | INFO | main | views | logout | line 177 | LOGOUT root-2026-06-15 08:42:20.682927
+2026-06-15 08:47:09,861 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 08:47:09.861616
+2026-06-15 08:47:11,545 | INFO | main | views | logout | line 177 | LOGOUT root-2026-06-15 08:47:11.545111
+2026-06-15 08:51:04,141 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 08:51:04.141083
+2026-06-15 08:57:36,702 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 08:57:36.702595
+2026-06-15 08:57:48,099 | INFO | main | views | logout | line 177 | LOGOUT root-2026-06-15 08:57:48.099240
+2026-06-15 08:59:47,986 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 08:59:47.986447
+2026-06-15 09:40:47,475 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 09:40:47.475225
+2026-06-15 09:58:07,590 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 09:58:07.590276
+2026-06-15 09:58:25,473 | INFO | main | views | get_context_data | line 171 | RESULT VIEW | root-2026-06-15 09:58:25.473488
+2026-06-15 10:23:04,853 | INFO | main | views | logout | line 177 | LOGOUT root-2026-06-15 10:23:04.853708
+2026-06-15 10:23:11,370 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 10:23:11.370525
+2026-06-15 10:23:24,456 | INFO | main | views | logout | line 177 | LOGOUT root-2026-06-15 10:23:24.456071
+2026-06-15 10:59:14,986 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 10:59:14.986829
+2026-06-15 11:12:02,573 | INFO | main | views | logout | line 177 | LOGOUT root-2026-06-15 11:12:02.573119
+2026-06-15 11:13:27,349 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 11:13:27.349197
+2026-06-15 11:14:07,901 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 11:14:07.901730
+2026-06-15 11:15:23,780 | INFO | main | views | logout | line 177 | LOGOUT root-2026-06-15 11:15:23.780381
+2026-06-15 11:15:29,458 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 11:15:29.458860
+2026-06-15 11:42:45,096 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 11:42:45.096508
+2026-06-15 11:44:09,138 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 11:44:09.138163
+2026-06-15 12:02:34,327 | INFO | main | views | form_valid | line 52 | LOGIN root-2026-06-15 12:02:34.327437
+2026-06-15 13:04:15,146 | INFO | main | views | logout | line 179 | LOGOUT root-2026-06-15 13:04:15.146388
+2026-06-15 13:04:19,336 | INFO | main | views | form_valid | line 54 | LOGIN root-2026-06-15 13:04:19.336860
+2026-06-15 13:04:24,285 | WARNING | main | views | custom_404 | line 219 | 404 Not Found: /index/gl/kgbu
+2026-06-15 13:04:24,357 | WARNING | main | views | custom_404 | line 219 | 404 Not Found: /favicon.ico
+2026-06-15 13:04:41,131 | WARNING | main | views | custom_404 | line 219 | 404 Not Found: /index/kmbmmb
+2026-06-15 13:04:49,941 | INFO | main | views | logout | line 179 | LOGOUT root-2026-06-15 13:04:49.941913
+2026-06-15 13:05:06,559 | INFO | main | views | form_valid | line 54 | LOGIN root-2026-06-15 13:05:06.559961
+2026-06-15 13:05:12,582 | WARNING | main | views | custom_404 | line 219 | 404 Not Found: /result_student/vj,vhb
+2026-06-15 13:06:19,360 | WARNING | main | views | custom_404 | line 219 | 404 Not Found: /test-404
+2026-06-15 13:06:19,385 | WARNING | main | views | custom_404 | line 219 | 404 Not Found: /test-404/
+2026-06-15 13:06:29,125 | WARNING | main | views | custom_404 | line 219 | 404 Not Found: /test-404/
+2026-06-15 13:06:37,224 | WARNING | main | views | custom_404 | line 219 | 404 Not Found: /jkcbljdbh
+2026-06-15 13:07:01,743 | WARNING | main | views | custom_404 | line 219 | 404 Not Found: /test-403
+2026-06-15 13:07:01,772 | WARNING | main | views | custom_403 | line 206 | 403 Forbidden: /test-403/
+2026-06-15 13:07:23,665 | WARNING | main | views | custom_404 | line 219 | 404 Not Found: /test-400
+2026-06-15 13:09:34,682 | WARNING | main | views | custom_404 | line 219 | 404 Not Found: /test-500
+2026-06-15 13:11:07,780 | WARNING | main | views | custom_403 | line 206 | 403 Forbidden: /test-403/
+2026-06-15 13:11:21,765 | WARNING | main | views | custom_404 | line 219 | 404 Not Found: /test-404/
+2026-06-15 13:13:48,395 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:13:48,396 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:13:48,396 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:13:48,397 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:13:48,397 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:13:48,397 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:13:48,398 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:13:48,398 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:13:48,400 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:13:50,341 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:13:50,342 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:13:50,342 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:13:50,343 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:13:50,343 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:13:50,343 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:13:50,344 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:13:50,345 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:13:50,345 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:13:50,420 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /favicon.ico
+2026-06-15 13:13:53,085 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /test-404/
+2026-06-15 13:13:55,264 | WARNING | main | views | custom_403 | line 207 | 403 Forbidden: /test-403/
+2026-06-15 13:13:57,851 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /favicon.ico
+2026-06-15 13:16:34,994 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:16:34,995 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:16:34,996 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:16:34,996 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:16:34,996 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:16:34,996 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:16:34,997 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:16:34,998 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:16:34,998 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:16:36,240 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /test-404/
+2026-06-15 13:16:37,177 | WARNING | main | views | custom_403 | line 207 | 403 Forbidden: /test-403/
+2026-06-15 13:16:49,008 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3..jpg
+2026-06-15 13:16:49,421 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3..jpg
+2026-06-15 13:16:50,871 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3..jpg
+2026-06-15 13:16:51,020 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3..jpg
+2026-06-15 13:16:51,158 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3..jpg
+2026-06-15 13:16:51,291 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3..jpg
+2026-06-15 13:22:23,897 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3..jpg
+2026-06-15 13:22:37,576 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3..jpg
+2026-06-15 13:22:39,239 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3..jpg
+2026-06-15 13:22:39,716 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3..jpg
+2026-06-15 13:22:39,924 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3..jpg
+2026-06-15 13:22:41,213 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /favicon.ico
+2026-06-15 13:23:28,580 | INFO | main | views | form_valid | line 55 | LOGIN root-2026-06-15 13:23:28.580891
+2026-06-15 13:23:29,938 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:23:31,172 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:23:32,108 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:23:33,145 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:23:33,340 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:23:33,505 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:23:55,484 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:23:56,637 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:23:56,867 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:23:57,057 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:23:57,242 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:23:57,419 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:23:57,591 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:23:57,766 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:24:06,131 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /favicon.ico
+2026-06-15 13:24:15,652 | INFO | main | views | form_valid | line 55 | LOGIN root-2026-06-15 13:24:15.652505
+2026-06-15 13:24:17,294 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:24:18,522 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:24:20,482 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2026-06-15 13:25:48,298 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:25:49,848 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:25:50,211 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:25:50,404 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:25:50,557 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:25:50,730 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:25:50,870 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:25:51,003 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/test_image_Ex5EFpe_L9SdEb3_QctFfwJ..jpg
+2026-06-15 13:25:57,324 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /favicon.ico
+2026-06-15 13:26:20,551 | INFO | main | views | form_valid | line 55 | LOGIN root-2026-06-15 13:26:20.551161
+2026-06-15 13:26:21,986 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/6106295208_ZUH1cmz.jpg
+2026-06-15 13:26:23,084 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/6106295208_ZUH1cmz.jpg
+2026-06-15 13:26:24,294 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/6106295208_ZUH1cmz.jpg
+2026-06-15 13:26:24,498 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/6106295208_ZUH1cmz.jpg
+2026-06-15 13:26:24,681 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/6106295208_ZUH1cmz.jpg
+2026-06-15 13:26:24,871 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/6106295208_ZUH1cmz.jpg
+2026-06-15 13:26:25,046 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/6106295208_ZUH1cmz.jpg
+2026-06-15 13:26:25,217 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/6106295208_ZUH1cmz.jpg
+2026-06-15 13:26:25,381 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/6106295208_ZUH1cmz.jpg
+2026-06-15 13:26:25,552 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/6106295208_ZUH1cmz.jpg
+2026-06-15 13:26:25,711 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/6106295208_ZUH1cmz.jpg
+2026-06-15 13:26:25,861 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/6106295208_ZUH1cmz.jpg
+2026-06-15 13:26:28,057 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /favicon.ico
+2026-06-15 13:27:25,901 | INFO | main | views | form_valid | line 55 | LOGIN root-2026-06-15 13:27:25.901803
+2026-06-15 13:27:27,170 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/6106295208_ZUH1cmz_GNO7g4o.jpg
+2026-06-15 13:27:28,466 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/6106295208_ZUH1cmz_GNO7g4o.jpg
+2026-06-15 13:28:40,848 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2026-06-15 13:50:06,382 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /test-404/
+2026-06-15 13:50:06,583 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /favicon.ico
+2026-06-15 13:50:20,583 | WARNING | main | views | custom_403 | line 207 | 403 Forbidden: /test-403/
+2026-06-15 13:50:24,284 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/6106295208_ZUH1cmz_GNO7g4o.jpg
+2026-06-15 13:50:50,752 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:50:50,753 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:50:50,753 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:50:50,753 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:50:50,754 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:50:50,754 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:50:50,755 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:50:50,756 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:50:50,756 | ERROR | main | views | custom_500 | line 236 | 500 Error: /test-500/
+2026-06-15 13:53:57,456 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/6106295208_ZUH1cmz_GNO7g4o.jpg
+2026-06-15 13:54:02,634 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/6106295208_ZUH1cmz.jpg
+2026-06-15 13:56:15,189 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/6106295208_ZUH1cmz_GNO7g4o.jpg
+2026-06-15 13:57:19,260 | INFO | main | views | form_valid | line 55 | LOGIN root-2026-06-15 13:57:19.260811
+2026-06-15 13:57:20,509 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/backGround_main_HLVIB32.jpg
+2026-06-15 13:57:21,522 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/backGround_main_HLVIB32.jpg
+2026-06-15 13:57:29,207 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/backGround_main_HLVIB32.jpg
+2026-06-15 14:07:44,615 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/backGround_main_HLVIB32.jpg
+2026-06-15 14:20:12,768 | INFO | main | views | form_valid | line 55 | LOGIN root-2026-06-15 14:20:12.768510

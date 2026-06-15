@@ -173,3 +173,529 @@ Traceback (most recent call last):
     raise self.error(
 django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 56: 'endblock', expected 'endblock' or 'endblock contents'. Did you forget to register or load this tag?
 2026-06-11 14:16:18,663 | ERROR | django.server | basehttp | log_message | line 213 | "GET /index/ HTTP/1.1" 500 145
+2026-06-15 11:05:50,713 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:05:50,715 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:05:50,729 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:05:50,729 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:05:50,737 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:05:50,737 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:05:50,744 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:05:50,745 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:05:50,752 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:05:50,753 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:05:50,760 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:05:50,761 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:05:50,768 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:05:50,769 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:05:50,777 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:05:50,777 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:05:50,785 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:05:50,786 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:05:50,793 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:05:50,793 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:05:50,800 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:05:50,801 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:06:11,122 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /index/алодиаглма/ъ
+2026-06-15 11:06:11,124 | ERROR | django.server | basehttp | log_message | line 213 | "GET /index/%D0%B0%D0%BB%D0%BE%D0%B4%D0%B8%D0%B0%D0%B3%D0%BB%D0%BC%D0%B0/%D1%8A HTTP/1.1" 500 1668
+2026-06-15 11:12:51,098 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /,jvkhgv
+2026-06-15 11:12:51,099 | ERROR | django.server | basehttp | log_message | line 213 | "GET /,jvkhgv HTTP/1.1" 500 1668
+2026-06-15 11:12:51,137 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:51,139 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:51,153 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:51,154 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:51,160 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:51,161 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:51,169 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:51,170 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:51,178 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:51,178 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:51,184 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:51,185 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:51,194 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:51,195 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:51,202 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:51,203 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:51,210 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:51,211 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:51,218 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:51,219 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:51,228 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:51,229 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:53,238 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:53,239 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:53,245 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:53,246 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:53,254 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:53,255 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:53,263 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:53,265 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:53,272 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:53,272 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:53,279 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:53,279 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:53,287 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:53,288 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:53,293 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:53,294 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:53,299 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:53,299 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:53,307 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:53,308 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:53,313 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:53,313 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:53,903 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /,jvkhgv
+2026-06-15 11:12:53,904 | ERROR | django.server | basehttp | log_message | line 213 | "GET /,jvkhgv HTTP/1.1" 500 1668
+2026-06-15 11:12:53,927 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/main/base.css
+2026-06-15 11:12:53,928 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/main/base.css HTTP/1.1" 500 1668
+2026-06-15 11:12:53,943 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:53,944 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:53,952 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:53,954 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:57,327 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:57,327 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:57,334 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:57,335 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:57,343 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:57,344 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:57,352 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:57,352 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:57,359 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:57,360 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:57,368 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:57,369 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:57,376 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:57,377 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:57,384 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:57,384 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:57,392 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:57,393 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:57,400 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:57,401 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:12:57,408 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:12:57,408 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:03,953 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /clknckjbn
+2026-06-15 11:13:03,953 | ERROR | django.server | basehttp | log_message | line 213 | "GET /clknckjbn HTTP/1.1" 500 1668
+2026-06-15 11:13:03,998 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/main/base.css
+2026-06-15 11:13:03,999 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/main/base.css HTTP/1.1" 500 1668
+2026-06-15 11:13:04,030 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:04,031 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:04,046 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:04,046 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:05,415 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:05,416 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:05,423 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:05,424 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:05,431 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:05,431 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:05,439 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:05,440 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:05,445 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:05,446 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:05,453 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:05,454 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:05,461 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:05,462 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:05,468 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:05,469 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:05,476 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:05,477 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:05,483 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:05,484 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:05,490 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:05,491 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:14,974 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:14,975 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:14,985 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:14,985 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:16,066 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:16,067 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:21,500 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:21,500 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:21,506 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:21,507 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:21,513 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:21,513 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:21,521 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:21,522 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:21,528 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:21,529 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:21,535 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:21,536 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:21,542 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:21,543 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:21,551 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:21,552 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:21,558 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:21,559 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:21,567 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:21,568 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:21,573 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:21,574 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:27,458 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/main/base.css
+2026-06-15 11:13:27,459 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/main/base.css HTTP/1.1" 500 1668
+2026-06-15 11:13:27,481 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:27,482 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:27,493 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:27,494 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:29,785 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/main/base.css
+2026-06-15 11:13:29,786 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/main/base.css HTTP/1.1" 500 1668
+2026-06-15 11:13:29,802 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:29,803 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:29,813 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:29,813 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:33,380 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/main/index.css
+2026-06-15 11:13:33,381 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/main/base.css
+2026-06-15 11:13:33,382 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/main/index.css HTTP/1.1" 500 1668
+2026-06-15 11:13:33,383 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/main/base.css HTTP/1.1" 500 1668
+2026-06-15 11:13:33,392 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:33,393 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:33,410 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:33,411 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:33,421 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:33,422 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:35,291 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/main/base.css
+2026-06-15 11:13:35,292 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/main/index.css
+2026-06-15 11:13:35,293 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/main/base.css HTTP/1.1" 500 1668
+2026-06-15 11:13:35,293 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/main/index.css HTTP/1.1" 500 1668
+2026-06-15 11:13:35,303 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:35,304 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:35,318 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:35,320 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:35,790 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/main/base.css
+2026-06-15 11:13:35,791 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/main/index.css
+2026-06-15 11:13:35,792 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/main/base.css HTTP/1.1" 500 1668
+2026-06-15 11:13:35,792 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/main/index.css HTTP/1.1" 500 1668
+2026-06-15 11:13:35,805 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:35,806 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:35,817 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:35,819 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:36,038 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/main/base.css
+2026-06-15 11:13:36,039 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/main/index.css
+2026-06-15 11:13:36,040 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/main/base.css HTTP/1.1" 500 1668
+2026-06-15 11:13:36,041 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/main/index.css HTTP/1.1" 500 1668
+2026-06-15 11:13:36,057 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:36,058 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:36,067 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:36,069 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:36,247 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/main/base.css
+2026-06-15 11:13:36,248 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/main/index.css
+2026-06-15 11:13:36,249 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/main/index.css HTTP/1.1" 500 1668
+2026-06-15 11:13:36,249 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/main/base.css HTTP/1.1" 500 1668
+2026-06-15 11:13:36,263 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:36,266 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:13:36,276 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:13:36,277 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:04,765 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /index/vg.kjghb
+2026-06-15 11:15:04,766 | ERROR | django.server | basehttp | log_message | line 213 | "GET /index/vg.kjghb HTTP/1.1" 500 1668
+2026-06-15 11:15:04,803 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:04,804 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:04,811 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:04,812 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:04,818 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:04,819 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:04,824 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:04,825 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:04,833 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:04,834 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:04,840 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:04,841 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:04,848 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:04,849 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:04,854 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:04,855 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:04,862 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:04,862 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:04,867 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:04,868 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:04,875 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:04,876 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:05,941 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /index/vg.kjghb
+2026-06-15 11:15:05,943 | ERROR | django.server | basehttp | log_message | line 213 | "GET /index/vg.kjghb HTTP/1.1" 500 1668
+2026-06-15 11:15:06,885 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:06,886 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:06,894 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:06,895 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:06,901 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:06,902 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:06,909 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:06,909 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:06,917 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:06,919 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:06,925 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:06,927 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:06,934 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:06,935 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:06,941 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:06,942 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:06,951 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:06,952 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:06,959 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:06,959 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:06,968 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:06,969 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:10,975 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:10,976 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:10,982 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:10,983 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:10,989 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:10,989 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:10,998 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:10,999 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:11,005 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:11,006 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:11,013 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:11,014 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:11,020 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:11,020 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:11,025 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:11,029 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:11,035 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:11,036 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:11,042 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:11,043 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:11,050 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:11,051 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:19,059 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:19,060 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:19,067 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:19,068 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:19,076 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:19,076 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:19,083 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:19,084 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:19,091 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:19,091 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:19,098 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:19,099 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:19,106 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:19,107 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:19,114 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:19,114 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:19,121 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:19,122 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:19,128 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:19,128 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:19,136 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:19,137 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:19,720 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /index/kkkhk
+2026-06-15 11:15:19,720 | ERROR | django.server | basehttp | log_message | line 213 | "GET /index/kkkhk HTTP/1.1" 500 1668
+2026-06-15 11:15:35,146 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:35,147 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:35,153 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:35,154 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:35,160 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:35,160 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:35,168 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:35,168 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:35,175 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:35,175 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:35,184 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:35,185 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:35,192 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:35,193 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:35,199 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:35,200 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:35,207 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:35,208 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:35,214 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:35,214 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:35,222 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:15:35,222 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:15:39,726 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /student_profile/5/12
+2026-06-15 11:15:39,727 | ERROR | django.server | basehttp | log_message | line 213 | "GET /student_profile/5/12 HTTP/1.1" 500 1668
+2026-06-15 11:15:43,797 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /student_profile/5/12/
+2026-06-15 11:15:43,798 | ERROR | django.server | basehttp | log_message | line 213 | "GET /student_profile/5/12/ HTTP/1.1" 500 1668
+2026-06-15 11:16:07,231 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:16:07,232 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:16:07,238 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:16:07,239 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:16:07,246 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:16:07,247 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:16:07,253 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:16:07,254 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:16:07,263 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:16:07,264 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:16:07,271 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:16:07,272 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:16:07,281 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:16:07,282 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:16:07,289 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:16:07,290 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:16:07,298 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:16:07,299 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:16:07,307 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:16:07,308 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:16:07,314 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:16:07,315 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:17:11,324 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:17:11,325 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:17:11,333 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:17:11,334 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:17:11,341 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:17:11,342 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:17:11,350 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:17:11,351 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:17:11,359 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:17:11,359 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:17:11,368 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:17:11,369 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:17:11,377 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:17:11,377 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:17:11,384 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:17:11,386 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:17:11,394 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:17:11,395 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:17:11,400 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:17:11,401 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:17:11,409 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:17:11,410 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 1668
+2026-06-15 11:17:45,363 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /student_profile/5/12/
+2026-06-15 11:17:45,364 | ERROR | django.server | basehttp | log_message | line 213 | "GET /student_profile/5/12/ HTTP/1.1" 500 145
+2026-06-15 11:17:52,405 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /student_profile/5/12/
+2026-06-15 11:17:52,406 | ERROR | django.server | basehttp | log_message | line 213 | "GET /student_profile/5/12/ HTTP/1.1" 500 145
+2026-06-15 11:19:19,418 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:19:19,419 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:19:19,431 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:19:19,432 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:19:19,438 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:19:19,439 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:19:19,450 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:19:19,451 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:19:19,456 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:19:19,457 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:19:19,462 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:19:19,463 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:19:19,469 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:19:19,470 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:19:19,475 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:19:19,476 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:19:19,483 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:19:19,484 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:19:19,489 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:19:19,490 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:19:19,495 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:19:19,496 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:20:52,077 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /student_profile/5/12/
+2026-06-15 11:20:52,077 | ERROR | django.server | basehttp | log_message | line 213 | "GET /student_profile/5/12/ HTTP/1.1" 500 145
+2026-06-15 11:23:35,507 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:23:35,508 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:23:35,514 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:23:35,516 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:23:35,522 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:23:35,522 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:23:35,529 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:23:35,530 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:23:35,536 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:23:35,537 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:23:35,543 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:23:35,544 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:23:35,550 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:23:35,550 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:23:35,558 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:23:35,559 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:23:35,564 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:23:35,564 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:23:35,572 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:23:35,573 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:23:35,578 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:23:35,579 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:27:01,457 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /student_profile/5/12/
+2026-06-15 11:27:01,458 | ERROR | django.server | basehttp | log_message | line 213 | "GET /student_profile/5/12/ HTTP/1.1" 500 145
+2026-06-15 11:27:03,950 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /student_profile/5/12/
+2026-06-15 11:27:03,952 | ERROR | django.server | basehttp | log_message | line 213 | "GET /student_profile/5/12/ HTTP/1.1" 500 145
+2026-06-15 11:27:03,994 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /favicon.ico
+2026-06-15 11:27:03,996 | ERROR | django.server | basehttp | log_message | line 213 | "GET /favicon.ico HTTP/1.1" 500 145
+2026-06-15 11:27:05,426 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /student_profile/5/12/
+2026-06-15 11:27:05,428 | ERROR | django.server | basehttp | log_message | line 213 | "GET /student_profile/5/12/ HTTP/1.1" 500 145
+2026-06-15 11:27:05,470 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /favicon.ico
+2026-06-15 11:27:05,471 | ERROR | django.server | basehttp | log_message | line 213 | "GET /favicon.ico HTTP/1.1" 500 145
+2026-06-15 11:27:06,402 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /student_profile/5/12/
+2026-06-15 11:27:06,403 | ERROR | django.server | basehttp | log_message | line 213 | "GET /student_profile/5/12/ HTTP/1.1" 500 145
+2026-06-15 11:27:06,440 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /favicon.ico
+2026-06-15 11:27:06,440 | ERROR | django.server | basehttp | log_message | line 213 | "GET /favicon.ico HTTP/1.1" 500 145
+2026-06-15 11:27:07,027 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /student_profile/5/12/
+2026-06-15 11:27:07,029 | ERROR | django.server | basehttp | log_message | line 213 | "GET /student_profile/5/12/ HTTP/1.1" 500 145
+2026-06-15 11:27:07,061 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /favicon.ico
+2026-06-15 11:27:07,062 | ERROR | django.server | basehttp | log_message | line 213 | "GET /favicon.ico HTTP/1.1" 500 145
+2026-06-15 11:27:07,522 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /student_profile/5/12/
+2026-06-15 11:27:07,522 | ERROR | django.server | basehttp | log_message | line 213 | "GET /student_profile/5/12/ HTTP/1.1" 500 145
+2026-06-15 11:27:07,558 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /favicon.ico
+2026-06-15 11:27:07,559 | ERROR | django.server | basehttp | log_message | line 213 | "GET /favicon.ico HTTP/1.1" 500 145
+2026-06-15 11:27:15,296 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /student_profile/5/12/
+2026-06-15 11:27:15,297 | ERROR | django.server | basehttp | log_message | line 213 | "GET /student_profile/5/12/ HTTP/1.1" 500 145
+2026-06-15 11:27:15,329 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /favicon.ico
+2026-06-15 11:27:15,330 | ERROR | django.server | basehttp | log_message | line 213 | "GET /favicon.ico HTTP/1.1" 500 145
+2026-06-15 11:28:35,586 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:28:35,586 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:28:35,592 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:28:35,593 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:28:35,600 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:28:35,600 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:28:35,607 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:28:35,607 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:28:35,611 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:28:35,612 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:28:35,619 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:28:35,619 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:28:35,625 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:28:35,626 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:28:35,631 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:28:35,631 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:28:35,638 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:28:35,639 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:28:35,644 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:28:35,646 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:28:35,651 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:28:35,652 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:32:21,528 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /student_profile/5/12/
+2026-06-15 11:32:21,529 | ERROR | django.server | basehttp | log_message | line 213 | "GET /student_profile/5/12/ HTTP/1.1" 500 145
+2026-06-15 11:32:21,568 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /favicon.ico
+2026-06-15 11:32:21,570 | ERROR | django.server | basehttp | log_message | line 213 | "GET /favicon.ico HTTP/1.1" 500 145
+2026-06-15 11:32:23,111 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /student_profile/5/12/
+2026-06-15 11:32:23,112 | ERROR | django.server | basehttp | log_message | line 213 | "GET /student_profile/5/12/ HTTP/1.1" 500 145
+2026-06-15 11:32:23,150 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /favicon.ico
+2026-06-15 11:32:23,152 | ERROR | django.server | basehttp | log_message | line 213 | "GET /favicon.ico HTTP/1.1" 500 145
+2026-06-15 11:32:34,845 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /student_profile/5/12
+2026-06-15 11:32:34,846 | ERROR | django.server | basehttp | log_message | line 213 | "GET /student_profile/5/12 HTTP/1.1" 500 145
+2026-06-15 11:32:34,963 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /favicon.ico
+2026-06-15 11:32:34,964 | ERROR | django.server | basehttp | log_message | line 213 | "GET /favicon.ico HTTP/1.1" 500 145
+2026-06-15 11:33:10,325 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /student_profile/5/12
+2026-06-15 11:33:10,326 | ERROR | django.server | basehttp | log_message | line 213 | "GET /student_profile/5/12 HTTP/1.1" 500 145
+2026-06-15 11:33:10,360 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /favicon.ico
+2026-06-15 11:33:10,361 | ERROR | django.server | basehttp | log_message | line 213 | "GET /favicon.ico HTTP/1.1" 500 145
+2026-06-15 11:33:11,583 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /student_profile/5/12
+2026-06-15 11:33:11,584 | ERROR | django.server | basehttp | log_message | line 213 | "GET /student_profile/5/12 HTTP/1.1" 500 145
+2026-06-15 11:33:11,623 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /favicon.ico
+2026-06-15 11:33:11,625 | ERROR | django.server | basehttp | log_message | line 213 | "GET /favicon.ico HTTP/1.1" 500 145
+2026-06-15 11:33:35,671 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:33:35,672 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:33:35,678 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:33:35,679 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:33:35,687 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:33:35,688 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:33:35,694 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:33:35,695 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:33:35,703 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:33:35,704 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:33:35,712 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:33:35,713 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:33:35,720 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:33:35,721 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:33:35,728 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:33:35,729 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:33:35,736 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:33:35,737 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:33:35,743 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:33:35,744 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:33:35,749 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /static/img/Gekkon_Icon.png
+2026-06-15 11:33:35,749 | ERROR | django.server | basehttp | log_message | line 213 | "GET /static/img/Gekkon_Icon.png HTTP/1.1" 500 145
+2026-06-15 11:33:39,220 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /student_profile/5/12
+2026-06-15 11:33:39,221 | ERROR | django.server | basehttp | log_message | line 213 | "GET /student_profile/5/12 HTTP/1.1" 500 145
+2026-06-15 11:33:39,254 | ERROR | django.request | log | log_response | line 248 | Internal Server Error: /favicon.ico
+2026-06-15 11:33:39,254 | ERROR | django.server | basehttp | log_message | line 213 | "GET /favicon.ico HTTP/1.1" 500 145
+2026-06-15 13:09:34,767 | ERROR | django.server | basehttp | log_message | line 213 | "GET /test-500/ HTTP/1.1" 500 59
+2026-06-15 13:11:33,385 | ERROR | django.server | basehttp | log_message | line 213 | "GET /test-500/ HTTP/1.1" 500 59
+2026-06-15 13:13:48,441 | ERROR | django.server | basehttp | log_message | line 213 | "GET /test-500/ HTTP/1.1" 500 59
+2026-06-15 13:13:50,385 | ERROR | django.server | basehttp | log_message | line 213 | "GET /test-500/ HTTP/1.1" 500 59
+2026-06-15 13:16:35,037 | ERROR | django.server | basehttp | log_message | line 213 | "GET /test-500/ HTTP/1.1" 500 59
+2026-06-15 13:50:50,806 | ERROR | django.server | basehttp | log_message | line 213 | "GET /test-500/ HTTP/1.1" 500 59

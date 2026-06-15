@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>500 - Внутренняя ошибка сервера</title>
+    <link rel="stylesheet" href="{% static '/main/custom_500.css' %}">
+</head>
+<body>
+    <div class="error-container">
+        <!-- Бейдж 500 -->
+        <div class="badge-500">
+            <div class="code-500">HTTP 500</div>
+            <span>Серверная ошибка</span>
+        </div>
+
+        <!-- Заголовок -->
+        <h1>Сервер&nbsp;задумался</h1>
+        <div class="glow-text">
+            Что-то пошло не так на нашей стороне. Технический сбой, но тесты уже готовятся к запуску.<br>
+            Попробуйте зайти позже или выберите один из доступных тестов.
+        </div>
+
+        <!-- Блок "Доступные тесты" -->
+        <div class="tests-section">
+            <div class="tests-header">
+                <div class="tests-title">Доступные тесты</div>
+                <div class="search-placeholder">Поиск теста...</div>
+            </div>
+            <div class="test-list">
+                <!-- Электрика -->
+                <div class="test-item">
+                    <div class="test-name">Электрика</div>
+                    <div class="test-action">[Открыть]</div>
+                </div>
+                <!-- Вводная программа по эксплуатации и обслуживанию подземной самоходной техники Хенкон -->
+                <div class="test-item">
+                    <div class="test-name">Вводная программа по эксплуатации и обслуживанию подземной самоходной техники Хенкон</div>
+                    <div class="test-action">[Открыть]</div>
+                </div>
+            </div>
+            <div class="broken-sign" style="margin-top: 14px; display: inline-block;">
+                🚧 сервер временно недоступен • ведутся работы
+            </div>
+        </div>
+
+        <!-- Дополнительное сообщение -->
+        <div class="lost-message">
+            <div class="lost-text">
+                <span class="compass-icon">🔧</span> 
+                Код ошибки: <strong>500 Internal Server Error</strong> — администраторы уже в курсе.
+            </div>
+            <div class="fake-button">
+                ✖︎ автоматическое восстановление
+            </div>
+        </div>
+
+        <div class="footer-note">
+            • серверная ошибка • повторите попытку позже • код 500 •
+        </div>
+    </div>
+</body>
+</html>

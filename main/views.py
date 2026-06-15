@@ -1,5 +1,8 @@
+import sys
+from django.http import HttpResponseBadRequest, Http404
+from django.core.exceptions import PermissionDenied
 from django.http import HttpResponseRedirect, FileResponse
-from django.shortcuts import redirect, get_object_or_404
+from django.shortcuts import redirect, get_object_or_404, render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
@@ -177,6 +180,89 @@ def logout(request):
     logger.info(f"LOGOUT {request.user.username}-{dt.datetime.now()}")
     auth.logout(request)
     return redirect("main:login")
+
+
+def custom_400(request, exception=None):
+    """Кастомная страница ошибки 400 - Bad Request"""
+    context = {
+        'error_code': '400',
+        'error_name': 'BAD REQUEST',
+        'error_title': 'Неверный запрос',
+        'error_message': 'Сервер не может обработать запрос из-за синтаксической ошибки.',
+        'error_detail': str(exception) if exception else 'Проверьте правильность параметров запроса.',
+    }
+    logger.warning(f'400 Bad Request: {request.path}')
+    return render(request, 'errors/400.html', context, status=400)
+
+
+def custom_403(request, exception=None):
+    """Кастомная страница ошибки 403 - Forbidden"""
+    context = {
+        'error_code': '403',
+        'error_name': 'FORBIDDEN',
+        'error_title': 'Доступ запрещен',
+        'error_message': 'У вас нет прав для доступа к этой странице.',
+        'error_detail': str(exception) if exception else 'Недостаточно прав для просмотра этого ресурса.',
+    }
+    logger.warning(f'403 Forbidden: {request.path}')
+    return render(request, 'errors/403.html', context, status=403)
+
+def custom_404(request, exception=None):
+    """Кастомная страница ошибки 404 - Not Found"""
+    context = {
+        'error_code': '404',
+        'error_name': 'NOT FOUND',
+        'error_title': 'Страница не найдена',
+        'error_message': 'Запрашиваемая страница не существует или была перемещена.',
+        'error_detail': str(exception) if exception else f'Путь: {request.path} не найден',
+        'requested_path': request.path,
+    }
+    logger.warning(f'404 Not Found: {request.path}')
+    return render(request, 'errors/404.html', context, status=404)
+
+
+def custom_500(request):
+    """Кастомная страница ошибки 500 - Internal Server Error"""
+    exc_type, exc_value, exc_traceback = sys.exc_info()
+    
+    context = {
+        'error_code': '500',
+        'error_name': 'INTERNAL SERVER ERROR',
+        'error_title': 'Внутренняя ошибка сервера',
+        'error_message': 'Что-то пошло не так на нашей стороне.',
+        'error_detail': str(exc_value) if exc_value else 'Неизвестная ошибка сервера',
+    }
+    
+    logger.error(f'500 Error: {request.path}')
+    
+    if exc_traceback:
+        tb_str = ''.join(traceback.format_tb(exc_traceback))
+        logger.error(f'Traceback: {tb_str}')
+        if settings.DEBUG:
+            context['traceback'] = tb_str
+    
+    return render(request, 'errors/500.html', context, status=500)
+
+def test_400(request):
+    """Тест ошибки 400"""
+    return HttpResponseBadRequest("Тестовая ошибка 400")
+
+
+def test_403(request):
+    """Тест ошибки 403"""
+    raise PermissionDenied("Тестовая ошибка 403")
+
+
+def test_404(request):
+    """Тест ошибки 404"""
+    raise Http404("Тестовая ошибка 404")
+
+
+def test_500(request):
+    """Тест ошибки 500"""
+    raise ValueError("Тестовая ошибка 500")
+
+
 
 
 def export_attempt_excel(request, pk):

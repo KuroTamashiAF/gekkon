@@ -10,11 +10,16 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
+# from ctypes import cast
+# from email.policy import default
 from pathlib import Path
-from django.core.management.utils import get_random_secret_key
+
+# from django.core.management.utils import get_random_secret_key
 from decouple import config
 import os
 import logging
+
+from django.conf.global_settings import STATIC_ROOT
 
 # from django.conf.global_settings import LOGIN_REDIRECT_URL, LOGIN_URL, MEDIA_ROOT, MEDIA_URL
 
@@ -31,9 +36,9 @@ SECRET_KEY = config("SECRET_KEY")
 # print(SECRET_KEY)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config("DEBUG")
+DEBUG = config("DEBUG", default=False, cast=bool)
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = config("ALLOWED_HOSTS").split(",")
 
 
 # Application definition
@@ -89,11 +94,11 @@ WSGI_APPLICATION = "HenkonKnowledgeTest.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "gtests",
-        "USER": "gek",
-        "PASSWORD": "gek",
-        "HOST": "127.0.0.1",
-        "PORT": "5432",
+        "NAME": config("DB_NAME"),
+        "USER": config("DB_USER"),
+        "PASSWORD": config("DB_PASSWORD"),
+        "HOST": config("DB_HOST"),
+        "PORT": config("DB_PORT"),
     }
 }
 
@@ -136,6 +141,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 LOGIN_REDIRECT_URL = "main:index"
 LOGIN_URL = "main:login"
@@ -144,46 +150,41 @@ MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "/media/"
 
 LOG_DIR = BASE_DIR / "logs"
-LOG_DIR.mkdir(exist_ok=True)  #Если папка уже существует → ошибки не будет.
+LOG_DIR.mkdir(exist_ok=True)  # Если папка уже существует → ошибки не будет.
 
 
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
-
-    "formatters": {            #КАК будет выглядеть лог.Например:2026-05-20 | ERROR | views | line 52 | database error
+    "formatters": {  # КАК будет выглядеть лог.Например:2026-05-20 | ERROR | views | line 52 | database error
         "verbose": {
             "format": (
-                "{asctime} | "    # Время ошибки.
-                "{levelname} | "  #Уровень ошибки:
-                "{name} | "       #Имя logger.
-                "{module} | "       #Имя файла Python.
-                "{funcName} | "     #Имя функции.
-                "line {lineno} | "      #Номер строки.ОЧЕНЬ полезно на сервере.
-                "{message}"     #Текст твоего лога.
+                "{asctime} | "  # Время ошибки.
+                "{levelname} | "  # Уровень ошибки:
+                "{name} | "  # Имя logger.
+                "{module} | "  # Имя файла Python.
+                "{funcName} | "  # Имя функции.
+                "line {lineno} | "  # Номер строки.ОЧЕНЬ полезно на сервере.
+                "{message}"  # Текст твоего лога.
             ),
             "style": "{",
         },
-
-        "simple": {                                                         #Красивый вывод в консоль.Например:INFO | TEST STARTED
+        "simple": {  # Красивый вывод в консоль.Например:INFO | TEST STARTED
             "format": "{levelname} | {message}",
             "style": "{",
         },
     },
-
-    "handlers": {            # andler = куда писать лог.Например:файл консоль email telegram linux journal
-
-        "django_file": {        # отлов ошибок Django 
+    "handlers": {  # andler = куда писать лог.Например:файл консоль email telegram linux journal
+        "django_file": {  # отлов ошибок Django
             "level": "ERROR",
-            "class": "logging.handlers.RotatingFileHandler",        #Автоматически:ограничивает размеh / создаёт новые файлы
-            "filename": LOG_DIR / "django_errors.log",          #Куда писать.
-            "maxBytes": 1024 * 1024 * 5,                        #Максимальный размер:
-            "backupCount": 5,                                   # Хранить 5 старых логов 
+            "class": "logging.handlers.RotatingFileHandler",  # Автоматически:ограничивает размеh / создаёт новые файлы
+            "filename": LOG_DIR / "django_errors.log",  # Куда писать.
+            "maxBytes": 1024 * 1024 * 5,  # Максимальный размер:
+            "backupCount": 5,  # Хранить 5 старых логов
             "formatter": "verbose",
-            "encoding":"utf-8",
-                                                                      #Использовать подробный формат.
+            "encoding": "utf-8",
+            # Использовать подробный формат.
         },
-
         "gtests_file": {
             "level": "INFO",
             "class": "logging.handlers.RotatingFileHandler",
@@ -191,9 +192,8 @@ LOGGING = {
             "maxBytes": 1024 * 1024 * 5,
             "backupCount": 5,
             "formatter": "verbose",
-            "encoding":"utf-8",
+            "encoding": "utf-8",
         },
-
         "warning_file": {
             "level": "WARNING",
             "class": "logging.handlers.RotatingFileHandler",
@@ -201,46 +201,40 @@ LOGGING = {
             "maxBytes": 1024 * 1024 * 5,
             "backupCount": 5,
             "formatter": "verbose",
-            "encoding":"utf-8",
+            "encoding": "utf-8",
         },
-
         "console": {
             "class": "logging.StreamHandler",
             "formatter": "simple",
         },
-
         "main_file": {
-            "level": "INFO", # INFO и выше
+            "level": "INFO",  # INFO и выше
             "class": "logging.handlers.RotatingFileHandler",  # Ротация логов
-            "filename": LOG_DIR / "main.log",   # Файл:
-                                                # logs/main.log
-            "maxBytes": 1024 * 1024 * 5,     # Максимальный размер:
-                                            # 5 MB
-            "backupCount": 5,   # 5 резервных файлов
-            "formatter": "verbose", # Подробный formatter
-            "encoding":"utf-8",
+            "filename": LOG_DIR / "main.log",  # Файл:
+            # logs/main.log
+            "maxBytes": 1024 * 1024 * 5,  # Максимальный размер:
+            # 5 MB
+            "backupCount": 5,  # 5 резервных файлов
+            "formatter": "verbose",  # Подробный formatter
+            "encoding": "utf-8",
         },
     },
-
     "loggers": {
-
         "django": {
             "handlers": ["django_file", "console"],
             "level": "ERROR",
             "propagate": True,
         },
-
         "gtests": {
             "handlers": ["gtests_file", "warning_file", "console"],
             "level": "INFO",
             "propagate": False,
         },
-
         "main": {
-            "handlers": ["main_file","warning_file", "console"],
-            "level": "INFO",        # INFO и выше
-            "propagate": False,    # Не дублировать логи
+            "handlers": ["main_file", "warning_file", "console"],
+            "level": "INFO",  # INFO и выше
+            "propagate": False,  # Не дублировать логи
         },
-
     },
 }
+

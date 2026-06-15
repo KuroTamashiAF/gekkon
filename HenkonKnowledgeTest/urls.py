@@ -15,13 +15,24 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+from main.views import custom_404, custom_403, custom_500, custom_400
+
+handler400 = custom_400
+handler403 = custom_403
+handler404 = custom_404
+handler500 = custom_500
 
 
 urlpatterns = [
     path("verwalter/", admin.site.urls),
-    path("",include("main.urls", namespace="main")),
-    path("",include("gtests.urls", namespace="gtests")),
-] 
+    path("", include("main.urls", namespace="main")),
+    path("", include("gtests.urls", namespace="gtests")),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+if not settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
