@@ -1,4 +1,5 @@
 import sys
+import traceback
 from django.http import HttpResponseBadRequest, Http404
 from django.core.exceptions import PermissionDenied
 from django.http import HttpResponseRedirect, FileResponse
@@ -73,7 +74,7 @@ class IndexView(LoginRequiredMixin, TemplateView):
             context["username"] = user.username
             context["is_staff"] = user.is_staff
             context["tests"] = get_available_tests_for_user(user)
-            context["attemts_count"] = user.student_type.max_attempts
+            context["attemts_count"] = (user.student_type.max_attempts if user.student_type else 1)
         return context
 
 

@@ -881,3 +881,35 @@ FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\kn
 2026-06-16 15:26:23,755 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon_Icon.png
 2026-06-16 15:26:53,598 | INFO | main | views | form_valid | line 55 | LOGIN root-2026-06-16 15:26:53.598021
 2026-06-16 15:27:46,290 | INFO | main | views | logout | line 180 | LOGOUT root-2026-06-16 15:27:46.290707
+2026-06-16 16:52:02,979 | INFO | main | views | form_valid | line 56 | LOGIN root-2026-06-16 16:52:02.978604
+2026-06-16 16:52:03,165 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 16:52:03,176 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/fonts/Shonen.ttf
+2026-06-16 16:52:05,190 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 16:52:06,384 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/fonts/Shonen.ttf
+2026-06-16 16:52:07,664 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/main/base.css
+2026-06-16 16:52:07,664 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/main/index.css
+2026-06-16 16:52:07,676 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 16:52:07,704 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 16:52:07,735 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 16:52:09,202 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 16:52:11,587 | INFO | main | views | logout | line 181 | LOGOUT root-2026-06-16 16:52:11.587314
+2026-06-16 16:52:13,554 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/main/login.css
+2026-06-16 16:52:13,555 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/img/Gekkon-Logo.png
+2026-06-16 16:52:13,623 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 16:52:14,261 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/main/login.css
+2026-06-16 16:52:14,262 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/img/Gekkon-Logo.png
+2026-06-16 16:52:14,332 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 16:52:17,208 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 16:59:04,373 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/main/login.css
+2026-06-16 16:59:04,374 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/img/Gekkon-Logo.png
+2026-06-16 16:59:06,505 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/main/login.css
+2026-06-16 16:59:06,538 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2026-06-16 16:59:13,605 | INFO | main | views | form_valid | line 56 | LOGIN root-2026-06-16 16:59:13.605281
+2026-06-16 16:59:13,704 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/main/base.css
+2026-06-16 16:59:13,705 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/main/index.css
+2026-06-16 16:59:13,735 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 16:59:15,333 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 16:59:15,334 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/main/base.css
+2026-06-16 16:59:15,334 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/main/index.css
+2026-06-16 16:59:15,344 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2026-06-16 17:00:41,355 | WARNING | main | views | custom_404 | line 221 | 404 Not Found: /static/img/Gekkon_Icon.png
