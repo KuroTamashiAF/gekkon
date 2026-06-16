@@ -9,9 +9,7 @@ from gtests.models import Test, Question, AnswerOption
 
 class Command(BaseCommand):
     help = "Загрузка тестов из JSON"
-
     def handle(self, *args, **kwargs):
-
 
         file_names = os.listdir(os.path.join(settings.BASE_DIR / "for_tests_json"))
         count_tests = 0

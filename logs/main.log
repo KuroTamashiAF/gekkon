@@ -800,3 +800,39 @@ FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Python_Projects\\kn
 2026-06-15 13:57:29,207 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/backGround_main_HLVIB32.jpg
 2026-06-15 14:07:44,615 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /media/tests_images/backGround_main_HLVIB32.jpg
 2026-06-15 14:20:12,768 | INFO | main | views | form_valid | line 55 | LOGIN root-2026-06-15 14:20:12.768510
+2026-06-16 08:03:16,961 | INFO | main | views | form_valid | line 55 | LOGIN root-2026-06-16 08:03:16.961768
+2026-06-16 08:04:19,280 | INFO | main | views | form_valid | line 55 | LOGIN root-2026-06-16 08:04:19.280676
+2026-06-16 08:19:46,863 | INFO | main | views | form_valid | line 55 | LOGIN root-2026-06-16 08:19:46.863398
+2026-06-16 08:20:35,458 | INFO | main | views | form_valid | line 55 | LOGIN root-2026-06-16 08:20:35.458503
+2026-06-16 08:28:01,830 | INFO | main | views | form_valid | line 55 | LOGIN root-2026-06-16 08:28:01.830933
+2026-06-16 08:31:18,297 | INFO | main | views | get_context_data | line 174 | RESULT VIEW | root-2026-06-16 08:31:18.297174
+2026-06-16 08:31:19,592 | INFO | main | views | export_attempt_excel | line 368 | EXCEL EXPORT | root-2026-06-16 08:31:19.592884
+2026-06-16 08:31:35,804 | INFO | main | servises | pdf_render_function | line 262 | PDF Export root
+2026-06-16 09:47:26,585 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 09:47:26,640 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 09:47:27,882 | INFO | main | views | logout | line 180 | LOGOUT root-2026-06-16 09:47:27.882737
+2026-06-16 09:47:28,614 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 09:47:32,625 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 09:47:32,707 | INFO | main | views | form_valid | line 55 | LOGIN root-2026-06-16 09:47:32.707749
+2026-06-16 09:47:32,821 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/main/base.css
+2026-06-16 09:47:32,821 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/main/index.css
+2026-06-16 09:47:32,834 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 09:47:32,855 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 09:47:37,574 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/main/base.css
+2026-06-16 09:47:37,600 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 09:47:39,047 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/main/base.css
+2026-06-16 09:47:39,048 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/main/index.css
+2026-06-16 09:47:39,074 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 09:47:40,632 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 09:47:56,648 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 09:48:28,663 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 09:49:32,674 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 09:51:40,690 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 09:51:58,805 | INFO | main | views | logout | line 180 | LOGOUT root-2026-06-16 09:51:58.805990
+2026-06-16 09:52:00,854 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 09:52:02,505 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/main/login.css
+2026-06-16 09:52:02,506 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon-Logo.png
+2026-06-16 09:52:02,579 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon_Icon.png
+2026-06-16 09:52:05,181 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/main/login.css
+2026-06-16 09:52:05,182 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon-Logo.png
+2026-06-16 09:52:05,251 | WARNING | main | views | custom_404 | line 220 | 404 Not Found: /static/img/Gekkon_Icon.png

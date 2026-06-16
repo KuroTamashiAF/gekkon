@@ -766,3 +766,146 @@
 2026-06-11 13:56:54,316 | INFO | gtests | views | finish_test | line 270 | FINISH TEST | user=IvanChief--test=Электрика--score=50.0%--correct=3/6--2026-06-11 13:56:54.316234
 2026-06-11 14:14:50,383 | INFO | gtests | views | dispatch | line 85 | START TEST | user=IvanChief--test=Электрика--attempt_id=None--2026-06-11 14:14:50.383602
 2026-06-15 09:58:11,584 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Вводная программа по эксплуатации и обслуживанию подземной самоходной техники Хенкон--attempt_id=None--2026-06-15 09:58:11.584671
+2026-06-16 08:29:45,196 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=None--2026-06-16 08:29:45.196026
+2026-06-16 08:29:55,572 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:29:55.572673
+2026-06-16 08:29:55,578 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=103--selected_option=378--2026-06-16 08:29:55.578798
+2026-06-16 08:29:55,676 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:29:55.676798
+2026-06-16 08:30:06,498 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:06.498859
+2026-06-16 08:30:06,505 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=127--selected_option=474--2026-06-16 08:30:06.505777
+2026-06-16 08:30:06,597 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:06.597535
+2026-06-16 08:30:08,363 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:08.363726
+2026-06-16 08:30:08,369 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=90--selected_option=328--2026-06-16 08:30:08.369841
+2026-06-16 08:30:08,461 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:08.461771
+2026-06-16 08:30:09,185 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:09.185061
+2026-06-16 08:30:09,194 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=124--selected_option=465--2026-06-16 08:30:09.194028
+2026-06-16 08:30:09,292 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:09.292889
+2026-06-16 08:30:10,036 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:10.036800
+2026-06-16 08:30:10,043 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=98--selected_option=359--2026-06-16 08:30:10.043818
+2026-06-16 08:30:10,145 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:10.145271
+2026-06-16 08:30:10,810 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:10.810116
+2026-06-16 08:30:10,817 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=93--selected_option=340--2026-06-16 08:30:10.817325
+2026-06-16 08:30:10,909 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:10.909187
+2026-06-16 08:30:11,995 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:11.995161
+2026-06-16 08:30:12,003 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=99--selected_option=365--2026-06-16 08:30:12.003152
+2026-06-16 08:30:12,128 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:12.128471
+2026-06-16 08:30:13,082 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:13.082782
+2026-06-16 08:30:13,091 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=116--selected_option=430--2026-06-16 08:30:13.091077
+2026-06-16 08:30:13,194 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:13.194296
+2026-06-16 08:30:14,286 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:14.286782
+2026-06-16 08:30:14,294 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=107--selected_option=394--2026-06-16 08:30:14.294744
+2026-06-16 08:30:14,391 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:14.391762
+2026-06-16 08:30:15,803 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:15.803468
+2026-06-16 08:30:15,809 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=131--selected_option=491--2026-06-16 08:30:15.809581
+2026-06-16 08:30:15,901 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:15.901519
+2026-06-16 08:30:17,640 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:17.640829
+2026-06-16 08:30:17,646 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=101--selected_option=373--2026-06-16 08:30:17.646794
+2026-06-16 08:30:17,761 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:17.761290
+2026-06-16 08:30:19,196 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:19.196284
+2026-06-16 08:30:19,201 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=89--selected_option=322--2026-06-16 08:30:19.201284
+2026-06-16 08:30:19,299 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:19.299883
+2026-06-16 08:30:20,042 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:20.042545
+2026-06-16 08:30:20,048 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=97--selected_option=356--2026-06-16 08:30:20.048545
+2026-06-16 08:30:20,142 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:20.142131
+2026-06-16 08:30:20,712 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:20.712347
+2026-06-16 08:30:20,719 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=133--selected_option=499--2026-06-16 08:30:20.719475
+2026-06-16 08:30:20,817 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:20.817557
+2026-06-16 08:30:21,345 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:21.345066
+2026-06-16 08:30:21,354 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=111--selected_option=411--2026-06-16 08:30:21.354458
+2026-06-16 08:30:21,472 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:21.472806
+2026-06-16 08:30:21,912 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:21.912154
+2026-06-16 08:30:21,920 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=113--selected_option=419--2026-06-16 08:30:21.920153
+2026-06-16 08:30:22,042 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:22.042508
+2026-06-16 08:30:22,523 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:22.523885
+2026-06-16 08:30:22,573 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=118--selected_option=440--2026-06-16 08:30:22.573324
+2026-06-16 08:30:22,685 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:22.685741
+2026-06-16 08:30:23,086 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:23.086216
+2026-06-16 08:30:23,095 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=129--selected_option=483--2026-06-16 08:30:23.095575
+2026-06-16 08:30:23,208 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:23.208221
+2026-06-16 08:30:23,605 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:23.605443
+2026-06-16 08:30:23,615 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=119--selected_option=442--2026-06-16 08:30:23.615559
+2026-06-16 08:30:23,744 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:23.744948
+2026-06-16 08:30:24,189 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:24.189405
+2026-06-16 08:30:24,199 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=114--selected_option=422--2026-06-16 08:30:24.198405
+2026-06-16 08:30:24,406 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:24.406063
+2026-06-16 08:30:31,005 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:31.005579
+2026-06-16 08:30:31,011 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=100--selected_option=367--2026-06-16 08:30:31.011577
+2026-06-16 08:30:31,108 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:31.108607
+2026-06-16 08:30:32,077 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:32.077316
+2026-06-16 08:30:32,083 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=120--selected_option=449--2026-06-16 08:30:32.083140
+2026-06-16 08:30:32,176 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:32.176311
+2026-06-16 08:30:32,930 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:32.930293
+2026-06-16 08:30:32,936 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=105--selected_option=389--2026-06-16 08:30:32.936297
+2026-06-16 08:30:33,031 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:33.031057
+2026-06-16 08:30:33,673 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:33.673092
+2026-06-16 08:30:33,681 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=102--selected_option=374--2026-06-16 08:30:33.681072
+2026-06-16 08:30:33,777 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:33.777754
+2026-06-16 08:30:34,292 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:34.292717
+2026-06-16 08:30:34,298 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=117--selected_option=437--2026-06-16 08:30:34.298824
+2026-06-16 08:30:34,397 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:34.397369
+2026-06-16 08:30:34,993 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:34.993638
+2026-06-16 08:30:35,000 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=106--selected_option=392--2026-06-16 08:30:35.000606
+2026-06-16 08:30:35,099 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:35.099321
+2026-06-16 08:30:35,661 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:35.661953
+2026-06-16 08:30:35,667 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=94--selected_option=344--2026-06-16 08:30:35.667845
+2026-06-16 08:30:35,764 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:35.764263
+2026-06-16 08:30:36,395 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:36.395627
+2026-06-16 08:30:36,402 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=91--selected_option=332--2026-06-16 08:30:36.402748
+2026-06-16 08:30:36,498 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:36.498825
+2026-06-16 08:30:37,344 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:37.344870
+2026-06-16 08:30:37,350 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=121--selected_option=451--2026-06-16 08:30:37.350868
+2026-06-16 08:30:37,444 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:37.444946
+2026-06-16 08:30:38,138 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:38.138864
+2026-06-16 08:30:38,145 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=109--selected_option=402--2026-06-16 08:30:38.145994
+2026-06-16 08:30:38,245 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:38.245688
+2026-06-16 08:30:38,899 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:38.899685
+2026-06-16 08:30:38,908 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=125--selected_option=467--2026-06-16 08:30:38.908728
+2026-06-16 08:30:39,014 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:39.014231
+2026-06-16 08:30:39,668 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:39.668913
+2026-06-16 08:30:39,677 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=95--selected_option=346--2026-06-16 08:30:39.677355
+2026-06-16 08:30:39,781 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:39.781044
+2026-06-16 08:30:40,405 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:40.405066
+2026-06-16 08:30:40,412 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=123--selected_option=459--2026-06-16 08:30:40.412735
+2026-06-16 08:30:40,526 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:40.526721
+2026-06-16 08:30:41,168 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:41.168283
+2026-06-16 08:30:41,179 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=122--selected_option=457--2026-06-16 08:30:41.179259
+2026-06-16 08:30:41,290 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:41.290590
+2026-06-16 08:30:41,923 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:41.923099
+2026-06-16 08:30:41,931 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=132--selected_option=494--2026-06-16 08:30:41.931037
+2026-06-16 08:30:42,035 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:42.035120
+2026-06-16 08:30:42,684 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:42.684926
+2026-06-16 08:30:42,692 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=92--selected_option=334--2026-06-16 08:30:42.692936
+2026-06-16 08:30:42,798 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:42.798974
+2026-06-16 08:30:43,412 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:43.412012
+2026-06-16 08:30:43,417 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=128--selected_option=479--2026-06-16 08:30:43.417939
+2026-06-16 08:30:43,519 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:43.519726
+2026-06-16 08:30:44,105 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:44.105471
+2026-06-16 08:30:44,114 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=104--selected_option=384--2026-06-16 08:30:44.114603
+2026-06-16 08:30:44,219 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:44.219508
+2026-06-16 08:30:44,854 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:44.854158
+2026-06-16 08:30:44,864 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=110--selected_option=407--2026-06-16 08:30:44.864208
+2026-06-16 08:30:44,969 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:44.969690
+2026-06-16 08:30:45,675 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:45.675720
+2026-06-16 08:30:45,683 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=108--selected_option=398--2026-06-16 08:30:45.683725
+2026-06-16 08:30:45,782 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:45.782290
+2026-06-16 08:30:46,277 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:46.277878
+2026-06-16 08:30:46,285 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=88--selected_option=320--2026-06-16 08:30:46.285874
+2026-06-16 08:30:46,398 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:46.398274
+2026-06-16 08:30:47,112 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:47.112061
+2026-06-16 08:30:47,122 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=130--selected_option=486--2026-06-16 08:30:47.122001
+2026-06-16 08:30:47,229 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:47.229839
+2026-06-16 08:30:47,866 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:47.866183
+2026-06-16 08:30:47,875 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=96--selected_option=350--2026-06-16 08:30:47.875190
+2026-06-16 08:30:47,982 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:47.982302
+2026-06-16 08:30:48,707 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:48.707356
+2026-06-16 08:30:48,713 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=134--selected_option=503--2026-06-16 08:30:48.713355
+2026-06-16 08:30:48,816 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:48.816040
+2026-06-16 08:30:49,465 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:49.465023
+2026-06-16 08:30:49,471 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=126--selected_option=470--2026-06-16 08:30:49.471880
+2026-06-16 08:30:49,577 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:49.577020
+2026-06-16 08:30:50,234 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:50.234340
+2026-06-16 08:30:50,243 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=115--selected_option=426--2026-06-16 08:30:50.243376
+2026-06-16 08:30:50,444 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:50.444345
+2026-06-16 08:30:51,061 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:51.061859
+2026-06-16 08:30:51,067 | INFO | gtests | views | form_valid | line 204 | ANSWEAR | user=root--test=Основы гидравлики для гидравликов----question_id=112--selected_option=415--2026-06-16 08:30:51.067942
+2026-06-16 08:30:51,176 | INFO | gtests | views | dispatch | line 85 | START TEST | user=root--test=Основы гидравлики для гидравликов--attempt_id=97--2026-06-16 08:30:51.176322
+2026-06-16 08:30:51,216 | INFO | gtests | views | finish_test | line 270 | FINISH TEST | user=root--test=Основы гидравлики для гидравликов--score=34.04255319148936%--correct=16/47--2026-06-16 08:30:51.216179

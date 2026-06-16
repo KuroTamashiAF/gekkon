@@ -52,6 +52,7 @@ htmlcov/
 # Logs
 logs/
 *.log
+.sql
 
 # Celery
 celerybeat-schedule
